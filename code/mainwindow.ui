@@ -6,44 +6,208 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1203</width>
+    <height>721</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Forge</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/flame-icon.png</normaloff>:/icons/flame-icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="userButton">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>180</y>
-      <width>151</width>
-      <height>71</height>
+      <x>100</x>
+      <y>210</y>
+      <width>131</width>
+      <height>121</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>User</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>60</x>
       <y>60</y>
-      <width>151</width>
-      <height>101</height>
+      <width>581</width>
+      <height>81</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Welcome.</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+   </widget>
+   <widget class="QPushButton" name="goalsButton">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>210</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
     </property>
-    <property name="wordWrap">
-     <bool>true</bool>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
+    <property name="text">
+     <string>Workout
+Goals</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="calcButton">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>210</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
+    <property name="text">
+     <string>Calculator</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="linksButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>210</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
+    <property name="text">
+     <string>Links</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tipsButton">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>410</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
+    <property name="text">
+     <string>Tips</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="termButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>410</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
+    <property name="text">
+     <string>Terminology</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tutorButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>410</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333; 
+color: white;               
+border-radius: 15px;       
+padding: 10px 20px;</string>
+    </property>
+    <property name="text">
+     <string>Tutorial</string>
     </property>
    </widget>
   </widget>
@@ -52,13 +216,21 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>24</height>
+     <width>1203</width>
+     <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuHello">
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <addaction name="menuHello"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
