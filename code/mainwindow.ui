@@ -44,16 +44,16 @@ border-radius: 15px;
 padding: 10px 20px;</string>
     </property>
     <property name="text">
-     <string>User</string>
+     <string>Users</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>60</y>
-      <width>581</width>
-      <height>81</height>
+      <y>70</y>
+      <width>291</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">

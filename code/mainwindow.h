@@ -18,7 +18,19 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_userButton_clicked();
+
+    void on_termButton_clicked();
+
+    void on_goalsButton_clicked();
+
+    void on_tipsButton_clicked();
+
+    void on_linksButton_clicked();
+
+    void on_tutorButton_clicked();
+
+    void on_calcButton_clicked();
 
 private:
     Ui::MainWindow *ui;

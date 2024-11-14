@@ -64,7 +64,7 @@ public:
 "padding: 10px 20px;"));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(60, 60, 581, 81));
+        label->setGeometry(QRect(60, 70, 291, 71));
         QFont font2;
         font2.setPointSize(40);
         label->setFont(font2);
@@ -139,7 +139,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Forge", nullptr));
-        userButton->setText(QCoreApplication::translate("MainWindow", "User", nullptr));
+        userButton->setText(QCoreApplication::translate("MainWindow", "Users", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Welcome.", nullptr));
         goalsButton->setText(QCoreApplication::translate("MainWindow", "Workout\n"
 "Goals", nullptr));
