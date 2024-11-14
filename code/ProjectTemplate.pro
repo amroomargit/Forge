@@ -11,17 +11,23 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    olduser.cpp \
+    newuser.cpp \
+    returninguser.cpp \
+    usermainmenu.cpp \
     userswindow.cpp
 
 HEADERS += \
     mainwindow.h \
-    olduser.h \
+    newuser.h \
+    returninguser.h \
+    usermainmenu.h \
     userswindow.h
 
 FORMS += \
     mainwindow.ui \
-    olduser.ui \
+    newuser.ui \
+    returninguser.ui \
+    usermainmenu.ui \
     userswindow.ui
 
 # Default rules for deployment.

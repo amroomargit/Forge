@@ -1,5 +1,5 @@
-#ifndef OLDUSER_H
-#define OLDUSER_H
+#ifndef RETURNINGUSER_H
+#define RETURNINGUSER_H
 
 #include <QMainWindow>
 
@@ -19,4 +19,4 @@ private:
     Ui::OldUser *ui;
 };
 
-#endif // OLDUSER_H
+#endif // RETURNINGUSER_H
