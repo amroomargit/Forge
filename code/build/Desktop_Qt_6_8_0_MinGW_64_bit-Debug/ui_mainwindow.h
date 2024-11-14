@@ -28,7 +28,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *userButton;
-    QLabel *label;
+    QLabel *titleLabel;
     QPushButton *goalsButton;
     QPushButton *calcButton;
     QPushButton *linksButton;
@@ -62,12 +62,12 @@ public:
 "color: white;               \n"
 "border-radius: 15px;       \n"
 "padding: 10px 20px;"));
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(60, 70, 291, 71));
+        titleLabel = new QLabel(centralwidget);
+        titleLabel->setObjectName("titleLabel");
+        titleLabel->setGeometry(QRect(60, 70, 291, 71));
         QFont font2;
         font2.setPointSize(40);
-        label->setFont(font2);
+        titleLabel->setFont(font2);
         goalsButton = new QPushButton(centralwidget);
         goalsButton->setObjectName("goalsButton");
         goalsButton->setGeometry(QRect(350, 210, 131, 121));
@@ -140,7 +140,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Forge", nullptr));
         userButton->setText(QCoreApplication::translate("MainWindow", "Users", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Welcome.", nullptr));
+        titleLabel->setText(QCoreApplication::translate("MainWindow", "Welcome.", nullptr));
         goalsButton->setText(QCoreApplication::translate("MainWindow", "Workout\n"
 "Goals", nullptr));
         calcButton->setText(QCoreApplication::translate("MainWindow", "Calculator", nullptr));

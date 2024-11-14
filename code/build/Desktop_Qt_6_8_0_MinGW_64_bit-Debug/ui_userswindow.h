@@ -25,8 +25,9 @@ class Ui_UsersWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *label;
-    QPushButton *pushButton;
+    QLabel *titleLabel;
+    QPushButton *addUserButton;
+    QPushButton *backButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -40,19 +41,19 @@ public:
         UsersWindow->setWindowIcon(icon);
         centralwidget = new QWidget(UsersWindow);
         centralwidget->setObjectName("centralwidget");
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(60, 60, 181, 61));
+        titleLabel = new QLabel(centralwidget);
+        titleLabel->setObjectName("titleLabel");
+        titleLabel->setGeometry(QRect(60, 70, 181, 71));
         QFont font;
         font.setPointSize(40);
-        label->setFont(font);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(100, 210, 131, 121));
+        titleLabel->setFont(font);
+        addUserButton = new QPushButton(centralwidget);
+        addUserButton->setObjectName("addUserButton");
+        addUserButton->setGeometry(QRect(100, 210, 131, 121));
         QFont font1;
         font1.setPointSize(32);
-        pushButton->setFont(font1);
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
+        addUserButton->setFont(font1);
+        addUserButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;\n"
@@ -60,6 +61,16 @@ public:
 "\n"
 "\n"
 ""));
+        backButton = new QPushButton(centralwidget);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(60, 620, 83, 31));
+        QFont font2;
+        font2.setPointSize(8);
+        backButton->setFont(font2);
+        backButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;"));
         UsersWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(UsersWindow);
         menubar->setObjectName("menubar");
@@ -77,8 +88,9 @@ public:
     void retranslateUi(QMainWindow *UsersWindow)
     {
         UsersWindow->setWindowTitle(QCoreApplication::translate("UsersWindow", "Forge", nullptr));
-        label->setText(QCoreApplication::translate("UsersWindow", "Users.", nullptr));
-        pushButton->setText(QCoreApplication::translate("UsersWindow", "+", nullptr));
+        titleLabel->setText(QCoreApplication::translate("UsersWindow", "Users.", nullptr));
+        addUserButton->setText(QCoreApplication::translate("UsersWindow", "+", nullptr));
+        backButton->setText(QCoreApplication::translate("UsersWindow", "Back", nullptr));
     } // retranslateUi
 
 };

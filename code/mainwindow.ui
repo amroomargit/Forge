@@ -47,7 +47,7 @@ padding: 10px 20px;</string>
      <string>Users</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="titleLabel">
     <property name="geometry">
      <rect>
       <x>60</x>

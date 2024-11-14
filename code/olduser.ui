@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>UsersWindow</class>
- <widget class="QMainWindow" name="UsersWindow">
+ <class>OldUser</class>
+ <widget class="QMainWindow" name="OldUser">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,7 +23,7 @@
      <rect>
       <x>60</x>
       <y>70</y>
-      <width>181</width>
+      <width>601</width>
       <height>71</height>
      </rect>
     </property>
@@ -33,59 +33,82 @@
      </font>
     </property>
     <property name="text">
-     <string>Users.</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="addUserButton">
+   <widget class="QLineEdit" name="passBox">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>213</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="passLabel">
     <property name="geometry">
      <rect>
       <x>100</x>
       <y>210</y>
-      <width>131</width>
-      <height>121</height>
+      <width>181</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>32</pointsize>
+      <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: #333333; 
-color: white;
-border-radius: 15px;
-padding: 10px 20px;
-
-
-
-</string>
-    </property>
     <property name="text">
-     <string>+</string>
+     <string>Enter Password:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="backButton">
+   <widget class="QLabel" name="forgotLabel">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>620</y>
-      <width>83</width>
-      <height>31</height>
+      <x>100</x>
+      <y>270</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #0000EE;</string>
+    </property>
+    <property name="text">
+     <string>Forgot your password?</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="deleteLabel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>500</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>8</pointsize>
+      <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: #333333;
-color: white;
-border-radius: 15px;
-padding: 10px 20px;</string>
-    </property>
     <property name="text">
-     <string>Back</string>
+     <string>Delete User:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="deleteBox">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>505</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Enter Password to Proceed</string>
     </property>
    </widget>
   </widget>
