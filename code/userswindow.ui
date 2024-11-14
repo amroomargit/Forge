@@ -68,7 +68,7 @@ padding: 10px 20px;
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>620</y>
+      <y>590</y>
       <width>83</width>
       <height>31</height>
      </rect>

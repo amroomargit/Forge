@@ -63,7 +63,7 @@ public:
 ""));
         backButton = new QPushButton(centralwidget);
         backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(60, 620, 83, 31));
+        backButton->setGeometry(QRect(60, 590, 83, 31));
         QFont font2;
         font2.setPointSize(8);
         backButton->setFont(font2);

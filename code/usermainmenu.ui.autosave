@@ -36,7 +36,7 @@
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="templatesLabel">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -54,10 +54,10 @@
      <string>Templates</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="backButton">
+   <widget class="QPushButton" name="logoutButton">
     <property name="geometry">
      <rect>
-      <x>1072</x>
+      <x>1080</x>
       <y>30</y>
       <width>91</width>
       <height>41</height>
@@ -78,26 +78,7 @@ padding: 10px 20px;</string>
      <string>Logout</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>164</y>
-      <width>131</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: #333333;
-color: white;
-border-radius: 15px;
-padding: 10px 20px;</string>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="newWLTLabel">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -112,16 +93,17 @@ padding: 10px 20px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">background-color: rgba(255, 0, 0, 200);
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+border: 2px solid red;</string>
     </property>
     <property name="text">
      <string>New Weightlifting Template</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="newCLTLabel">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -145,7 +127,7 @@ padding: 10px 20px;</string>
      <string>New Cardio Template</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="currMeasLabel">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -191,7 +173,7 @@ padding: 10px 20px;</string>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="updateButton">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -215,7 +197,7 @@ padding: 5px 10px;</string>
      <string>Update</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="updateButton_2">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -239,7 +221,7 @@ padding: 5px 10px;</string>
      <string>Update</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="heightBox_2">
+   <widget class="QLineEdit" name="weightBox">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -249,7 +231,7 @@ padding: 5px 10px;</string>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="heightLabel_2">
+   <widget class="QLabel" name="weightLabel">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -267,7 +249,7 @@ padding: 5px 10px;</string>
      <string>Weight:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="updateButton_3">
     <property name="geometry">
      <rect>
       <x>750</x>
@@ -291,7 +273,7 @@ padding: 5px 10px;</string>
      <string>Update</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="heightBox_3">
+   <widget class="QLineEdit" name="caloriesBox">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -301,7 +283,7 @@ padding: 5px 10px;</string>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="heightLabel_3">
+   <widget class="QLabel" name="caloriesLabel">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -319,7 +301,7 @@ padding: 5px 10px;</string>
      <string>Calories:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="quicklinksLabel">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -337,7 +319,7 @@ padding: 5px 10px;</string>
      <string>Quick Links</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_9">
+   <widget class="QPushButton" name="termButton">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -356,7 +338,7 @@ padding: 10px 20px;</string>
      <string>Terminology</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_10">
+   <widget class="QPushButton" name="goalsButton">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -376,7 +358,7 @@ padding: 10px 20px;</string>
 Goals</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_11">
+   <widget class="QPushButton" name="tipButton">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -395,7 +377,7 @@ padding: 10px 20px;</string>
      <string>Tips</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_12">
+   <widget class="QPushButton" name="calculatorButton">
     <property name="geometry">
      <rect>
       <x>850</x>
@@ -414,7 +396,7 @@ padding: 10px 20px;</string>
      <string>Calculator</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_13">
+   <widget class="QPushButton" name="tutorialButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -433,7 +415,7 @@ padding: 10px 20px;</string>
      <string>Tutorial</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_14">
+   <widget class="QPushButton" name="linksButton">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -452,17 +434,46 @@ padding: 10px 20px;</string>
      <string>Links</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="warningLabel">
     <property name="geometry">
      <rect>
-      <x>1070</x>
+      <x>1080</x>
       <y>80</y>
-      <width>101</width>
-      <height>51</height>
+      <width>71</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Warning: Only way back is to logout, that's why I've provided the quick links! Clicking them won't log you out!</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WARNING&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="revealTxtButton">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>83</y>
+      <width>20</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="arrowType">
+     <enum>Qt::ArrowType::DownArrow</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hiddenLabel">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>100</y>
+      <width>101</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The only way&lt;br/&gt;back is to &lt;br/&gt;logout,&lt;br/&gt;that's why I've &lt;br/&gt;provided&lt;br/&gt;the quick links&lt;br/&gt;in case that's&lt;br/&gt;what you were&lt;br/&gt;looking for! &lt;br/&gt;Clicking them&lt;br/&gt;won't &lt;br/&gt;log you out!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
