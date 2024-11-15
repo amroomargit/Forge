@@ -15,7 +15,8 @@ SOURCES += \
     returninguser.cpp \
     usermainmenu.cpp \
     userswindow.cpp \
-    weightlifttemplate.cpp
+    weightlifttemplate.cpp \
+    wltdialog.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -23,7 +24,8 @@ HEADERS += \
     returninguser.h \
     usermainmenu.h \
     userswindow.h \
-    weightlifttemplate.h
+    weightlifttemplate.h \
+    wltdialog.h
 
 FORMS += \
     mainwindow.ui \
@@ -31,7 +33,8 @@ FORMS += \
     returninguser.ui \
     usermainmenu.ui \
     userswindow.ui \
-    weightlifttemplate.ui
+    weightlifttemplate.ui \
+    wltdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

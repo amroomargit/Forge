@@ -7,13 +7,121 @@
     <x>0</x>
     <y>0</y>
     <width>1203</width>
-    <height>700</height>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="styleSheet">
+       <string notr="true">QScrollBar:vertical {
+    background: #333333;          /* Background color of the scrollbar track */
+    width: 12px;                  /* Width of the vertical scrollbar */
+    border-radius: 15px;          /* Rounded scrollbar edges */
+    margin: 0px 3px 0px 3px;      /* Margin to prevent scrollbar from touching edges */
+}
+
+QScrollBar::handle:vertical {
+    background: black;            /* Color of the draggable handle */
+    min-height: 20px;             /* Minimum height of the handle */
+    border-radius: 15px;          /* Rounding of the handle */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;             /* Remove arrow buttons (optional) */
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: #333333;          /* Background for empty scrollable area */
+}
+
+QScrollBar:horizontal {
+    background: #333333;          /* Background color of the scrollbar track */
+    height: 12px;                 /* Height of the horizontal scrollbar */
+    border-radius: 15px;          /* Rounded scrollbar edges */
+    margin: 3px 0px 3px 0px;      /* Margin to prevent scrollbar from touching edges */
+}
+
+QScrollBar::handle:horizontal {
+    background: black;            /* Color of the draggable handle */
+    min-width: 20px;              /* Minimum width of the handle */
+    border-radius: 15px;          /* Rounding of the handle */
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    background: none;             /* Remove arrow buttons (optional) */
+    width: 0px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: #333333;          /* Background for empty scrollable area */
+}
+</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1179</width>
+         <height>647</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>851</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>40</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>New Weightlifting Template.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>210</y>
+          <width>271</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #333333;
+color: white;
+border-radius: 15px;
+padding: 10px 20px;</string>
+        </property>
+        <property name="text">
+         <string>+ Add New Excercise</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>

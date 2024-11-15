@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/icons">
         <file>flame-icon.png</file>
+        <file>plus.png</file>
     </qresource>
 </RCC>

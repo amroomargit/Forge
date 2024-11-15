@@ -4,9 +4,13 @@ debug/newuser.o
 debug/returninguser.o
 debug/usermainmenu.o
 debug/userswindow.o
+debug/weightlifttemplate.o
+debug/wltdialog.o
 debug/qrc_resources.o
 debug/moc_mainwindow.o
 debug/moc_newuser.o
 debug/moc_returninguser.o
 debug/moc_usermainmenu.o
 debug/moc_userswindow.o
+debug/moc_weightlifttemplate.o
+debug/moc_wltdialog.o

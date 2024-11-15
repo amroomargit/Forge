@@ -30,7 +30,6 @@ public:
     QLabel *titleLabel;
     QLabel *templatesLabel;
     QPushButton *logoutButton;
-    QPushButton *pushButton;
     QPushButton *newWLTLabel;
     QPushButton *newCLTLabel;
     QLabel *currMeasLabel;
@@ -88,28 +87,22 @@ public:
 "color: red;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(330, 164, 131, 121));
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"padding: 10px 20px;"));
         newWLTLabel = new QPushButton(centralwidget);
         newWLTLabel->setObjectName("newWLTLabel");
         newWLTLabel->setGeometry(QRect(60, 170, 231, 51));
         QFont font3;
         font3.setPointSize(8);
         newWLTLabel->setFont(font3);
-        newWLTLabel->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        newWLTLabel->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 0, 0, 200);\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+""));
         newCLTLabel = new QPushButton(centralwidget);
         newCLTLabel->setObjectName("newCLTLabel");
         newCLTLabel->setGeometry(QRect(60, 230, 231, 51));
         newCLTLabel->setFont(font3);
-        newCLTLabel->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        newCLTLabel->setStyleSheet(QString::fromUtf8("background-color: rgba(221, 188, 0, 0.8);\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
@@ -237,10 +230,9 @@ public:
     void retranslateUi(QMainWindow *UserMainMenu)
     {
         UserMainMenu->setWindowTitle(QCoreApplication::translate("UserMainMenu", "Forge", nullptr));
-        titleLabel->setText(QCoreApplication::translate("UserMainMenu", "TextLabel", nullptr));
+        titleLabel->setText(QString());
         templatesLabel->setText(QCoreApplication::translate("UserMainMenu", "Templates", nullptr));
         logoutButton->setText(QCoreApplication::translate("UserMainMenu", "Logout", nullptr));
-        pushButton->setText(QCoreApplication::translate("UserMainMenu", "PushButton", nullptr));
         newWLTLabel->setText(QCoreApplication::translate("UserMainMenu", "New Weightlifting Template", nullptr));
         newCLTLabel->setText(QCoreApplication::translate("UserMainMenu", "New Cardio Template", nullptr));
         currMeasLabel->setText(QCoreApplication::translate("UserMainMenu", "Current Measurements", nullptr));

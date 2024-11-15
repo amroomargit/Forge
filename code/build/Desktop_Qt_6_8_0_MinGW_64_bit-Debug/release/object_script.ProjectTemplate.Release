@@ -4,9 +4,13 @@ release/newuser.o
 release/returninguser.o
 release/usermainmenu.o
 release/userswindow.o
+release/weightlifttemplate.o
+release/wltdialog.o
 release/qrc_resources.o
 release/moc_mainwindow.o
 release/moc_newuser.o
 release/moc_returninguser.o
 release/moc_usermainmenu.o
 release/moc_userswindow.o
+release/moc_weightlifttemplate.o
+release/moc_wltdialog.o

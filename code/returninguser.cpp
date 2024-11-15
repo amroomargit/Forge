@@ -6,6 +6,8 @@ OldUser::OldUser(QWidget *parent)
     , ui(new Ui::OldUser)
 {
     ui->setupUi(this);
+
+    this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
 OldUser::~OldUser()

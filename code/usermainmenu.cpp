@@ -6,6 +6,8 @@ UserMainMenu::UserMainMenu(QWidget *parent)
     , ui(new Ui::UserMainMenu)
 {
     ui->setupUi(this);
+
+    this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
 UserMainMenu::~UserMainMenu()

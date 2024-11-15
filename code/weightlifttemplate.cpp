@@ -6,6 +6,8 @@ WeightliftTemplate::WeightliftTemplate(QWidget *parent)
     , ui(new Ui::WeightliftTemplate)
 {
     ui->setupUi(this);
+
+    this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
 WeightliftTemplate::~WeightliftTemplate()
