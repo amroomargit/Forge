@@ -14,21 +14,24 @@ SOURCES += \
     newuser.cpp \
     returninguser.cpp \
     usermainmenu.cpp \
-    userswindow.cpp
+    userswindow.cpp \
+    weightlifttemplate.cpp
 
 HEADERS += \
     mainwindow.h \
     newuser.h \
     returninguser.h \
     usermainmenu.h \
-    userswindow.h
+    userswindow.h \
+    weightlifttemplate.h
 
 FORMS += \
     mainwindow.ui \
     newuser.ui \
     returninguser.ui \
     usermainmenu.ui \
-    userswindow.ui
+    userswindow.ui \
+    weightlifttemplate.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
