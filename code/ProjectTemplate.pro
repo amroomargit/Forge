@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addnewworkoutdialog.cpp \
     main.cpp \
     mainwindow.cpp \
     newuser.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
     wltdialog.cpp
 
 HEADERS += \
+    addnewworkoutdialog.h \
     mainwindow.h \
     newuser.h \
     returninguser.h \
@@ -28,6 +30,7 @@ HEADERS += \
     wltdialog.h
 
 FORMS += \
+    addnewworkoutdialog.ui \
     mainwindow.ui \
     newuser.ui \
     returninguser.ui \
