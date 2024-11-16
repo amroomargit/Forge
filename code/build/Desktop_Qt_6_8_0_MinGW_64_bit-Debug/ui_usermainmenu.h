@@ -83,29 +83,51 @@ public:
         QFont font2;
         font2.setPointSize(9);
         logoutButton->setFont(font2);
-        logoutButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        logoutButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: red;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: red;\n"
+"color: white;\n"
+"}"));
         newWLTLabel = new QPushButton(centralwidget);
         newWLTLabel->setObjectName("newWLTLabel");
         newWLTLabel->setGeometry(QRect(60, 170, 231, 51));
         QFont font3;
         font3.setPointSize(8);
         newWLTLabel->setFont(font3);
-        newWLTLabel->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 0, 0, 200);\n"
+        newWLTLabel->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: rgba(255, 0, 0, 200);\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #ff5c5c;\n"
+"color: white;\n"
+"}\n"
 ""));
         newCLTLabel = new QPushButton(centralwidget);
         newCLTLabel->setObjectName("newCLTLabel");
         newCLTLabel->setGeometry(QRect(60, 230, 231, 51));
         newCLTLabel->setFont(font3);
-        newCLTLabel->setStyleSheet(QString::fromUtf8("background-color: rgba(221, 188, 0, 0.8);\n"
+        newCLTLabel->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: rgba(221, 188, 0, 0.8);\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #ffd900;\n"
+"color: white;\n"
+"}\n"
+""));
         currMeasLabel = new QLabel(centralwidget);
         currMeasLabel->setObjectName("currMeasLabel");
         currMeasLabel->setGeometry(QRect(40, 320, 331, 51));
@@ -121,20 +143,34 @@ public:
         heightBox->setGeometry(QRect(60, 410, 141, 28));
         updateButton = new QPushButton(centralwidget);
         updateButton->setObjectName("updateButton");
-        updateButton->setGeometry(QRect(210, 410, 91, 31));
+        updateButton->setGeometry(QRect(210, 403, 91, 41));
         updateButton->setFont(font3);
-        updateButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        updateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
-"border-radius: 12px;\n"
-"padding: 5px 10px;"));
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         updateButton_2 = new QPushButton(centralwidget);
         updateButton_2->setObjectName("updateButton_2");
-        updateButton_2->setGeometry(QRect(480, 410, 91, 31));
+        updateButton_2->setGeometry(QRect(480, 403, 91, 41));
         updateButton_2->setFont(font3);
-        updateButton_2->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        updateButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
-"border-radius: 12px;\n"
-"padding: 5px 10px;"));
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         weightBox = new QLineEdit(centralwidget);
         weightBox->setObjectName("weightBox");
         weightBox->setGeometry(QRect(330, 410, 141, 28));
@@ -144,12 +180,19 @@ public:
         weightLabel->setFont(font4);
         updateButton_3 = new QPushButton(centralwidget);
         updateButton_3->setObjectName("updateButton_3");
-        updateButton_3->setGeometry(QRect(750, 410, 91, 31));
+        updateButton_3->setGeometry(QRect(750, 403, 91, 41));
         updateButton_3->setFont(font3);
-        updateButton_3->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        updateButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
-"border-radius: 12px;\n"
-"padding: 5px 10px;"));
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         caloriesBox = new QLineEdit(centralwidget);
         caloriesBox->setObjectName("caloriesBox");
         caloriesBox->setGeometry(QRect(600, 410, 141, 28));
@@ -164,45 +207,87 @@ public:
         termButton = new QPushButton(centralwidget);
         termButton->setObjectName("termButton");
         termButton->setGeometry(QRect(50, 520, 131, 121));
-        termButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        termButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         goalsButton = new QPushButton(centralwidget);
         goalsButton->setObjectName("goalsButton");
         goalsButton->setGeometry(QRect(210, 520, 131, 121));
-        goalsButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        goalsButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         tipButton = new QPushButton(centralwidget);
         tipButton->setObjectName("tipButton");
         tipButton->setGeometry(QRect(370, 520, 131, 121));
-        tipButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        tipButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         calculatorButton = new QPushButton(centralwidget);
         calculatorButton->setObjectName("calculatorButton");
         calculatorButton->setGeometry(QRect(850, 520, 131, 121));
-        calculatorButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        calculatorButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         tutorialButton = new QPushButton(centralwidget);
         tutorialButton->setObjectName("tutorialButton");
         tutorialButton->setGeometry(QRect(690, 520, 131, 121));
-        tutorialButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        tutorialButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         linksButton = new QPushButton(centralwidget);
         linksButton->setObjectName("linksButton");
         linksButton->setGeometry(QRect(530, 520, 131, 121));
-        linksButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        linksButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         warningLabel = new QLabel(centralwidget);
         warningLabel->setObjectName("warningLabel");
         warningLabel->setGeometry(QRect(1080, 80, 71, 21));

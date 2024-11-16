@@ -219,10 +219,17 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Back</string>

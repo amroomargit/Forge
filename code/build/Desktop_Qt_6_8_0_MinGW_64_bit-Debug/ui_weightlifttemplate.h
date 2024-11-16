@@ -31,6 +31,7 @@ public:
     QWidget *scrollAreaWidgetContents;
     QLabel *label;
     QPushButton *pushButton;
+    QPushButton *addNewWorkoutButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -106,10 +107,34 @@ public:
         QFont font1;
         font1.setPointSize(11);
         pushButton->setFont(font1);
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
+        addNewWorkoutButton = new QPushButton(scrollAreaWidgetContents);
+        addNewWorkoutButton->setObjectName("addNewWorkoutButton");
+        addNewWorkoutButton->setGeometry(QRect(1070, 20, 81, 40));
+        QFont font2;
+        font2.setPointSize(9);
+        addNewWorkoutButton->setFont(font2);
+        addNewWorkoutButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #000000;\n"
+"color: #09f522;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #09f522;\n"
+"color: white;\n"
+"}"));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         verticalLayout->addWidget(scrollArea);
@@ -133,6 +158,7 @@ public:
         WeightliftTemplate->setWindowTitle(QCoreApplication::translate("WeightliftTemplate", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("WeightliftTemplate", "New Weightlifting Template.", nullptr));
         pushButton->setText(QCoreApplication::translate("WeightliftTemplate", "+ Add New Excercise", nullptr));
+        addNewWorkoutButton->setText(QCoreApplication::translate("WeightliftTemplate", "Save", nullptr));
     } // retranslateUi
 
 };

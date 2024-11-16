@@ -69,10 +69,17 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: red;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: red;
+color: white;
+}</string>
     </property>
     <property name="text">
      <string>Logout</string>
@@ -93,10 +100,17 @@ padding: 10px 20px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 0, 0, 200);
+     <string notr="true">QPushButton {
+background-color: rgba(255, 0, 0, 200);
 color: white;
 border-radius: 15px;
 padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #ff5c5c;
+color: white;
+}
 </string>
     </property>
     <property name="text">
@@ -118,10 +132,18 @@ padding: 10px 20px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(221, 188, 0, 0.8);
+     <string notr="true">QPushButton {
+background-color: rgba(221, 188, 0, 0.8);
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #ffd900;
+color: white;
+}
+</string>
     </property>
     <property name="text">
      <string>New Cardio Template</string>
@@ -177,9 +199,9 @@ padding: 10px 20px;</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>410</y>
+      <y>403</y>
       <width>91</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -188,10 +210,17 @@ padding: 10px 20px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
-border-radius: 12px;
-padding: 5px 10px;</string>
+border-radius: 15px;
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Update</string>
@@ -201,9 +230,9 @@ padding: 5px 10px;</string>
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>410</y>
+      <y>403</y>
       <width>91</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -212,10 +241,17 @@ padding: 5px 10px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
-border-radius: 12px;
-padding: 5px 10px;</string>
+border-radius: 15px;
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Update</string>
@@ -253,9 +289,9 @@ padding: 5px 10px;</string>
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>410</y>
+      <y>403</y>
       <width>91</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -264,10 +300,17 @@ padding: 5px 10px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
-border-radius: 12px;
-padding: 5px 10px;</string>
+border-radius: 15px;
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Update</string>
@@ -329,10 +372,17 @@ padding: 5px 10px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Terminology</string>
@@ -348,10 +398,17 @@ padding: 10px 20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Workout 
@@ -368,10 +425,17 @@ Goals</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Tips</string>
@@ -387,10 +451,17 @@ padding: 10px 20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Calculator</string>
@@ -406,10 +477,17 @@ padding: 10px 20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Tutorial</string>
@@ -425,10 +503,17 @@ padding: 10px 20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;
+     <string notr="true">QPushButton {
+background-color: #333333;
 color: white;
 border-radius: 15px;
-padding: 10px 20px;</string>
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
     </property>
     <property name="text">
      <string>Links</string>

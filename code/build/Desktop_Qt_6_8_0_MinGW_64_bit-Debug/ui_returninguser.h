@@ -79,10 +79,17 @@ public:
         QFont font2;
         font2.setPointSize(8);
         backButton->setFont(font2);
-        backButton->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;"));
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         OldUser->setCentralWidget(centralwidget);
         menubar = new QMenuBar(OldUser);
         menubar->setObjectName("menubar");

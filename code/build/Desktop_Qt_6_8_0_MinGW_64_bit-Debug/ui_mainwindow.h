@@ -58,10 +58,17 @@ public:
         QFont font1;
         font1.setPointSize(13);
         userButton->setFont(font1);
-        userButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        userButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         titleLabel = new QLabel(centralwidget);
         titleLabel->setObjectName("titleLabel");
         titleLabel->setGeometry(QRect(60, 70, 291, 71));
@@ -72,52 +79,94 @@ public:
         goalsButton->setObjectName("goalsButton");
         goalsButton->setGeometry(QRect(350, 210, 131, 121));
         goalsButton->setFont(font1);
-        goalsButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        goalsButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         calcButton = new QPushButton(centralwidget);
         calcButton->setObjectName("calcButton");
         calcButton->setGeometry(QRect(850, 210, 131, 121));
         QFont font3;
         font3.setPointSize(12);
         calcButton->setFont(font3);
-        calcButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        calcButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         linksButton = new QPushButton(centralwidget);
         linksButton->setObjectName("linksButton");
         linksButton->setGeometry(QRect(600, 210, 131, 121));
         linksButton->setFont(font1);
-        linksButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        linksButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         tipsButton = new QPushButton(centralwidget);
         tipsButton->setObjectName("tipsButton");
         tipsButton->setGeometry(QRect(350, 410, 131, 121));
         tipsButton->setFont(font1);
-        tipsButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        tipsButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         termButton = new QPushButton(centralwidget);
         termButton->setObjectName("termButton");
         termButton->setGeometry(QRect(100, 410, 131, 121));
         termButton->setFont(font);
-        termButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        termButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         tutorButton = new QPushButton(centralwidget);
         tutorButton->setObjectName("tutorButton");
         tutorButton->setGeometry(QRect(600, 410, 131, 121));
         tutorButton->setFont(font1);
-        tutorButton->setStyleSheet(QString::fromUtf8("background-color: #333333; \n"
-"color: white;               \n"
-"border-radius: 15px;       \n"
-"padding: 10px 20px;"));
+        tutorButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
