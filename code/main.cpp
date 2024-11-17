@@ -1,11 +1,11 @@
-#include "userswindow.h"
+#include "wltdialog.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    UsersWindow w;
+    WLTDialog w;
     w.show();
     return a.exec();
 }
