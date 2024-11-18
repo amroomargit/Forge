@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     addnewworkoutdialog.cpp \
     calculator.cpp \
+    cardiotemplate.cpp \
     main.cpp \
     mainwindow.cpp \
     newuser.cpp \
@@ -23,6 +24,7 @@ SOURCES += \
 HEADERS += \
     addnewworkoutdialog.h \
     calculator.h \
+    cardiotemplate.h \
     mainwindow.h \
     newuser.h \
     returninguser.h \
@@ -34,6 +36,7 @@ HEADERS += \
 FORMS += \
     addnewworkoutdialog.ui \
     calculator.ui \
+    cardiotemplate.ui \
     mainwindow.ui \
     newuser.ui \
     returninguser.ui \

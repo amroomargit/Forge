@@ -30,20 +30,32 @@ public:
     QWidget *centralwidget;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QLabel *label_7;
-    QLineEdit *lineEdit_5;
-    QLabel *label_2;
-    QLineEdit *lineEdit_3;
-    QLabel *label_3;
-    QLabel *label_6;
+    QLabel *bmiLabel;
+    QLineEdit *ageBox;
+    QLabel *ageLabel;
+    QLineEdit *weightBox;
+    QLabel *heightLabel;
+    QLabel *genderLabel;
+    QPushButton *calculateButton;
+    QComboBox *genderDropdown;
     QPushButton *backButton;
-    QComboBox *comboBox;
-    QPushButton *backButton_2;
-    QLineEdit *lineEdit_6;
-    QComboBox *comboBox_2;
-    QLabel *label_4;
-    QLabel *label;
-    QLabel *label_5;
+    QLineEdit *heightBox;
+    QComboBox *activityDropdown;
+    QLabel *weightLabel;
+    QLabel *titleLabel;
+    QLabel *activitylevelLabel;
+    QLabel *calculationBMILabel;
+    QLabel *weightBMLabel;
+    QLabel *calorieGoalLabel;
+    QLabel *maintainWLabel;
+    QLabel *maintainWResultLabel;
+    QLabel *mildWLLabel;
+    QLabel *mildWLResultLabel;
+    QLabel *weightLossLabel;
+    QLabel *weightLossResultLabel;
+    QLabel *extremeWLLabel;
+    QLabel *extremeWLResultLabel;
+    QComboBox *weightDropdown;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -59,43 +71,100 @@ public:
         centralwidget->setObjectName("centralwidget");
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(0, 10, 1201, 661));
-        scrollArea->setWidgetResizable(true);
+        scrollArea->setGeometry(QRect(-10, 10, 1181, 641));
+        scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:vertical {\n"
+"    background-color: #656565;\n"
+"    width: 15px; \n"
+"    margin: 10px 0; \n"
+"    border-radius: 15px; \n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"    background-color: black;\n"
+"    border-radius: 15px; \n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"    background: none; \n"
+"}\n"
+""));
+        scrollArea->setFrameShape(QFrame::Shape::NoFrame);
+        scrollArea->setFrameShadow(QFrame::Shadow::Plain);
+        scrollArea->setWidgetResizable(false);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1199, 659));
-        label_7 = new QLabel(scrollAreaWidgetContents);
-        label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(50, 410, 361, 61));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1162, 800));
+        bmiLabel = new QLabel(scrollAreaWidgetContents);
+        bmiLabel->setObjectName("bmiLabel");
+        bmiLabel->setGeometry(QRect(50, 410, 341, 61));
         QFont font;
         font.setPointSize(20);
-        label_7->setFont(font);
-        lineEdit_5 = new QLineEdit(scrollAreaWidgetContents);
-        lineEdit_5->setObjectName("lineEdit_5");
-        lineEdit_5->setGeometry(QRect(140, 210, 51, 28));
-        label_2 = new QLabel(scrollAreaWidgetContents);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(80, 200, 51, 41));
+        bmiLabel->setFont(font);
+        ageBox = new QLineEdit(scrollAreaWidgetContents);
+        ageBox->setObjectName("ageBox");
+        ageBox->setGeometry(QRect(140, 208, 71, 31));
+        ageBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 5px 10px;"));
+        ageLabel = new QLabel(scrollAreaWidgetContents);
+        ageLabel->setObjectName("ageLabel");
+        ageLabel->setGeometry(QRect(80, 200, 51, 41));
         QFont font1;
         font1.setPointSize(15);
-        label_2->setFont(font1);
-        lineEdit_3 = new QLineEdit(scrollAreaWidgetContents);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(600, 210, 51, 28));
-        label_3 = new QLabel(scrollAreaWidgetContents);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(280, 200, 81, 41));
-        label_3->setFont(font1);
-        label_6 = new QLabel(scrollAreaWidgetContents);
-        label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(80, 290, 91, 41));
-        label_6->setFont(font1);
-        backButton = new QPushButton(scrollAreaWidgetContents);
-        backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(860, 230, 121, 71));
+        ageLabel->setFont(font1);
+        weightBox = new QLineEdit(scrollAreaWidgetContents);
+        weightBox->setObjectName("weightBox");
+        weightBox->setGeometry(QRect(600, 208, 71, 31));
+        weightBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 5px 10px;"));
+        heightLabel = new QLabel(scrollAreaWidgetContents);
+        heightLabel->setObjectName("heightLabel");
+        heightLabel->setGeometry(QRect(280, 200, 81, 41));
+        heightLabel->setFont(font1);
+        genderLabel = new QLabel(scrollAreaWidgetContents);
+        genderLabel->setObjectName("genderLabel");
+        genderLabel->setGeometry(QRect(80, 290, 91, 41));
+        genderLabel->setFont(font1);
+        calculateButton = new QPushButton(scrollAreaWidgetContents);
+        calculateButton->setObjectName("calculateButton");
+        calculateButton->setGeometry(QRect(860, 230, 121, 71));
         QFont font2;
         font2.setPointSize(10);
-        backButton->setFont(font2);
+        calculateButton->setFont(font2);
+        calculateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
+        genderDropdown = new QComboBox(scrollAreaWidgetContents);
+        genderDropdown->addItem(QString());
+        genderDropdown->addItem(QString());
+        genderDropdown->setObjectName("genderDropdown");
+        genderDropdown->setGeometry(QRect(180, 297, 91, 31));
+        genderDropdown->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 5px 10px;"));
+        backButton = new QPushButton(scrollAreaWidgetContents);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(1080, 30, 71, 41));
+        QFont font3;
+        font3.setPointSize(9);
+        backButton->setFont(font3);
         backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -107,54 +176,95 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
-        comboBox = new QComboBox(scrollAreaWidgetContents);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(180, 300, 82, 28));
-        backButton_2 = new QPushButton(scrollAreaWidgetContents);
-        backButton_2->setObjectName("backButton_2");
-        backButton_2->setGeometry(QRect(1090, 30, 71, 41));
-        QFont font3;
-        font3.setPointSize(9);
-        backButton_2->setFont(font3);
-        backButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: #333333;\n"
+        heightBox = new QLineEdit(scrollAreaWidgetContents);
+        heightBox->setObjectName("heightBox");
+        heightBox->setGeometry(QRect(370, 208, 71, 31));
+        heightBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
-"padding: 10px 20px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"     background-color: #bababa;\n"
-"color: black;\n"
-"}"));
-        lineEdit_6 = new QLineEdit(scrollAreaWidgetContents);
-        lineEdit_6->setObjectName("lineEdit_6");
-        lineEdit_6->setGeometry(QRect(370, 210, 51, 28));
-        comboBox_2 = new QComboBox(scrollAreaWidgetContents);
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->setObjectName("comboBox_2");
-        comboBox_2->setGeometry(QRect(500, 300, 271, 28));
-        label_4 = new QLabel(scrollAreaWidgetContents);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(510, 200, 91, 41));
-        label_4->setFont(font1);
-        label = new QLabel(scrollAreaWidgetContents);
-        label->setObjectName("label");
-        label->setGeometry(QRect(60, 70, 321, 61));
+"padding: 5px 10px;"));
+        activityDropdown = new QComboBox(scrollAreaWidgetContents);
+        activityDropdown->addItem(QString());
+        activityDropdown->addItem(QString());
+        activityDropdown->addItem(QString());
+        activityDropdown->addItem(QString());
+        activityDropdown->addItem(QString());
+        activityDropdown->addItem(QString());
+        activityDropdown->setObjectName("activityDropdown");
+        activityDropdown->setGeometry(QRect(500, 297, 271, 31));
+        activityDropdown->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 5px 10px;"));
+        weightLabel = new QLabel(scrollAreaWidgetContents);
+        weightLabel->setObjectName("weightLabel");
+        weightLabel->setGeometry(QRect(510, 200, 91, 41));
+        weightLabel->setFont(font1);
+        titleLabel = new QLabel(scrollAreaWidgetContents);
+        titleLabel->setObjectName("titleLabel");
+        titleLabel->setGeometry(QRect(60, 70, 321, 61));
         QFont font4;
         font4.setPointSize(40);
-        label->setFont(font4);
-        label_5 = new QLabel(scrollAreaWidgetContents);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(340, 290, 151, 41));
-        label_5->setFont(font1);
+        titleLabel->setFont(font4);
+        activitylevelLabel = new QLabel(scrollAreaWidgetContents);
+        activitylevelLabel->setObjectName("activitylevelLabel");
+        activitylevelLabel->setGeometry(QRect(340, 290, 151, 41));
+        activitylevelLabel->setFont(font1);
+        calculationBMILabel = new QLabel(scrollAreaWidgetContents);
+        calculationBMILabel->setObjectName("calculationBMILabel");
+        calculationBMILabel->setGeometry(QRect(420, 411, 161, 61));
+        calculationBMILabel->setFont(font);
+        weightBMLabel = new QLabel(scrollAreaWidgetContents);
+        weightBMLabel->setObjectName("weightBMLabel");
+        weightBMLabel->setGeometry(QRect(640, 411, 201, 61));
+        weightBMLabel->setFont(font);
+        calorieGoalLabel = new QLabel(scrollAreaWidgetContents);
+        calorieGoalLabel->setObjectName("calorieGoalLabel");
+        calorieGoalLabel->setGeometry(QRect(50, 530, 191, 61));
+        calorieGoalLabel->setFont(font);
+        maintainWLabel = new QLabel(scrollAreaWidgetContents);
+        maintainWLabel->setObjectName("maintainWLabel");
+        maintainWLabel->setGeometry(QRect(260, 550, 141, 31));
+        QFont font5;
+        font5.setPointSize(11);
+        maintainWLabel->setFont(font5);
+        maintainWResultLabel = new QLabel(scrollAreaWidgetContents);
+        maintainWResultLabel->setObjectName("maintainWResultLabel");
+        maintainWResultLabel->setGeometry(QRect(410, 550, 181, 31));
+        maintainWResultLabel->setFont(font5);
+        mildWLLabel = new QLabel(scrollAreaWidgetContents);
+        mildWLLabel->setObjectName("mildWLLabel");
+        mildWLLabel->setGeometry(QRect(260, 590, 141, 31));
+        mildWLLabel->setFont(font5);
+        mildWLResultLabel = new QLabel(scrollAreaWidgetContents);
+        mildWLResultLabel->setObjectName("mildWLResultLabel");
+        mildWLResultLabel->setGeometry(QRect(410, 590, 181, 31));
+        mildWLResultLabel->setFont(font5);
+        weightLossLabel = new QLabel(scrollAreaWidgetContents);
+        weightLossLabel->setObjectName("weightLossLabel");
+        weightLossLabel->setGeometry(QRect(260, 630, 141, 31));
+        weightLossLabel->setFont(font5);
+        weightLossResultLabel = new QLabel(scrollAreaWidgetContents);
+        weightLossResultLabel->setObjectName("weightLossResultLabel");
+        weightLossResultLabel->setGeometry(QRect(400, 630, 181, 31));
+        weightLossResultLabel->setFont(font5);
+        extremeWLLabel = new QLabel(scrollAreaWidgetContents);
+        extremeWLLabel->setObjectName("extremeWLLabel");
+        extremeWLLabel->setGeometry(QRect(260, 670, 171, 31));
+        extremeWLLabel->setFont(font5);
+        extremeWLResultLabel = new QLabel(scrollAreaWidgetContents);
+        extremeWLResultLabel->setObjectName("extremeWLResultLabel");
+        extremeWLResultLabel->setGeometry(QRect(410, 670, 181, 31));
+        extremeWLResultLabel->setFont(font5);
+        weightDropdown = new QComboBox(scrollAreaWidgetContents);
+        weightDropdown->addItem(QString());
+        weightDropdown->addItem(QString());
+        weightDropdown->setObjectName("weightDropdown");
+        weightDropdown->setGeometry(QRect(690, 208, 61, 31));
+        weightDropdown->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 5px 10px;"));
         scrollArea->setWidget(scrollAreaWidgetContents);
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
@@ -173,28 +283,42 @@ public:
     void retranslateUi(QMainWindow *Calculator)
     {
         Calculator->setWindowTitle(QCoreApplication::translate("Calculator", "Forge", nullptr));
-        label_7->setText(QCoreApplication::translate("Calculator", "Body Mass Index (BMI):", nullptr));
-        lineEdit_5->setText(QString());
-        label_2->setText(QCoreApplication::translate("Calculator", "Age:", nullptr));
-        lineEdit_3->setText(QString());
-        label_3->setText(QCoreApplication::translate("Calculator", "Height:", nullptr));
-        label_6->setText(QCoreApplication::translate("Calculator", "Gender:", nullptr));
-        backButton->setText(QCoreApplication::translate("Calculator", "Calculate!", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("Calculator", "Male", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("Calculator", "Female", nullptr));
+        bmiLabel->setText(QCoreApplication::translate("Calculator", "Body Mass Index (BMI):", nullptr));
+        ageBox->setText(QString());
+        ageLabel->setText(QCoreApplication::translate("Calculator", "Age:", nullptr));
+        weightBox->setText(QString());
+        heightLabel->setText(QCoreApplication::translate("Calculator", "Height:", nullptr));
+        genderLabel->setText(QCoreApplication::translate("Calculator", "Gender:", nullptr));
+        calculateButton->setText(QCoreApplication::translate("Calculator", "Calculate!", nullptr));
+        genderDropdown->setItemText(0, QCoreApplication::translate("Calculator", "Male", nullptr));
+        genderDropdown->setItemText(1, QCoreApplication::translate("Calculator", "Female", nullptr));
 
-        backButton_2->setText(QCoreApplication::translate("Calculator", "Back", nullptr));
-        lineEdit_6->setText(QString());
-        comboBox_2->setItemText(0, QCoreApplication::translate("Calculator", "Little to no exercise", nullptr));
-        comboBox_2->setItemText(1, QCoreApplication::translate("Calculator", "Exercise 1-3 times per week", nullptr));
-        comboBox_2->setItemText(2, QCoreApplication::translate("Calculator", "Exercise 4-5 times per week", nullptr));
-        comboBox_2->setItemText(3, QCoreApplication::translate("Calculator", "Intense exercise 3-4 times per week", nullptr));
-        comboBox_2->setItemText(4, QCoreApplication::translate("Calculator", "Intense exercise 6-7 times per week", nullptr));
-        comboBox_2->setItemText(5, QCoreApplication::translate("Calculator", "Very intense exercise daily", nullptr));
+        backButton->setText(QCoreApplication::translate("Calculator", "Back", nullptr));
+        heightBox->setText(QString());
+        activityDropdown->setItemText(0, QCoreApplication::translate("Calculator", "Little to no exercise", nullptr));
+        activityDropdown->setItemText(1, QCoreApplication::translate("Calculator", "Exercise 1-3 times per week", nullptr));
+        activityDropdown->setItemText(2, QCoreApplication::translate("Calculator", "Exercise 4-5 times per week", nullptr));
+        activityDropdown->setItemText(3, QCoreApplication::translate("Calculator", "Intense exercise 3-4 times per week", nullptr));
+        activityDropdown->setItemText(4, QCoreApplication::translate("Calculator", "Intense exercise 6-7 times per week", nullptr));
+        activityDropdown->setItemText(5, QCoreApplication::translate("Calculator", "Very intense exercise daily", nullptr));
 
-        label_4->setText(QCoreApplication::translate("Calculator", "Weight:", nullptr));
-        label->setText(QCoreApplication::translate("Calculator", "Calculator.", nullptr));
-        label_5->setText(QCoreApplication::translate("Calculator", "Activity Level:", nullptr));
+        weightLabel->setText(QCoreApplication::translate("Calculator", "Weight:", nullptr));
+        titleLabel->setText(QCoreApplication::translate("Calculator", "Calculator.", nullptr));
+        activitylevelLabel->setText(QCoreApplication::translate("Calculator", "Activity Level:", nullptr));
+        calculationBMILabel->setText(QString());
+        weightBMLabel->setText(QString());
+        calorieGoalLabel->setText(QCoreApplication::translate("Calculator", "Calorie Goal:", nullptr));
+        maintainWLabel->setText(QCoreApplication::translate("Calculator", "Maintain weight:", nullptr));
+        maintainWResultLabel->setText(QString());
+        mildWLLabel->setText(QCoreApplication::translate("Calculator", "Mild weight loss:", nullptr));
+        mildWLResultLabel->setText(QString());
+        weightLossLabel->setText(QCoreApplication::translate("Calculator", "Weight loss:", nullptr));
+        weightLossResultLabel->setText(QString());
+        extremeWLLabel->setText(QCoreApplication::translate("Calculator", "Extreme weight loss:", nullptr));
+        extremeWLResultLabel->setText(QString());
+        weightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "kg", nullptr));
+        weightDropdown->setItemText(1, QCoreApplication::translate("Calculator", "lbs", nullptr));
+
     } // retranslateUi
 
 };

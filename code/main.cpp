@@ -1,11 +1,11 @@
-#include "wltdialog.h"
+#include "weightlifttemplate.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    WLTDialog w;
+    WeightliftTemplate w;
     w.show();
     return a.exec();
 }

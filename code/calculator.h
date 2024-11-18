@@ -15,6 +15,8 @@ public:
     explicit Calculator(QWidget *parent = nullptr);
     ~Calculator();
 
+private slots:
+
 private:
     Ui::Calculator *ui;
 };
