@@ -15,6 +15,11 @@ public:
     explicit UsersWindow(QWidget *parent = nullptr);
     ~UsersWindow();
 
+private slots:
+    void on_addUserButton_clicked();
+
+    void on_backButton_clicked();
+
 private:
     Ui::UsersWindow *ui;
 };

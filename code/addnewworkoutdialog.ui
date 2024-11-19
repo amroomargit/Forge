@@ -14,10 +14,13 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #333333;
-color: white;
-border-radius: 15px;
-padding: 10px;</string>
+   <string notr="true">QDialog {
+    background-color: #333333;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+</string>
   </property>
   <widget class="QPushButton" name="xButton">
    <property name="geometry">
@@ -113,6 +116,9 @@ padding: 10px 20px;</string>
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
    </property>
    <property name="text">
     <string>Enter new workout name:</string>

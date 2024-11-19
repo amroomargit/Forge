@@ -6,6 +6,8 @@ CardioTemplate::CardioTemplate(QWidget *parent)
     , ui(new Ui::CardioTemplate)
 {
     ui->setupUi(this);
+
+    this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
 CardioTemplate::~CardioTemplate()

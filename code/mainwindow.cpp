@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "UsersWindow.h"
+
+#include "userswindow.h"
+#include "calculator.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 
-
 }
 
 MainWindow::~MainWindow()
@@ -18,48 +19,44 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//if users button is clicked on home page
-void MainWindow::on_userButton_clicked()
-{
-    this->close();
-
-    UsersWindow* usersWindow = new UsersWindow(this);
-    usersWindow->show();
+void MainWindow::on_userButton_clicked(){
+    UsersWindow *usersWindow = new UsersWindow;
+    this->setCentralWidget(usersWindow);
 }
 
-//if terminology button is clicked on home page
+
 void MainWindow::on_termButton_clicked()
 {
 
 }
 
-//if workout goals button is clicked on home page
+
 void MainWindow::on_goalsButton_clicked()
 {
 
 }
 
-//if tips button is clicked on home page
+
 void MainWindow::on_tipsButton_clicked()
 {
 
 }
 
-//if links button is clicked on home page
+
 void MainWindow::on_linksButton_clicked()
 {
 
 }
 
-//if tutorial button is clicked on home page
+
 void MainWindow::on_tutorButton_clicked()
 {
 
 }
 
-//if calculator button is clicked on home page
-void MainWindow::on_calcButton_clicked()
-{
 
+void MainWindow::on_calcButton_clicked(){
+    Calculator *calculator = new Calculator;
+    this->setCentralWidget(calculator);
 }
 

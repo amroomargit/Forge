@@ -31,10 +31,13 @@ public:
         if (AddNewWorkoutDialog->objectName().isEmpty())
             AddNewWorkoutDialog->setObjectName("AddNewWorkoutDialog");
         AddNewWorkoutDialog->resize(400, 258);
-        AddNewWorkoutDialog->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"padding: 10px;"));
+        AddNewWorkoutDialog->setStyleSheet(QString::fromUtf8("QDialog {\n"
+"    background-color: #333333;\n"
+"    color: white;\n"
+"    border-radius: 15px;\n"
+"    padding: 10px 20px;\n"
+"}\n"
+""));
         xButton = new QPushButton(AddNewWorkoutDialog);
         xButton->setObjectName("xButton");
         xButton->setGeometry(QRect(340, 10, 51, 40));
@@ -80,6 +83,7 @@ public:
         QFont font1;
         font1.setPointSize(12);
         label->setFont(font1);
+        label->setStyleSheet(QString::fromUtf8("color:white;"));
 
         retranslateUi(AddNewWorkoutDialog);
 

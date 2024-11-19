@@ -1,5 +1,6 @@
 release/addnewworkoutdialog.o
 release/calculator.o
+release/cardiotemplate.o
 release/main.o
 release/mainwindow.o
 release/newuser.o
@@ -11,6 +12,7 @@ release/wltdialog.o
 release/qrc_resources.o
 release/moc_addnewworkoutdialog.o
 release/moc_calculator.o
+release/moc_cardiotemplate.o
 release/moc_mainwindow.o
 release/moc_newuser.o
 release/moc_returninguser.o

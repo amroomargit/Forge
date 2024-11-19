@@ -40,7 +40,6 @@ public:
     QLineEdit *weightBox;
     QLineEdit *caloricBox;
     QPushButton *backButton;
-    QPushButton *backButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -121,21 +120,6 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
-        backButton_2 = new QPushButton(centralwidget);
-        backButton_2->setObjectName("backButton_2");
-        backButton_2->setGeometry(QRect(850, 280, 83, 31));
-        backButton_2->setFont(font2);
-        backButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: #333333;\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"padding: 10px 20px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"     background-color: #bababa;\n"
-"color: black;\n"
-"}"));
         NewUser->setCentralWidget(centralwidget);
         menubar = new QMenuBar(NewUser);
         menubar->setObjectName("menubar");
@@ -161,7 +145,6 @@ public:
         weightLabel->setText(QCoreApplication::translate("NewUser", "Weight:", nullptr));
         caloricLabel->setText(QCoreApplication::translate("NewUser", "Caloric Intake:", nullptr));
         backButton->setText(QCoreApplication::translate("NewUser", "Back", nullptr));
-        backButton_2->setText(QCoreApplication::translate("NewUser", "Back", nullptr));
     } // retranslateUi
 
 };
