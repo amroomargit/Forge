@@ -22,7 +22,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_OldUser
+class Ui_ReturningUser
 {
 public:
     QWidget *centralwidget;
@@ -33,22 +33,24 @@ public:
     QLabel *deleteLabel;
     QLineEdit *deleteBox;
     QPushButton *backButton;
+    QPushButton *enterButton;
+    QPushButton *deleteButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
-    void setupUi(QMainWindow *OldUser)
+    void setupUi(QMainWindow *ReturningUser)
     {
-        if (OldUser->objectName().isEmpty())
-            OldUser->setObjectName("OldUser");
-        OldUser->resize(1203, 721);
+        if (ReturningUser->objectName().isEmpty())
+            ReturningUser->setObjectName("ReturningUser");
+        ReturningUser->resize(1203, 721);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/flame-icon.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        OldUser->setWindowIcon(icon);
-        centralwidget = new QWidget(OldUser);
+        ReturningUser->setWindowIcon(icon);
+        centralwidget = new QWidget(ReturningUser);
         centralwidget->setObjectName("centralwidget");
         titleLabel = new QLabel(centralwidget);
         titleLabel->setObjectName("titleLabel");
-        titleLabel->setGeometry(QRect(60, 70, 601, 71));
+        titleLabel->setGeometry(QRect(60, 70, 821, 71));
         QFont font;
         font.setPointSize(40);
         titleLabel->setFont(font);
@@ -75,7 +77,7 @@ public:
         deleteBox->setGeometry(QRect(290, 460, 321, 41));
         backButton = new QPushButton(centralwidget);
         backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(60, 590, 83, 31));
+        backButton->setGeometry(QRect(1080, 30, 83, 31));
         QFont font2;
         font2.setPointSize(8);
         backButton->setFont(font2);
@@ -90,35 +92,67 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
-        OldUser->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(OldUser);
+        enterButton = new QPushButton(centralwidget);
+        enterButton->setObjectName("enterButton");
+        enterButton->setGeometry(QRect(650, 207, 101, 51));
+        QFont font3;
+        font3.setPointSize(11);
+        enterButton->setFont(font3);
+        enterButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: #09f522;\n"
+"border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #09f522;\n"
+"color: white;\n"
+"}"));
+        deleteButton = new QPushButton(centralwidget);
+        deleteButton->setObjectName("deleteButton");
+        deleteButton->setGeometry(QRect(650, 456, 101, 51));
+        deleteButton->setFont(font3);
+        deleteButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: red;\n"
+"border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: red;\n"
+"color: white;\n"
+"}"));
+        ReturningUser->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(ReturningUser);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 1203, 25));
-        OldUser->setMenuBar(menubar);
-        statusbar = new QStatusBar(OldUser);
+        ReturningUser->setMenuBar(menubar);
+        statusbar = new QStatusBar(ReturningUser);
         statusbar->setObjectName("statusbar");
-        OldUser->setStatusBar(statusbar);
+        ReturningUser->setStatusBar(statusbar);
 
-        retranslateUi(OldUser);
+        retranslateUi(ReturningUser);
 
-        QMetaObject::connectSlotsByName(OldUser);
+        QMetaObject::connectSlotsByName(ReturningUser);
     } // setupUi
 
-    void retranslateUi(QMainWindow *OldUser)
+    void retranslateUi(QMainWindow *ReturningUser)
     {
-        OldUser->setWindowTitle(QCoreApplication::translate("OldUser", "Forge", nullptr));
-        titleLabel->setText(QCoreApplication::translate("OldUser", "hello", nullptr));
-        passLabel->setText(QCoreApplication::translate("OldUser", "Enter Password:", nullptr));
-        forgotLabel->setText(QCoreApplication::translate("OldUser", "Forgot your password?", nullptr));
-        deleteLabel->setText(QCoreApplication::translate("OldUser", "Delete User:", nullptr));
-        deleteBox->setPlaceholderText(QCoreApplication::translate("OldUser", "Enter Password to Proceed", nullptr));
-        backButton->setText(QCoreApplication::translate("OldUser", "Back", nullptr));
+        ReturningUser->setWindowTitle(QCoreApplication::translate("ReturningUser", "Forge", nullptr));
+        titleLabel->setText(QString());
+        passLabel->setText(QCoreApplication::translate("ReturningUser", "Enter Password:", nullptr));
+        forgotLabel->setText(QCoreApplication::translate("ReturningUser", "Forgot your password?", nullptr));
+        deleteLabel->setText(QCoreApplication::translate("ReturningUser", "Delete User:", nullptr));
+        deleteBox->setPlaceholderText(QCoreApplication::translate("ReturningUser", "Enter Password to Proceed", nullptr));
+        backButton->setText(QCoreApplication::translate("ReturningUser", "Back", nullptr));
+        enterButton->setText(QCoreApplication::translate("ReturningUser", "Enter", nullptr));
+        deleteButton->setText(QCoreApplication::translate("ReturningUser", "Delete", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class OldUser: public Ui_OldUser {};
+    class ReturningUser: public Ui_ReturningUser {};
 } // namespace Ui
 
 QT_END_NAMESPACE

@@ -47,10 +47,11 @@ public:
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
         scrollArea->setGeometry(QRect(0, 4, 1201, 661));
+        scrollArea->setFrameShape(QFrame::Shape::NoFrame);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1199, 659));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1201, 661));
         backButton = new QPushButton(scrollAreaWidgetContents);
         backButton->setObjectName("backButton");
         backButton->setGeometry(QRect(1080, 30, 83, 31));

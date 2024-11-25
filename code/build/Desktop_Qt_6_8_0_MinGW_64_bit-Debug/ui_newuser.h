@@ -98,7 +98,7 @@ public:
         nameBox = new QLineEdit(centralwidget);
         nameBox->setObjectName("nameBox");
         nameBox->setGeometry(QRect(100, 250, 231, 28));
-        nameBox->setMaxLength(20);
+        nameBox->setMaxLength(12);
         passBox = new QLineEdit(centralwidget);
         passBox->setObjectName("passBox");
         passBox->setGeometry(QRect(100, 360, 231, 28));
@@ -227,7 +227,7 @@ public:
         weightUnit->setItemText(0, QCoreApplication::translate("NewUser", "lbs", nullptr));
         weightUnit->setItemText(1, QCoreApplication::translate("NewUser", "kgs", nullptr));
 
-        charWarning->setText(QCoreApplication::translate("NewUser", "(MAX 20 CHARACTERS)", nullptr));
+        charWarning->setText(QCoreApplication::translate("NewUser", "(MAX 12 CHARACTERS)", nullptr));
         charWarning_2->setText(QCoreApplication::translate("NewUser", "(MAX 20 CHARACTERS)", nullptr));
         charWarning_3->setText(QCoreApplication::translate("NewUser", "(MAX 20 CHARACTERS)", nullptr));
         charWarning_4->setText(QCoreApplication::translate("NewUser", "(MAX 6 CHARACTERS)", nullptr));

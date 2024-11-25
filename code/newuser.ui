@@ -154,7 +154,7 @@
      </rect>
     </property>
     <property name="maxLength">
-     <number>20</number>
+     <number>12</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="passBox">
@@ -351,7 +351,7 @@ border-radius: 15px;
      </font>
     </property>
     <property name="text">
-     <string>(MAX 20 CHARACTERS)</string>
+     <string>(MAX 12 CHARACTERS)</string>
     </property>
    </widget>
    <widget class="QLabel" name="charWarning_2">

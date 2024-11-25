@@ -36,8 +36,9 @@ namespace {
 struct qt_meta_stringdata_CLASSUsersWindowENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSUsersWindowENDCLASS = QtMocHelpers::stringData(
     "UsersWindow",
-    "populateUsers",
+    "onUserButtonClicked",
     "",
+    "username",
     "on_addUserButton_clicked",
     "on_backButton_clicked"
 );
@@ -60,12 +61,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSUsersWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x08,    1 /* Private */,
-       3,    0,   33,    2, 0x08,    2 /* Private */,
-       4,    0,   34,    2, 0x08,    3 /* Private */,
+       1,    1,   32,    2, 0x08,    1 /* Private */,
+       4,    0,   35,    2, 0x08,    3 /* Private */,
+       5,    0,   36,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -81,8 +82,9 @@ Q_CONSTINIT const QMetaObject UsersWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSUsersWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<UsersWindow, std::true_type>,
-        // method 'populateUsers'
+        // method 'onUserButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'on_addUserButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_backButton_clicked'
@@ -97,13 +99,12 @@ void UsersWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<UsersWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->populateUsers(); break;
+        case 0: _t->onUserButtonClicked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->on_addUserButton_clicked(); break;
         case 2: _t->on_backButton_clicked(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *UsersWindow::metaObject() const

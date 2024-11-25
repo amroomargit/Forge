@@ -4,19 +4,30 @@
 #include <QMainWindow>
 
 namespace Ui {
-class OldUser;
+class ReturningUser;
 }
 
-class OldUser : public QMainWindow
+class ReturningUser : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit OldUser(QWidget *parent = nullptr);
-    ~OldUser();
+    explicit ReturningUser(QWidget *parent = nullptr);
+    ~ReturningUser();
+    void setUser(const QString &username); //accepts username
+
+
+private slots:
+    void on_enterButton_clicked();
+
+    void on_deleteButton_clicked(QString &username);
+
+    void on_backButton_clicked();
 
 private:
-    Ui::OldUser *ui;
+    Ui::ReturningUser *ui;
+    QString currentUser; //to store username
+    QString pass; //to store password
 };
 
 #endif // RETURNINGUSER_H
