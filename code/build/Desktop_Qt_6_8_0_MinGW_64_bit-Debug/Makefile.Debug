@@ -2379,24 +2379,7 @@ debug/addnewworkoutdialog.o: ../../addnewworkoutdialog.cpp ../../addnewworkoutdi
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_addnewworkoutdialog.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h
+		ui_addnewworkoutdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\addnewworkoutdialog.o ..\..\addnewworkoutdialog.cpp
 
 debug/calculator.o: ../../calculator.cpp ../../calculator.h \
@@ -2592,46 +2575,6 @@ debug/calculator.o: ../../calculator.cpp ../../calculator.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		ui_calculator.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QScrollArea \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		../../mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\calculator.o ..\..\calculator.cpp
 
@@ -2827,40 +2770,7 @@ debug/cardiotemplate.o: ../../cardiotemplate.cpp ../../cardiotemplate.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_cardiotemplate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QScrollArea \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		ui_cardiotemplate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cardiotemplate.o ..\..\cardiotemplate.cpp
 
 debug/main.o: ../../main.cpp ../../mainwindow.h \
@@ -3056,7 +2966,18 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/QSqlError \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qsqlerror.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp
 
 debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
@@ -3252,26 +3173,6 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		ui_mainwindow.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QAction \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenu \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		../../userswindow.h \
 		../../calculator.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
@@ -3469,43 +3370,6 @@ debug/newuser.o: ../../newuser.cpp ../../newuser.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		ui_newuser.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		../../userswindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\newuser.o ..\..\newuser.cpp
 
@@ -3701,31 +3565,7 @@ debug/returninguser.o: ../../returninguser.cpp ../../returninguser.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_returninguser.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		ui_returninguser.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\returninguser.o ..\..\returninguser.cpp
 
 debug/usermainmenu.o: ../../usermainmenu.cpp ../../usermainmenu.h \
@@ -3920,33 +3760,7 @@ debug/usermainmenu.o: ../../usermainmenu.cpp ../../usermainmenu.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_usermainmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QToolButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtoolbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		ui_usermainmenu.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\usermainmenu.o ..\..\usermainmenu.cpp
 
 debug/userswindow.o: ../../userswindow.cpp ../../userswindow.h \
@@ -4142,24 +3956,6 @@ debug/userswindow.o: ../../userswindow.cpp ../../userswindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		ui_userswindow.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		../../mainwindow.h \
 		../../newuser.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\userswindow.o ..\..\userswindow.cpp
@@ -4356,40 +4152,7 @@ debug/weightlifttemplate.o: ../../weightlifttemplate.cpp ../../weightlifttemplat
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_weightlifttemplate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QScrollArea \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		ui_weightlifttemplate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\weightlifttemplate.o ..\..\weightlifttemplate.cpp
 
 debug/wltdialog.o: ../../wltdialog.cpp ../../wltdialog.h \
@@ -4583,26 +4346,7 @@ debug/wltdialog.o: ../../wltdialog.cpp ../../wltdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_wltdialog.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QScrollArea \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		ui_wltdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\wltdialog.o ..\..\wltdialog.cpp
 
 debug/qrc_resources.o: debug/qrc_resources.cpp 
