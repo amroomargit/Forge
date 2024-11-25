@@ -161,9 +161,9 @@ public:
 "padding: 5px 10px;"));
         backButton = new QPushButton(scrollAreaWidgetContents);
         backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(1080, 30, 71, 41));
+        backButton->setGeometry(QRect(1080, 30, 71, 31));
         QFont font3;
-        font3.setPointSize(9);
+        font3.setPointSize(8);
         backButton->setFont(font3);
         backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"

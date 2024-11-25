@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -40,6 +41,9 @@ public:
     QLineEdit *weightBox;
     QLineEdit *caloricBox;
     QPushButton *backButton;
+    QPushButton *enterButton;
+    QComboBox *heightUnit;
+    QComboBox *weightUnit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -105,7 +109,7 @@ public:
         caloricBox->setGeometry(QRect(760, 470, 231, 28));
         backButton = new QPushButton(centralwidget);
         backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(70, 590, 83, 31));
+        backButton->setGeometry(QRect(1080, 30, 83, 31));
         QFont font2;
         font2.setPointSize(8);
         backButton->setFont(font2);
@@ -120,6 +124,41 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
+        enterButton = new QPushButton(centralwidget);
+        enterButton->setObjectName("enterButton");
+        enterButton->setGeometry(QRect(480, 570, 151, 51));
+        QFont font3;
+        font3.setPointSize(11);
+        enterButton->setFont(font3);
+        enterButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: #09f522;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #09f522;;\n"
+"color: white;\n"
+"}"));
+        heightUnit = new QComboBox(centralwidget);
+        heightUnit->addItem(QString());
+        heightUnit->addItem(QString());
+        heightUnit->setObjectName("heightUnit");
+        heightUnit->setGeometry(QRect(1000, 247, 61, 31));
+        heightUnit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+""));
+        weightUnit = new QComboBox(centralwidget);
+        weightUnit->addItem(QString());
+        weightUnit->addItem(QString());
+        weightUnit->setObjectName("weightUnit");
+        weightUnit->setGeometry(QRect(1000, 360, 61, 31));
+        weightUnit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+""));
         NewUser->setCentralWidget(centralwidget);
         menubar = new QMenuBar(NewUser);
         menubar->setObjectName("menubar");
@@ -145,6 +184,13 @@ public:
         weightLabel->setText(QCoreApplication::translate("NewUser", "Weight:", nullptr));
         caloricLabel->setText(QCoreApplication::translate("NewUser", "Caloric Intake:", nullptr));
         backButton->setText(QCoreApplication::translate("NewUser", "Back", nullptr));
+        enterButton->setText(QCoreApplication::translate("NewUser", "Enter", nullptr));
+        heightUnit->setItemText(0, QCoreApplication::translate("NewUser", "cm", nullptr));
+        heightUnit->setItemText(1, QCoreApplication::translate("NewUser", "ft", nullptr));
+
+        weightUnit->setItemText(0, QCoreApplication::translate("NewUser", "cm", nullptr));
+        weightUnit->setItemText(1, QCoreApplication::translate("NewUser", "ft", nullptr));
+
     } // retranslateUi
 
 };

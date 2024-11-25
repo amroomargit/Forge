@@ -19,8 +19,9 @@ NewUser::~NewUser()
 
 void NewUser::on_backButton_clicked()
 {
-    UsersWindow *usersWindow = new UsersWindow(this);
-    usersWindow->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    UsersWindow *usersWindow = new UsersWindow;
+    usersWindow->setFixedSize(this->size());
     this -> setCentralWidget(usersWindow);
+    //this->centralWidget()->update();
 }
 

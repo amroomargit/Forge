@@ -20,6 +20,8 @@ Calculator::~Calculator()
 void Calculator::on_backButton_clicked()
 {
     MainWindow *mainWindow = new MainWindow;
+    mainWindow->setFixedSize(this->size());
     this->setCentralWidget(mainWindow);
+    //this->centralWidget()->update();
 }
 

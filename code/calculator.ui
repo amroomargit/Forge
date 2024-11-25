@@ -241,12 +241,12 @@ padding: 5px 10px;</string>
         <x>1080</x>
         <y>30</y>
         <width>71</width>
-        <height>41</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>9</pointsize>
+        <pointsize>8</pointsize>
        </font>
       </property>
       <property name="styleSheet">
