@@ -44,6 +44,12 @@ public:
     QPushButton *enterButton;
     QComboBox *heightUnit;
     QComboBox *weightUnit;
+    QLabel *charWarning;
+    QLabel *charWarning_2;
+    QLabel *charWarning_3;
+    QLabel *charWarning_4;
+    QLabel *charWarning_5;
+    QLabel *charWarning_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -92,21 +98,27 @@ public:
         nameBox = new QLineEdit(centralwidget);
         nameBox->setObjectName("nameBox");
         nameBox->setGeometry(QRect(100, 250, 231, 28));
+        nameBox->setMaxLength(20);
         passBox = new QLineEdit(centralwidget);
         passBox->setObjectName("passBox");
         passBox->setGeometry(QRect(100, 360, 231, 28));
+        passBox->setMaxLength(20);
         hintBox = new QLineEdit(centralwidget);
         hintBox->setObjectName("hintBox");
         hintBox->setGeometry(QRect(100, 470, 231, 28));
+        hintBox->setMaxLength(30);
         heightBox = new QLineEdit(centralwidget);
         heightBox->setObjectName("heightBox");
         heightBox->setGeometry(QRect(760, 250, 231, 28));
+        heightBox->setMaxLength(6);
         weightBox = new QLineEdit(centralwidget);
         weightBox->setObjectName("weightBox");
         weightBox->setGeometry(QRect(760, 360, 231, 28));
+        weightBox->setMaxLength(6);
         caloricBox = new QLineEdit(centralwidget);
         caloricBox->setObjectName("caloricBox");
         caloricBox->setGeometry(QRect(760, 470, 231, 28));
+        caloricBox->setMaxLength(5);
         backButton = new QPushButton(centralwidget);
         backButton->setObjectName("backButton");
         backButton->setGeometry(QRect(1080, 30, 83, 31));
@@ -159,6 +171,30 @@ public:
 "color: white;\n"
 "border-radius: 15px;\n"
 ""));
+        charWarning = new QLabel(centralwidget);
+        charWarning->setObjectName("charWarning");
+        charWarning->setGeometry(QRect(180, 212, 141, 31));
+        charWarning->setFont(font2);
+        charWarning_2 = new QLabel(centralwidget);
+        charWarning_2->setObjectName("charWarning_2");
+        charWarning_2->setGeometry(QRect(220, 322, 141, 31));
+        charWarning_2->setFont(font2);
+        charWarning_3 = new QLabel(centralwidget);
+        charWarning_3->setObjectName("charWarning_3");
+        charWarning_3->setGeometry(QRect(100, 500, 141, 31));
+        charWarning_3->setFont(font2);
+        charWarning_4 = new QLabel(centralwidget);
+        charWarning_4->setObjectName("charWarning_4");
+        charWarning_4->setGeometry(QRect(850, 216, 141, 31));
+        charWarning_4->setFont(font2);
+        charWarning_5 = new QLabel(centralwidget);
+        charWarning_5->setObjectName("charWarning_5");
+        charWarning_5->setGeometry(QRect(850, 326, 141, 31));
+        charWarning_5->setFont(font2);
+        charWarning_6 = new QLabel(centralwidget);
+        charWarning_6->setObjectName("charWarning_6");
+        charWarning_6->setGeometry(QRect(760, 500, 141, 31));
+        charWarning_6->setFont(font2);
         NewUser->setCentralWidget(centralwidget);
         menubar = new QMenuBar(NewUser);
         menubar->setObjectName("menubar");
@@ -188,9 +224,15 @@ public:
         heightUnit->setItemText(0, QCoreApplication::translate("NewUser", "cm", nullptr));
         heightUnit->setItemText(1, QCoreApplication::translate("NewUser", "ft", nullptr));
 
-        weightUnit->setItemText(0, QCoreApplication::translate("NewUser", "cm", nullptr));
-        weightUnit->setItemText(1, QCoreApplication::translate("NewUser", "ft", nullptr));
+        weightUnit->setItemText(0, QCoreApplication::translate("NewUser", "lbs", nullptr));
+        weightUnit->setItemText(1, QCoreApplication::translate("NewUser", "kgs", nullptr));
 
+        charWarning->setText(QCoreApplication::translate("NewUser", "(MAX 20 CHARACTERS)", nullptr));
+        charWarning_2->setText(QCoreApplication::translate("NewUser", "(MAX 20 CHARACTERS)", nullptr));
+        charWarning_3->setText(QCoreApplication::translate("NewUser", "(MAX 20 CHARACTERS)", nullptr));
+        charWarning_4->setText(QCoreApplication::translate("NewUser", "(MAX 6 CHARACTERS)", nullptr));
+        charWarning_5->setText(QCoreApplication::translate("NewUser", "(MAX 6 CHARACTERS)", nullptr));
+        charWarning_6->setText(QCoreApplication::translate("NewUser", "(MAX 5 CHARACTERS)", nullptr));
     } // retranslateUi
 
 };

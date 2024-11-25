@@ -16,6 +16,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -25,9 +26,11 @@ class Ui_UsersWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *titleLabel;
-    QPushButton *addUserButton;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
     QPushButton *backButton;
+    QPushButton *addUserButton;
+    QLabel *titleLabel;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -41,13 +44,31 @@ public:
         UsersWindow->setWindowIcon(icon);
         centralwidget = new QWidget(UsersWindow);
         centralwidget->setObjectName("centralwidget");
-        titleLabel = new QLabel(centralwidget);
-        titleLabel->setObjectName("titleLabel");
-        titleLabel->setGeometry(QRect(60, 70, 181, 71));
+        scrollArea = new QScrollArea(centralwidget);
+        scrollArea->setObjectName("scrollArea");
+        scrollArea->setGeometry(QRect(0, 4, 1201, 661));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1199, 659));
+        backButton = new QPushButton(scrollAreaWidgetContents);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(1080, 30, 83, 31));
         QFont font;
-        font.setPointSize(40);
-        titleLabel->setFont(font);
-        addUserButton = new QPushButton(centralwidget);
+        font.setPointSize(8);
+        backButton->setFont(font);
+        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
+        addUserButton = new QPushButton(scrollAreaWidgetContents);
         addUserButton->setObjectName("addUserButton");
         addUserButton->setGeometry(QRect(100, 210, 131, 121));
         QFont font1;
@@ -66,23 +87,13 @@ public:
 "}\n"
 "\n"
 ""));
-        backButton = new QPushButton(centralwidget);
-        backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(60, 590, 83, 31));
+        titleLabel = new QLabel(scrollAreaWidgetContents);
+        titleLabel->setObjectName("titleLabel");
+        titleLabel->setGeometry(QRect(60, 70, 181, 71));
         QFont font2;
-        font2.setPointSize(8);
-        backButton->setFont(font2);
-        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: #333333;\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"padding: 10px 20px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"     background-color: #bababa;\n"
-"color: black;\n"
-"}"));
+        font2.setPointSize(40);
+        titleLabel->setFont(font2);
+        scrollArea->setWidget(scrollAreaWidgetContents);
         UsersWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(UsersWindow);
         menubar->setObjectName("menubar");
@@ -100,9 +111,9 @@ public:
     void retranslateUi(QMainWindow *UsersWindow)
     {
         UsersWindow->setWindowTitle(QCoreApplication::translate("UsersWindow", "Forge", nullptr));
-        titleLabel->setText(QCoreApplication::translate("UsersWindow", "Users.", nullptr));
-        addUserButton->setText(QCoreApplication::translate("UsersWindow", "+", nullptr));
         backButton->setText(QCoreApplication::translate("UsersWindow", "Back", nullptr));
+        addUserButton->setText(QCoreApplication::translate("UsersWindow", "+", nullptr));
+        titleLabel->setText(QCoreApplication::translate("UsersWindow", "Users.", nullptr));
     } // retranslateUi
 
 };

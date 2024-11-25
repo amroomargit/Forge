@@ -16,6 +16,8 @@ public:
     ~UsersWindow();
 
 private slots:
+    void populateUsers();
+
     void on_addUserButton_clicked();
 
     void on_backButton_clicked();

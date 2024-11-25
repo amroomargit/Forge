@@ -23,7 +23,6 @@ void MainWindow::on_userButton_clicked(){
     UsersWindow *usersWindow = new UsersWindow;
     usersWindow->setFixedSize(this->size());
     this->setCentralWidget(usersWindow);
-    //this->centralWidget()->update();
 }
 
 
@@ -61,6 +60,5 @@ void MainWindow::on_calcButton_clicked(){
     Calculator *calculator = new Calculator;
     calculator->setFixedSize(this->size());
     this->setCentralWidget(calculator);
-    //this->centralWidget()->update();
 }
 

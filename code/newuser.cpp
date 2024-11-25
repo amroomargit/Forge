@@ -47,7 +47,8 @@ void NewUser::on_enterButton_clicked()
 
     // make sure no null values
     if(name.isEmpty() || password.isEmpty() || hint.isEmpty() || height <= 0 || weight <= 0 || caloricIntake <= 0){
-        QMessageBox::warning(this, "Invalid Input", "Can only proceed if all fields are filled with appropriate data type");
+        QMessageBox::warning(this, "Invalid Input", "Can only proceed if all fields are filled with appropriate data type.");
+        return;
     }
 
     //insert into database
