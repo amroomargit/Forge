@@ -69,6 +69,6 @@ void NewUser::on_enterButton_clicked()
         return;
     }
 
-    QMessageBox::information(this, "Success", "User saved successfully!");
+    QMessageBox::information(this, "Success", "User saved successfully!\nYou can go back now.");
 }
 

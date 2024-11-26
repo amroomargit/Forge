@@ -64,22 +64,6 @@
      <string>Enter Password:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="forgotLabel">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>270</y>
-      <width>151</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: #0000EE;</string>
-    </property>
-    <property name="text">
-     <string>Forgot your password?</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="deleteLabel">
     <property name="geometry">
      <rect>
@@ -203,6 +187,36 @@ color: white;
     </property>
     <property name="text">
      <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hintButton">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>290</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #333333;
+color: #254ff7;
+border-radius: 15px;
+}
+
+QPushButton:hover {
+     background-color: #254ff7;
+color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Forgot your password?</string>
     </property>
    </widget>
   </widget>

@@ -15,6 +15,9 @@ public:
     explicit WeightliftTemplate(QWidget *parent = nullptr);
     ~WeightliftTemplate();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::WeightliftTemplate *ui;
 };

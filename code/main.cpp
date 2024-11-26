@@ -18,7 +18,7 @@ void initializeDatabase(){
         return;
     }
 
-    // Create "users" table if non-existent
+    // Create users table if non-existent
     QSqlQuery query;
     query.exec("CREATE TABLE IF NOT EXISTS users ("
                "id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -32,6 +32,25 @@ void initializeDatabase(){
                "weight_unit TEXT NOT NULL"
                ");");
 
+    //create templates table
+    query.exec("CREATE TABLE IF NOT EXISTS templates ("
+                    "template_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    "user_id INTEGER NOT NULL,"
+                    "template_name TEXT NOT NULL,"
+                    "creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,"
+                    "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+                    ");");
+
+    //create template_exercises table
+    query.exec("CREATE TABLE IF NOT EXISTS template_exercises ("
+               "exercise_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "template_id INTEGER NOT NULL,"
+               "exercise_name TEXT NOT NULL,"
+               "sets INTEGER DEFAULT 0,"
+               "reps INTEGER DEFAULT 0,"
+               "weight REAL DEFAULT 0.0,"
+               "FOREIGN KEY (template_id) REFERENCES templates(template_id) ON DELETE CASCADE"
+               ");");
 }
 
 

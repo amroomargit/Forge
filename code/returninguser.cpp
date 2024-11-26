@@ -34,7 +34,7 @@ void ReturningUser::setUser(const QString &username){
 
     if(query.exec() && query.next()){
         pass = query.value(0).toString();
-        setUserSuccess = true;
+        setUserSuccess = true; //setUser was successful
     }
     else{
         QMessageBox::critical(this, "Error", "Couldn't find user in database");
@@ -47,6 +47,9 @@ void ReturningUser::on_enterButton_clicked(){
         if(passFromUser == pass){
             UserMainMenu *nextWindow = new UserMainMenu;
             nextWindow ->setFixedSize(this->size());
+
+            nextWindow->setUsername(currentUser); //pass username over
+
             this->setCentralWidget(nextWindow);
         }
         else{
@@ -59,8 +62,8 @@ void ReturningUser::on_enterButton_clicked(){
          * the program will just not create that button when we go back to the window, no need to manually change anything
         */
 void ReturningUser::on_deleteButton_clicked(){
-    qDebug() << "Delete button clicked.";
 
+    //take input from line edit filled out by user
     QString passFromUser = ui->deleteBox->text();
 
     //check if password was empty
@@ -92,7 +95,7 @@ void ReturningUser::on_deleteButton_clicked(){
 
     }
     else{
-        QMessageBox::warning(this,"Error","Wrong Password");
+        QMessageBox::warning(this,"Error","Wrong password or user not set");
     }
 
 }
@@ -102,5 +105,31 @@ void ReturningUser::on_backButton_clicked(){
     UsersWindow *usersWindow = new UsersWindow;
     usersWindow->setFixedSize(this->size());
     this->setCentralWidget(usersWindow);
+}
+
+
+void ReturningUser::on_hintButton_clicked()
+{
+    if(setUserSuccess == true){
+        QString hintHolder;
+
+        //Retrieve hint from database
+        QSqlQuery query;
+        query.prepare("SELECT hint FROM users WHERE name = :name");
+        query.bindValue(":name", currentUser);
+
+        if(query.exec()&& query.next()){
+            hintHolder = query.value(0).toString();
+            QMessageBox::information(this, "Hint", "Your hint is: "+hintHolder);
+        }
+        else{
+            QMessageBox::critical(this,"Error","Unable to retieve data from database");
+        }
+
+    }
+    else{
+        QMessageBox::critical(this,"Error","Wrong password or user not set");
+    }
+
 }
 

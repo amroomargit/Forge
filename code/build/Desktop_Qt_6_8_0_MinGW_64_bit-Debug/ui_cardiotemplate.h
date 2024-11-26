@@ -28,18 +28,18 @@ public:
     QWidget *centralwidget;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QWidget *widget;
-    QWidget *widget_5;
-    QLabel *label_2;
-    QLabel *label_5;
-    QLabel *label_6;
-    QWidget *widget_6;
-    QPushButton *pushButton_2;
-    QLabel *label_12;
-    QLabel *label_13;
-    QLabel *label_14;
-    QPushButton *backButton_4;
-    QComboBox *comboBox_2;
+    QWidget *workoutWidget;
+    QWidget *W5;
+    QLabel *W6;
+    QLabel *W3;
+    QLabel *W4;
+    QWidget *W7;
+    QPushButton *W11;
+    QLabel *W8;
+    QLabel *W9;
+    QLabel *W10;
+    QPushButton *W1;
+    QComboBox *W2;
     QLabel *titleLabel;
     QPushButton *backButton;
     QPushButton *backButton_2;
@@ -81,49 +81,49 @@ public:
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 981, 391));
-        widget = new QWidget(scrollAreaWidgetContents);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(20, 20, 561, 211));
-        widget->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        workoutWidget = new QWidget(scrollAreaWidgetContents);
+        workoutWidget->setObjectName("workoutWidget");
+        workoutWidget->setGeometry(QRect(20, 20, 561, 211));
+        workoutWidget->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        widget_5 = new QWidget(widget);
-        widget_5->setObjectName("widget_5");
-        widget_5->setGeometry(QRect(20, 10, 521, 41));
-        widget_5->setStyleSheet(QString::fromUtf8("background-color: #bababa;\n"
+        W5 = new QWidget(workoutWidget);
+        W5->setObjectName("W5");
+        W5->setGeometry(QRect(20, 10, 521, 41));
+        W5->setStyleSheet(QString::fromUtf8("background-color: #bababa;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        label_2 = new QLabel(widget_5);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(0, 0, 511, 41));
+        W6 = new QLabel(W5);
+        W6->setObjectName("W6");
+        W6->setGeometry(QRect(0, 0, 511, 41));
         QFont font;
         font.setPointSize(12);
         font.setBold(true);
-        label_2->setFont(font);
-        label_2->setStyleSheet(QString::fromUtf8("color:white"));
-        label_5 = new QLabel(widget);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(20, 60, 71, 41));
+        W6->setFont(font);
+        W6->setStyleSheet(QString::fromUtf8("color:white"));
+        W3 = new QLabel(workoutWidget);
+        W3->setObjectName("W3");
+        W3->setGeometry(QRect(20, 60, 71, 41));
         QFont font1;
         font1.setBold(true);
-        label_5->setFont(font1);
-        label_5->setStyleSheet(QString::fromUtf8("color:white"));
-        label_6 = new QLabel(widget);
-        label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(340, 60, 81, 41));
-        label_6->setFont(font1);
-        label_6->setStyleSheet(QString::fromUtf8("color:white"));
-        widget_6 = new QWidget(widget);
-        widget_6->setObjectName("widget_6");
-        widget_6->setGeometry(QRect(20, 100, 491, 41));
-        widget_6->setStyleSheet(QString::fromUtf8("background-color: #bababa;\n"
+        W3->setFont(font1);
+        W3->setStyleSheet(QString::fromUtf8("color:white"));
+        W4 = new QLabel(workoutWidget);
+        W4->setObjectName("W4");
+        W4->setGeometry(QRect(340, 60, 81, 41));
+        W4->setFont(font1);
+        W4->setStyleSheet(QString::fromUtf8("color:white"));
+        W7 = new QWidget(workoutWidget);
+        W7->setObjectName("W7");
+        W7->setGeometry(QRect(20, 100, 491, 41));
+        W7->setStyleSheet(QString::fromUtf8("background-color: #bababa;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        pushButton_2 = new QPushButton(widget_6);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(430, 4, 51, 31));
-        pushButton_2->setToolTipDuration(-7);
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        W11 = new QPushButton(W7);
+        W11->setObjectName("W11");
+        W11->setGeometry(QRect(430, 4, 51, 31));
+        W11->setToolTipDuration(-7);
+        W11->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #bababa;\n"
 "    color: #7e7e7e;\n"
 "    border-radius: 15px;\n"
@@ -139,29 +139,29 @@ public:
 "    color: white;\n"
 "}\n"
 ""));
-        pushButton_2->setCheckable(true);
-        label_12 = new QLabel(widget_6);
-        label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(6, -1, 51, 41));
-        label_12->setFont(font1);
-        label_12->setStyleSheet(QString::fromUtf8("color:white"));
-        label_13 = new QLabel(widget_6);
-        label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(140, 0, 81, 41));
-        label_13->setFont(font1);
-        label_13->setStyleSheet(QString::fromUtf8("color:white"));
-        label_14 = new QLabel(widget_6);
-        label_14->setObjectName("label_14");
-        label_14->setGeometry(QRect(330, 0, 61, 41));
-        label_14->setFont(font1);
-        label_14->setStyleSheet(QString::fromUtf8("color:white"));
-        backButton_4 = new QPushButton(widget);
-        backButton_4->setObjectName("backButton_4");
-        backButton_4->setGeometry(QRect(20, 160, 121, 41));
+        W11->setCheckable(true);
+        W8 = new QLabel(W7);
+        W8->setObjectName("W8");
+        W8->setGeometry(QRect(6, -1, 51, 41));
+        W8->setFont(font1);
+        W8->setStyleSheet(QString::fromUtf8("color:white"));
+        W9 = new QLabel(W7);
+        W9->setObjectName("W9");
+        W9->setGeometry(QRect(140, 0, 81, 41));
+        W9->setFont(font1);
+        W9->setStyleSheet(QString::fromUtf8("color:white"));
+        W10 = new QLabel(W7);
+        W10->setObjectName("W10");
+        W10->setGeometry(QRect(330, 0, 61, 41));
+        W10->setFont(font1);
+        W10->setStyleSheet(QString::fromUtf8("color:white"));
+        W1 = new QPushButton(workoutWidget);
+        W1->setObjectName("W1");
+        W1->setGeometry(QRect(20, 160, 121, 41));
         QFont font2;
         font2.setPointSize(9);
-        backButton_4->setFont(font2);
-        backButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        W1->setFont(font2);
+        W1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #bababab;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -171,12 +171,12 @@ public:
 "QPushButton:hover {\n"
 "     border: 1px solid white \n"
 "}"));
-        comboBox_2 = new QComboBox(widget);
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->setObjectName("comboBox_2");
-        comboBox_2->setGeometry(QRect(170, 56, 81, 41));
-        comboBox_2->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        W2 = new QComboBox(workoutWidget);
+        W2->addItem(QString());
+        W2->addItem(QString());
+        W2->setObjectName("W2");
+        W2->setGeometry(QRect(170, 56, 81, 41));
+        W2->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;"));
         scrollArea->setWidget(scrollAreaWidgetContents);
@@ -235,16 +235,16 @@ public:
     void retranslateUi(QMainWindow *CardioTemplate)
     {
         CardioTemplate->setWindowTitle(QCoreApplication::translate("CardioTemplate", "MainWindow", nullptr));
-        label_2->setText(QCoreApplication::translate("CardioTemplate", "000000000000000000000000000000000000001", nullptr));
-        label_5->setText(QCoreApplication::translate("CardioTemplate", "Set", nullptr));
-        label_6->setText(QCoreApplication::translate("CardioTemplate", "Reps", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("CardioTemplate", "\342\234\223", nullptr));
-        label_12->setText(QCoreApplication::translate("CardioTemplate", "1", nullptr));
-        label_13->setText(QCoreApplication::translate("CardioTemplate", "1001", nullptr));
-        label_14->setText(QCoreApplication::translate("CardioTemplate", "8", nullptr));
-        backButton_4->setText(QCoreApplication::translate("CardioTemplate", "+ Add Set", nullptr));
-        comboBox_2->setItemText(0, QCoreApplication::translate("CardioTemplate", "lbs", nullptr));
-        comboBox_2->setItemText(1, QCoreApplication::translate("CardioTemplate", "kgs", nullptr));
+        W6->setText(QCoreApplication::translate("CardioTemplate", "000000000000000000000000000000000000001", nullptr));
+        W3->setText(QCoreApplication::translate("CardioTemplate", "Set", nullptr));
+        W4->setText(QCoreApplication::translate("CardioTemplate", "Reps", nullptr));
+        W11->setText(QCoreApplication::translate("CardioTemplate", "\342\234\223", nullptr));
+        W8->setText(QCoreApplication::translate("CardioTemplate", "1", nullptr));
+        W9->setText(QCoreApplication::translate("CardioTemplate", "1001", nullptr));
+        W10->setText(QCoreApplication::translate("CardioTemplate", "8", nullptr));
+        W1->setText(QCoreApplication::translate("CardioTemplate", "+ Add Set", nullptr));
+        W2->setItemText(0, QCoreApplication::translate("CardioTemplate", "lbs", nullptr));
+        W2->setItemText(1, QCoreApplication::translate("CardioTemplate", "kgs", nullptr));
 
         titleLabel->setText(QCoreApplication::translate("CardioTemplate", "New Cardio Template.", nullptr));
         backButton->setText(QCoreApplication::translate("CardioTemplate", "Save", nullptr));

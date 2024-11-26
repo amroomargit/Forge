@@ -24,6 +24,8 @@ private slots:
 
     void on_backButton_clicked();
 
+    void on_hintButton_clicked();
+
 private:
     Ui::ReturningUser *ui;
     QString currentUser; //to store username

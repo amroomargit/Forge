@@ -96,7 +96,6 @@ UsersWindow::UsersWindow(QWidget *parent)
 
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 
-    //scrollAreaWidgetContents
 }
 
 UsersWindow::~UsersWindow()

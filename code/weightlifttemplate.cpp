@@ -14,3 +14,9 @@ WeightliftTemplate::~WeightliftTemplate()
 {
     delete ui;
 }
+
+void WeightliftTemplate::on_backButton_clicked()
+{
+    //go back to caller
+}
+

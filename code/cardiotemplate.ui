@@ -60,7 +60,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <height>391</height>
       </rect>
      </property>
-     <widget class="QWidget" name="widget" native="true">
+     <widget class="QWidget" name="workoutWidget" native="true">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -74,7 +74,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
 border-radius: 15px;
 padding: 10px 20px;</string>
       </property>
-      <widget class="QWidget" name="widget_5" native="true">
+      <widget class="QWidget" name="W5" native="true">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -88,7 +88,7 @@ padding: 10px 20px;</string>
 border-radius: 15px;
 padding: 10px 20px;</string>
        </property>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="W6">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -111,7 +111,7 @@ padding: 10px 20px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="W3">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -132,7 +132,7 @@ padding: 10px 20px;</string>
         <string>Set</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="W4">
        <property name="geometry">
         <rect>
          <x>340</x>
@@ -153,7 +153,7 @@ padding: 10px 20px;</string>
         <string>Reps</string>
        </property>
       </widget>
-      <widget class="QWidget" name="widget_6" native="true">
+      <widget class="QWidget" name="W7" native="true">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -167,7 +167,7 @@ padding: 10px 20px;</string>
 border-radius: 15px;
 padding: 10px 20px;</string>
        </property>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="W11">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -204,7 +204,7 @@ QPushButton:pressed {
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_12">
+       <widget class="QLabel" name="W8">
         <property name="geometry">
          <rect>
           <x>6</x>
@@ -225,7 +225,7 @@ QPushButton:pressed {
          <string>1</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_13">
+       <widget class="QLabel" name="W9">
         <property name="geometry">
          <rect>
           <x>140</x>
@@ -246,7 +246,7 @@ QPushButton:pressed {
          <string>1001</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_14">
+       <widget class="QLabel" name="W10">
         <property name="geometry">
          <rect>
           <x>330</x>
@@ -268,7 +268,7 @@ QPushButton:pressed {
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="backButton_4">
+      <widget class="QPushButton" name="W1">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -298,7 +298,7 @@ QPushButton:hover {
         <string>+ Add Set</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox_2">
+      <widget class="QComboBox" name="W2">
        <property name="geometry">
         <rect>
          <x>170</x>

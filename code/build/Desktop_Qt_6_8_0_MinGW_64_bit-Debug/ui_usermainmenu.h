@@ -12,13 +12,14 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,8 +31,8 @@ public:
     QLabel *titleLabel;
     QLabel *templatesLabel;
     QPushButton *logoutButton;
-    QPushButton *newWLTLabel;
-    QPushButton *newCLTLabel;
+    QPushButton *newWLTButton;
+    QPushButton *newCLTButton;
     QLabel *currMeasLabel;
     QLabel *heightLabel;
     QLineEdit *heightBox;
@@ -49,9 +50,10 @@ public:
     QPushButton *calculatorButton;
     QPushButton *tutorialButton;
     QPushButton *linksButton;
-    QLabel *warningLabel;
-    QToolButton *revealTxtButton;
-    QLabel *hiddenLabel;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContentsMM;
+    QComboBox *heightUnit;
+    QComboBox *weightUnit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -67,7 +69,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         titleLabel = new QLabel(centralwidget);
         titleLabel->setObjectName("titleLabel");
-        titleLabel->setGeometry(QRect(10, 20, 901, 71));
+        titleLabel->setGeometry(QRect(20, 30, 901, 71));
         QFont font;
         font.setPointSize(40);
         titleLabel->setFont(font);
@@ -94,13 +96,13 @@ public:
 "     background-color: red;\n"
 "color: white;\n"
 "}"));
-        newWLTLabel = new QPushButton(centralwidget);
-        newWLTLabel->setObjectName("newWLTLabel");
-        newWLTLabel->setGeometry(QRect(60, 170, 231, 51));
+        newWLTButton = new QPushButton(centralwidget);
+        newWLTButton->setObjectName("newWLTButton");
+        newWLTButton->setGeometry(QRect(60, 170, 231, 51));
         QFont font3;
         font3.setPointSize(8);
-        newWLTLabel->setFont(font3);
-        newWLTLabel->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        newWLTButton->setFont(font3);
+        newWLTButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: rgba(255, 0, 0, 200);\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -112,11 +114,11 @@ public:
 "color: white;\n"
 "}\n"
 ""));
-        newCLTLabel = new QPushButton(centralwidget);
-        newCLTLabel->setObjectName("newCLTLabel");
-        newCLTLabel->setGeometry(QRect(60, 230, 231, 51));
-        newCLTLabel->setFont(font3);
-        newCLTLabel->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        newCLTButton = new QPushButton(centralwidget);
+        newCLTButton->setObjectName("newCLTButton");
+        newCLTButton->setGeometry(QRect(60, 230, 231, 51));
+        newCLTButton->setFont(font3);
+        newCLTButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: rgba(221, 188, 0, 0.8);\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -134,16 +136,17 @@ public:
         currMeasLabel->setFont(font1);
         heightLabel = new QLabel(centralwidget);
         heightLabel->setObjectName("heightLabel");
-        heightLabel->setGeometry(QRect(60, 370, 231, 41));
+        heightLabel->setGeometry(QRect(60, 370, 81, 41));
         QFont font4;
-        font4.setPointSize(15);
+        font4.setPointSize(14);
         heightLabel->setFont(font4);
         heightBox = new QLineEdit(centralwidget);
         heightBox->setObjectName("heightBox");
-        heightBox->setGeometry(QRect(60, 410, 141, 28));
+        heightBox->setGeometry(QRect(60, 410, 101, 28));
+        heightBox->setMaxLength(3);
         updateButton = new QPushButton(centralwidget);
         updateButton->setObjectName("updateButton");
-        updateButton->setGeometry(QRect(210, 403, 91, 41));
+        updateButton->setGeometry(QRect(240, 403, 81, 41));
         updateButton->setFont(font3);
         updateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
@@ -158,7 +161,7 @@ public:
 "}"));
         updateButton_2 = new QPushButton(centralwidget);
         updateButton_2->setObjectName("updateButton_2");
-        updateButton_2->setGeometry(QRect(480, 403, 91, 41));
+        updateButton_2->setGeometry(QRect(640, 403, 81, 41));
         updateButton_2->setFont(font3);
         updateButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
@@ -173,14 +176,15 @@ public:
 "}"));
         weightBox = new QLineEdit(centralwidget);
         weightBox->setObjectName("weightBox");
-        weightBox->setGeometry(QRect(330, 410, 141, 28));
+        weightBox->setGeometry(QRect(390, 410, 171, 28));
+        weightBox->setMaxLength(3);
         weightLabel = new QLabel(centralwidget);
         weightLabel->setObjectName("weightLabel");
-        weightLabel->setGeometry(QRect(330, 370, 231, 41));
+        weightLabel->setGeometry(QRect(390, 370, 91, 41));
         weightLabel->setFont(font4);
         updateButton_3 = new QPushButton(centralwidget);
         updateButton_3->setObjectName("updateButton_3");
-        updateButton_3->setGeometry(QRect(750, 403, 91, 41));
+        updateButton_3->setGeometry(QRect(990, 403, 81, 41));
         updateButton_3->setFont(font3);
         updateButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
@@ -195,10 +199,11 @@ public:
 "}"));
         caloriesBox = new QLineEdit(centralwidget);
         caloriesBox->setObjectName("caloriesBox");
-        caloriesBox->setGeometry(QRect(600, 410, 141, 28));
+        caloriesBox->setGeometry(QRect(790, 410, 191, 28));
+        caloriesBox->setMaxLength(3);
         caloriesLabel = new QLabel(centralwidget);
         caloriesLabel->setObjectName("caloriesLabel");
-        caloriesLabel->setGeometry(QRect(600, 370, 231, 41));
+        caloriesLabel->setGeometry(QRect(790, 370, 101, 41));
         caloriesLabel->setFont(font4);
         quicklinksLabel = new QLabel(centralwidget);
         quicklinksLabel->setObjectName("quicklinksLabel");
@@ -288,16 +293,53 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
-        warningLabel = new QLabel(centralwidget);
-        warningLabel->setObjectName("warningLabel");
-        warningLabel->setGeometry(QRect(1080, 80, 71, 21));
-        revealTxtButton = new QToolButton(centralwidget);
-        revealTxtButton->setObjectName("revealTxtButton");
-        revealTxtButton->setGeometry(QRect(1150, 83, 20, 16));
-        revealTxtButton->setArrowType(Qt::ArrowType::DownArrow);
-        hiddenLabel = new QLabel(centralwidget);
-        hiddenLabel->setObjectName("hiddenLabel");
-        hiddenLabel->setGeometry(QRect(1080, 100, 101, 251));
+        scrollArea = new QScrollArea(centralwidget);
+        scrollArea->setObjectName("scrollArea");
+        scrollArea->setGeometry(QRect(370, 164, 691, 131));
+        scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:vertical {\n"
+"    background-color: #656565;\n"
+"    width: 15px; \n"
+"    margin: 10px 0; \n"
+"    border-radius: 15px; \n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"    background-color: black;\n"
+"    border-radius: 15px; \n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"    background: none; \n"
+"}"));
+        scrollArea->setFrameShape(QFrame::Shape::NoFrame);
+        scrollArea->setWidgetResizable(false);
+        scrollAreaWidgetContentsMM = new QWidget();
+        scrollAreaWidgetContentsMM->setObjectName("scrollAreaWidgetContentsMM");
+        scrollAreaWidgetContentsMM->setGeometry(QRect(0, 0, 689, 129));
+        scrollArea->setWidget(scrollAreaWidgetContentsMM);
+        heightUnit = new QComboBox(centralwidget);
+        heightUnit->addItem(QString());
+        heightUnit->addItem(QString());
+        heightUnit->setObjectName("heightUnit");
+        heightUnit->setGeometry(QRect(170, 410, 61, 31));
+        heightUnit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+""));
+        weightUnit = new QComboBox(centralwidget);
+        weightUnit->addItem(QString());
+        weightUnit->addItem(QString());
+        weightUnit->setObjectName("weightUnit");
+        weightUnit->setGeometry(QRect(570, 410, 61, 31));
+        weightUnit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+""));
         UserMainMenu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(UserMainMenu);
         menubar->setObjectName("menubar");
@@ -318,8 +360,8 @@ public:
         titleLabel->setText(QString());
         templatesLabel->setText(QCoreApplication::translate("UserMainMenu", "Templates", nullptr));
         logoutButton->setText(QCoreApplication::translate("UserMainMenu", "Logout", nullptr));
-        newWLTLabel->setText(QCoreApplication::translate("UserMainMenu", "New Weightlifting Template", nullptr));
-        newCLTLabel->setText(QCoreApplication::translate("UserMainMenu", "New Cardio Template", nullptr));
+        newWLTButton->setText(QCoreApplication::translate("UserMainMenu", "New Weightlifting Template", nullptr));
+        newCLTButton->setText(QCoreApplication::translate("UserMainMenu", "New Cardio Template", nullptr));
         currMeasLabel->setText(QCoreApplication::translate("UserMainMenu", "Current Measurements", nullptr));
         heightLabel->setText(QCoreApplication::translate("UserMainMenu", "Height:", nullptr));
         updateButton->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
@@ -335,9 +377,12 @@ public:
         calculatorButton->setText(QCoreApplication::translate("UserMainMenu", "Calculator", nullptr));
         tutorialButton->setText(QCoreApplication::translate("UserMainMenu", "Tutorial", nullptr));
         linksButton->setText(QCoreApplication::translate("UserMainMenu", "Links", nullptr));
-        warningLabel->setText(QCoreApplication::translate("UserMainMenu", "<html><head/><body><p>WARNING</p></body></html>", nullptr));
-        revealTxtButton->setText(QCoreApplication::translate("UserMainMenu", "...", nullptr));
-        hiddenLabel->setText(QCoreApplication::translate("UserMainMenu", "<html><head/><body><p>The only way<br/>back is to <br/>logout,<br/>that's why I've <br/>provided<br/>the quick links<br/>in case that's<br/>what you were<br/>looking for! <br/>Clicking them<br/>won't <br/>log you out!</p></body></html>", nullptr));
+        heightUnit->setItemText(0, QCoreApplication::translate("UserMainMenu", "cm", nullptr));
+        heightUnit->setItemText(1, QCoreApplication::translate("UserMainMenu", "ft", nullptr));
+
+        weightUnit->setItemText(0, QCoreApplication::translate("UserMainMenu", "lbs", nullptr));
+        weightUnit->setItemText(1, QCoreApplication::translate("UserMainMenu", "kgs", nullptr));
+
     } // retranslateUi
 
 };

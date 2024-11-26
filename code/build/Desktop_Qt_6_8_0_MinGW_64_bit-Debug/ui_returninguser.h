@@ -29,12 +29,12 @@ public:
     QLabel *titleLabel;
     QLineEdit *passBox;
     QLabel *passLabel;
-    QLabel *forgotLabel;
     QLabel *deleteLabel;
     QLineEdit *deleteBox;
     QPushButton *backButton;
     QPushButton *enterButton;
     QPushButton *deleteButton;
+    QPushButton *hintButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -63,10 +63,6 @@ public:
         QFont font1;
         font1.setPointSize(15);
         passLabel->setFont(font1);
-        forgotLabel = new QLabel(centralwidget);
-        forgotLabel->setObjectName("forgotLabel");
-        forgotLabel->setGeometry(QRect(110, 270, 151, 20));
-        forgotLabel->setStyleSheet(QString::fromUtf8("color: #0000EE;"));
         deleteLabel = new QLabel(centralwidget);
         deleteLabel->setObjectName("deleteLabel");
         deleteLabel->setGeometry(QRect(100, 455, 141, 41));
@@ -122,6 +118,22 @@ public:
 "     background-color: red;\n"
 "color: white;\n"
 "}"));
+        hintButton = new QPushButton(centralwidget);
+        hintButton->setObjectName("hintButton");
+        hintButton->setGeometry(QRect(130, 290, 191, 41));
+        QFont font4;
+        font4.setPointSize(7);
+        hintButton->setFont(font4);
+        hintButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: #254ff7;\n"
+"border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #254ff7;\n"
+"color: white;\n"
+"}"));
         ReturningUser->setCentralWidget(centralwidget);
         menubar = new QMenuBar(ReturningUser);
         menubar->setObjectName("menubar");
@@ -141,12 +153,12 @@ public:
         ReturningUser->setWindowTitle(QCoreApplication::translate("ReturningUser", "Forge", nullptr));
         titleLabel->setText(QString());
         passLabel->setText(QCoreApplication::translate("ReturningUser", "Enter Password:", nullptr));
-        forgotLabel->setText(QCoreApplication::translate("ReturningUser", "Forgot your password?", nullptr));
         deleteLabel->setText(QCoreApplication::translate("ReturningUser", "Delete User:", nullptr));
         deleteBox->setPlaceholderText(QCoreApplication::translate("ReturningUser", "Enter Password to Proceed", nullptr));
         backButton->setText(QCoreApplication::translate("ReturningUser", "Back", nullptr));
         enterButton->setText(QCoreApplication::translate("ReturningUser", "Enter", nullptr));
         deleteButton->setText(QCoreApplication::translate("ReturningUser", "Delete", nullptr));
+        hintButton->setText(QCoreApplication::translate("ReturningUser", "Forgot your password?", nullptr));
     } // retranslateUi
 
 };
