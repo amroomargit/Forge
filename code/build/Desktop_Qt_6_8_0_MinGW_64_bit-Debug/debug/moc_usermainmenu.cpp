@@ -37,18 +37,15 @@ namespace {
 struct qt_meta_stringdata_CLASSUserMainMenuENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSUserMainMenuENDCLASS = QtMocHelpers::stringData(
     "UserMainMenu",
-    "templateHomeScreenDisplay",
+    "retrieveUserID",
     "",
-    "userId",
-    "QSqlDatabase&",
-    "db",
-    "newTemplate",
-    "templateName",
+    "passedUserName",
+    "templateHomeScreenDisplay",
     "increaseQWidget",
     "widthIncrease",
     "on_logoutButton_clicked",
-    "on_newWLTLabel_clicked",
-    "on_newCLTLabel_clicked"
+    "on_newWLTButton_clicked",
+    "on_newCLTButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -69,17 +66,17 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSUserMainMenuENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   50,    2, 0x08,    1 /* Private */,
-       6,    3,   55,    2, 0x08,    4 /* Private */,
-       8,    1,   62,    2, 0x08,    8 /* Private */,
-      10,    0,   65,    2, 0x08,   10 /* Private */,
-      11,    0,   66,    2, 0x08,   11 /* Private */,
-      12,    0,   67,    2, 0x08,   12 /* Private */,
+       1,    1,   50,    2, 0x08,    1 /* Private */,
+       4,    0,   53,    2, 0x08,    3 /* Private */,
+       5,    1,   54,    2, 0x08,    4 /* Private */,
+       7,    0,   57,    2, 0x08,    6 /* Private */,
+       8,    0,   58,    2, 0x08,    7 /* Private */,
+       9,    0,   59,    2, 0x08,    8 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int, 0x80000000 | 4,    3,    5,
-    QMetaType::Void, QMetaType::Int, QMetaType::QString, 0x80000000 | 4,    3,    7,    5,
-    QMetaType::Void, QMetaType::Int,    9,
+    QMetaType::Int, QMetaType::QString,    3,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -96,23 +93,19 @@ Q_CONSTINIT const QMetaObject UserMainMenu::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSUserMainMenuENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<UserMainMenu, std::true_type>,
-        // method 'templateHomeScreenDisplay'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QSqlDatabase &, std::false_type>,
-        // method 'newTemplate'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'retrieveUserID'
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QSqlDatabase &, std::false_type>,
+        // method 'templateHomeScreenDisplay'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'increaseQWidget'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_logoutButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_newWLTLabel_clicked'
+        // method 'on_newWLTButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_newCLTLabel_clicked'
+        // method 'on_newCLTButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -124,12 +117,13 @@ void UserMainMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<UserMainMenu *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->templateHomeScreenDisplay((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QSqlDatabase&>>(_a[2]))); break;
-        case 1: _t->newTemplate((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QSqlDatabase&>>(_a[3]))); break;
+        case 0: { int _r = _t->retrieveUserID((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 1: _t->templateHomeScreenDisplay(); break;
         case 2: _t->increaseQWidget((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 3: _t->on_logoutButton_clicked(); break;
-        case 4: _t->on_newWLTLabel_clicked(); break;
-        case 5: _t->on_newCLTLabel_clicked(); break;
+        case 4: _t->on_newWLTButton_clicked(); break;
+        case 5: _t->on_newCLTButton_clicked(); break;
         default: ;
         }
     }

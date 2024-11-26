@@ -29,7 +29,7 @@ UserMainMenu::~UserMainMenu()
     delete ui;
 }
 
-//dynamically set user name at top of page
+//dynamically set username that was passed over at top of page
 void UserMainMenu::setUsername(const QString &thisUsername) {
     username = thisUsername;
 
@@ -38,7 +38,6 @@ void UserMainMenu::setUsername(const QString &thisUsername) {
     }
 }
 
-
 void UserMainMenu::on_logoutButton_clicked()
 {
     UsersWindow *usersWindow = new UsersWindow;
@@ -46,27 +45,36 @@ void UserMainMenu::on_logoutButton_clicked()
     this -> setCentralWidget(usersWindow);
 }
 
-//create new template button on user main menu
-void UserMainMenu::newTemplate(const QString& templateName, QSqlDatabase& db){
+//to retrieve userID for foreign key
+int UserMainMenu::retrieveUserID(const QString& passedUserName){
+    int returnID = -1; //No ID found yet, default val
 
-    //adding values to database templates table
-    QSqlQuery query(db);
-    query.prepare("INSERT INTO templates template_name VALUE :templateName");
-    query.bindValue(":templateName", templateName);
+    QSqlQuery query;
+    query.prepare("SELECT id FROM users WHERE name = :passedUserName"); //retrieve the id from the users table based on the name passed by the argument parameter
+    query.bindValue(":passedUserName", passedUserName); //bind name and parameter so they're connected
 
+    //if execution fails
     if(!query.exec()){
-        qDebug() << "Error with template insertion... "<<query.lastError().text();
+        QMessageBox::critical(this,"Error","No id associated with current user");
     }
     else{
-        qDebug()<<"Successful creation";
+        //check rows returned
+        if(query.next()){
+            returnID = query.value(0).toInt(); //takes first column from result (which is the id)
+        }
     }
+    return returnID;
 }
 
-//add template button to homescreen
-void UserMainMenu::templateHomeScreenDisplay(const QString& username, QSqlDatabase& db){
-    QSqlQuery query(db);
+
+
+//dynamically populate homescreen by reading through templates table to find how many templates a user has associated with their userID (primary/foreign key)
+void UserMainMenu::templateHomeScreenDisplay(){
+    int userIDRetrieved = retrieveUserID(username);
+
+    QSqlQuery query;
     query.prepare("SELECT template_id, template_name FROM templates WHERE user_id = :userId");
-    query.bindValue(":userId", userId);
+    query.bindValue(":userId", userIDRetrieved);
 
     //button positioning
     int x = 10;
@@ -104,9 +112,6 @@ void UserMainMenu::templateHomeScreenDisplay(const QString& username, QSqlDataba
                                       "}"
                                       );
 
-            connect(newTemplateButton, &QPushButton::clicked, [templateId]() {
-                qDebug() << "Template was clicked. Id:" << templateId;
-            });
 
             //update button count
             totalButtons++;
@@ -136,17 +141,15 @@ void UserMainMenu::increaseQWidget(int widthIncrease){
     scrollWidget->resize(newWidth,oldSize.height());
 }
 
-
+//go to weightlifttemplate screen
 void UserMainMenu::on_newWLTButton_clicked()
 {
-    newTemplate();
-
     WeightliftTemplate *goToTemplate = new WeightliftTemplate;
     goToTemplate->setFixedSize(this->size());
     this -> setCentralWidget(goToTemplate);
 }
 
-
+//go to cardiotemplate screen
 void UserMainMenu::on_newCLTButton_clicked()
 {
     CardioTemplate *goToTemplate = new CardioTemplate;

@@ -24,9 +24,9 @@ public:
     void setUsername(const QString &username);
 
 private slots:
-    void templateHomeScreenDisplay(int userId, QSqlDatabase& db);
+    int retrieveUserID(const QString& passedUserName); //to retrieve the userID
 
-    void newTemplate(const QString& templateName, QSqlDatabase& db);
+    void templateHomeScreenDisplay();
 
     void increaseQWidget(int widthIncrease);
 

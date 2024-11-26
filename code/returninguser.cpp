@@ -17,8 +17,7 @@ ReturningUser::ReturningUser(QWidget *parent)
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
-ReturningUser::~ReturningUser()
-{
+ReturningUser::~ReturningUser(){
     delete ui;
 }
 
@@ -48,7 +47,7 @@ void ReturningUser::on_enterButton_clicked(){
             UserMainMenu *nextWindow = new UserMainMenu;
             nextWindow ->setFixedSize(this->size());
 
-            nextWindow->setUsername(currentUser); //pass username over
+            nextWindow->setUsername(currentUser); //pass username over to usermainmenu
 
             this->setCentralWidget(nextWindow);
         }

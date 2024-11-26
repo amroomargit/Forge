@@ -31,8 +31,7 @@ public:
     QPushButton *addNewExerciseButton;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QLineEdit *lineEdit;
-    QLabel *label;
+    QLineEdit *templateNameBox;
     QPushButton *saveNewName;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -114,21 +113,14 @@ public:
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 981, 391));
         scrollArea->setWidget(scrollAreaWidgetContents);
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(670, 207, 301, 41));
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+        templateNameBox = new QLineEdit(centralwidget);
+        templateNameBox->setObjectName("templateNameBox");
+        templateNameBox->setGeometry(QRect(670, 207, 301, 41));
+        templateNameBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 ""));
-        lineEdit->setMaxLength(12);
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(490, 212, 181, 31));
-        QFont font3;
-        font3.setPointSize(12);
-        font3.setBold(false);
-        label->setFont(font3);
+        templateNameBox->setMaxLength(12);
         saveNewName = new QPushButton(centralwidget);
         saveNewName->setObjectName("saveNewName");
         saveNewName->setGeometry(QRect(990, 207, 61, 41));
@@ -162,9 +154,9 @@ public:
     {
         WeightliftTemplate->setWindowTitle(QCoreApplication::translate("WeightliftTemplate", "MainWindow", nullptr));
         backButton->setText(QCoreApplication::translate("WeightliftTemplate", "Back", nullptr));
-        titleLabel->setText(QCoreApplication::translate("WeightliftTemplate", "Default Template Name.", nullptr));
+        titleLabel->setText(QCoreApplication::translate("WeightliftTemplate", "Please Set Template Name.", nullptr));
         addNewExerciseButton->setText(QCoreApplication::translate("WeightliftTemplate", "+ Add New Exercise", nullptr));
-        label->setText(QCoreApplication::translate("WeightliftTemplate", "Set Template Name:", nullptr));
+        templateNameBox->setPlaceholderText(QCoreApplication::translate("WeightliftTemplate", "   Set Template Name", nullptr));
         saveNewName->setText(QCoreApplication::translate("WeightliftTemplate", "Set", nullptr));
     } // retranslateUi
 

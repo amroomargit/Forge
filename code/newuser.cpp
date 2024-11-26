@@ -35,7 +35,7 @@ void NewUser::on_backButton_clicked()
 
 void NewUser::on_enterButton_clicked()
 {
-    //initialization
+    //taking values from QlineEdits
     QString name = ui->nameBox->text();
     QString password = ui->passBox->text();
     QString hint = ui->hintBox->text();

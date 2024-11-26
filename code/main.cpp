@@ -18,7 +18,7 @@ void initializeDatabase(){
         return;
     }
 
-    // Create users table if non-existent
+    // Create users table if non-existent (this table stores users and their login info)
     QSqlQuery query;
     query.exec("CREATE TABLE IF NOT EXISTS users ("
                "id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -32,16 +32,17 @@ void initializeDatabase(){
                "weight_unit TEXT NOT NULL"
                ");");
 
-    //create templates table
+    //create templates table (this table stores each template name under a specific user)
     query.exec("CREATE TABLE IF NOT EXISTS templates ("
                     "template_id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                    "user_id INTEGER NOT NULL,"
+                    "user_id TEXT NOT NULL,"
                     "template_name TEXT NOT NULL,"
+                    "template_type TEXT NOT NULL," //weightlifting or cardio
                     "creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,"
                     "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
-                    ");");
+                    ");"); //cascade deletion, if a user is deleted from the users table above, all their templates are deleted in a cascading effect
 
-    //create template_exercises table
+    //create template_exercises table (this table stores the workouts in a template, under it's respective template, under it's respective user)
     query.exec("CREATE TABLE IF NOT EXISTS template_exercises ("
                "exercise_id INTEGER PRIMARY KEY AUTOINCREMENT,"
                "template_id INTEGER NOT NULL,"
@@ -49,8 +50,10 @@ void initializeDatabase(){
                "sets INTEGER DEFAULT 0,"
                "reps INTEGER DEFAULT 0,"
                "weight REAL DEFAULT 0.0,"
+               "weight_unit TEXT NOT NULL,"
                "FOREIGN KEY (template_id) REFERENCES templates(template_id) ON DELETE CASCADE"
                ");");
+    //cascade deletion, if a user is deleted from the users table above, all exercises associated with their templates are deleted in a cascading effect
 }
 
 
