@@ -15,6 +15,9 @@ public:
     explicit UserMainMenu(QWidget *parent = nullptr);
     ~UserMainMenu();
 
+private slots:
+    void on_logoutButton_clicked();
+
 private:
     Ui::UserMainMenu *ui;
 };

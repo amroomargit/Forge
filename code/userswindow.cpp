@@ -31,12 +31,16 @@ UsersWindow::UsersWindow(QWidget *parent)
 
     //position variables
     //x and y position for buttons
-    xPos = 310;
-    yPos = 210;
+    int xPos = 310;
+    int yPos = 210;
 
     //keep track of buttons in row
-    maxButtonsPerRow = 5;
-    buttonCounter = 1;
+    int maxButtonsPerRow = 5;
+    int buttonCounter = 1;
+    int totalRows = 1;
+
+    //keep track of when to extend QWidget
+    rowLoopCounter = 0;
 
     //loop through query to create buttons
     while(query.next()){
@@ -77,19 +81,43 @@ UsersWindow::UsersWindow(QWidget *parent)
             buttonCounter = 0;
             xPos = 100;
             yPos = yPos + 180;
+            totalRows = totalRows+1;
         }
         else{
             xPos = xPos + 210;
         }
 
+        //increase the height of the qwidget inside the scrollable area for every two rows added
+        if((totalRows%2) == 0){
+            increaseQWidget(50);
+        }
+
     }
 
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+
+    //scrollAreaWidgetContents
 }
 
 UsersWindow::~UsersWindow()
 {
     delete ui;
+}
+
+//increase QWidget height method
+void UsersWindow::increaseQWidget(int heightIncrease){
+
+    //create QWidget object linked to the ui scroll area widget we are dealing with
+    QWidget *scrollWidget = ui->scrollAreaWidgetContents;
+
+    //current size of widget
+    QSize oldSize = scrollWidget->size();
+
+    //heigh increase
+    int newHeight = oldSize.height()+heightIncrease;
+
+    //widget resize
+    scrollWidget->resize(oldSize.width(), newHeight);
 }
 
 void UsersWindow::onUserButtonClicked(const QString &username){
@@ -111,39 +139,6 @@ void UsersWindow::on_backButton_clicked()
     MainWindow *mainWindow = new MainWindow;
     mainWindow->setFixedSize(this->size());
     this->setCentralWidget(mainWindow);
-}
-
-//setters and getters so we can access private values for button deletion in returningusers.cpp
-int UsersWindow::getXPos(){
-    return xPos;
-}
-
-void UsersWindow::setXPos(int newValue){
-    xPos = newValue;
-}
-
-int UsersWindow::getYPos(){
-    return yPos;
-}
-
-void UsersWindow::setYPos(int newValue){
-    yPos = newValue;
-}
-
-int UsersWindow::getButtonCounter(){
-    return buttonCounter;
-}
-
-void UsersWindow::setButtonCounter(int newValue){
-    buttonCounter = newValue;
-}
-
-int UsersWindow::getMaxButtonsPerRow(){
-    return maxButtonsPerRow;
-}
-
-void UsersWindow::setMaxButtonsPerRow(int newValue){
-    maxButtonsPerRow = newValue;
 }
 
 

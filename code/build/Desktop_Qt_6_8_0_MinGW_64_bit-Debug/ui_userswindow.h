@@ -47,8 +47,29 @@ public:
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
         scrollArea->setGeometry(QRect(0, 4, 1201, 661));
+        scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:vertical {\n"
+"    background-color: #656565;\n"
+"    width: 15px; \n"
+"    margin: 10px 0; \n"
+"    border-radius: 15px; \n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"    background-color: black;\n"
+"    border-radius: 15px; \n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"    background: none; \n"
+"}\n"
+""));
         scrollArea->setFrameShape(QFrame::Shape::NoFrame);
-        scrollArea->setWidgetResizable(true);
+        scrollArea->setWidgetResizable(false);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1201, 661));

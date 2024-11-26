@@ -34,6 +34,7 @@ void ReturningUser::setUser(const QString &username){
 
     if(query.exec() && query.next()){
         pass = query.value(0).toString();
+        setUserSuccess = true;
     }
     else{
         QMessageBox::critical(this, "Error", "Couldn't find user in database");
@@ -57,17 +58,24 @@ void ReturningUser::on_enterButton_clicked(){
     /* delete user from database (since buttons are dynamically created each time the userswindow ui is opened,
          * the program will just not create that button when we go back to the window, no need to manually change anything
         */
-void ReturningUser::on_deleteButton_clicked(QString &username){
+void ReturningUser::on_deleteButton_clicked(){
+    qDebug() << "Delete button clicked.";
 
     QString passFromUser = ui->deleteBox->text();
 
-    //check if password matches for deletion
-    if(passFromUser == pass){
+    //check if password was empty
+    if(passFromUser.isEmpty()){
+        QMessageBox::warning(this, "Error","Password cannot be empty");
+        return;
+    }
+
+    //check if user was even set, and if password matches for deletion
+    if(setUserSuccess==true && passFromUser == pass){
 
         //delete user
         QSqlQuery query;
         query.prepare("DELETE FROM users WHERE name = :name");
-        query.bindValue(":name", username);
+        query.bindValue(":name", currentUser);
 
         if(query.exec()){
             QMessageBox::information(this, "Success", "User deleted successfully.");
@@ -90,8 +98,7 @@ void ReturningUser::on_deleteButton_clicked(QString &username){
 }
 
 
-void ReturningUser::on_backButton_clicked()
-{
+void ReturningUser::on_backButton_clicked(){
     UsersWindow *usersWindow = new UsersWindow;
     usersWindow->setFixedSize(this->size());
     this->setCentralWidget(usersWindow);

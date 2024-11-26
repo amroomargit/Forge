@@ -20,7 +20,7 @@ public:
 private slots:
     void on_enterButton_clicked();
 
-    void on_deleteButton_clicked(QString &username);
+    void on_deleteButton_clicked();
 
     void on_backButton_clicked();
 
@@ -28,6 +28,7 @@ private:
     Ui::ReturningUser *ui;
     QString currentUser; //to store username
     QString pass; //to store password
+    bool setUserSuccess; //to check if setUser was successful
 };
 
 #endif // RETURNINGUSER_H

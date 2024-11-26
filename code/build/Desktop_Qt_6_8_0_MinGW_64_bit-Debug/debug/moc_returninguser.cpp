@@ -39,8 +39,6 @@ constexpr auto qt_meta_stringdata_CLASSReturningUserENDCLASS = QtMocHelpers::str
     "on_enterButton_clicked",
     "",
     "on_deleteButton_clicked",
-    "QString&",
-    "username",
     "on_backButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -63,12 +61,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSReturningUserENDCLASS[] = {
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x08,    1 /* Private */,
-       3,    1,   33,    2, 0x08,    2 /* Private */,
-       6,    0,   36,    2, 0x08,    4 /* Private */,
+       3,    0,   33,    2, 0x08,    2 /* Private */,
+       4,    0,   34,    2, 0x08,    3 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 4,    5,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -87,7 +85,6 @@ Q_CONSTINIT const QMetaObject ReturningUser::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_deleteButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
         // method 'on_backButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -101,11 +98,12 @@ void ReturningUser::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         (void)_t;
         switch (_id) {
         case 0: _t->on_enterButton_clicked(); break;
-        case 1: _t->on_deleteButton_clicked((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1]))); break;
+        case 1: _t->on_deleteButton_clicked(); break;
         case 2: _t->on_backButton_clicked(); break;
         default: ;
         }
     }
+    (void)_a;
 }
 
 const QMetaObject *ReturningUser::metaObject() const

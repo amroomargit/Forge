@@ -27,11 +27,34 @@
       <height>661</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QScrollBar:vertical {
+    background-color: #656565;
+    width: 15px; 
+    margin: 10px 0; 
+    border-radius: 15px; 
+}
+
+QScrollBar::handle:vertical {
+    background-color: black;
+    border-radius: 15px; 
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none; 
+}
+</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="widgetResizable">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <widget class="QWidget" name="scrollAreaWidgetContents">
      <property name="geometry">

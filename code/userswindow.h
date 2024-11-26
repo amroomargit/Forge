@@ -16,23 +16,9 @@ public:
 
     ~UsersWindow();
 
-    int getXPos();
-
-    void setXPos(int newValue);
-
-    int getYPos();
-
-    void setYPos(int newValue);
-
-    int getButtonCounter();
-
-    void setButtonCounter(int newValue);
-
-    int getMaxButtonsPerRow();
-
-    void setMaxButtonsPerRow(int newValue);
-
 private slots:
+    void increaseQWidget(int heightIncrease); //to increase scrollable area while looping
+
     void onUserButtonClicked(const QString &username);
 
     void on_addUserButton_clicked();
@@ -41,14 +27,7 @@ private slots:
 
 private:
     Ui::UsersWindow *ui;
-
-    //dynamic button creation positions
-    int xPos;
-    int yPos;
-
-    //keep track of buttons in row for dynamic creation
-    int maxButtonsPerRow;
-    int buttonCounter;
+    int rowLoopCounter; //to know when extend the scrollable area
 };
 
 #endif // USERSWINDOW_H
