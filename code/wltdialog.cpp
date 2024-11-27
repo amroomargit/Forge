@@ -15,10 +15,6 @@ WLTDialog::WLTDialog(QWidget *parent)
     ui->setupUi(this);
 
     // Connect the itemClicked signal to the corresponding slot
-    connect(ui->listWidget, &QListWidget::itemClicked, this, &WLTDialog::on_listWidget_itemClicked);
-
-    //handle lineEdit searches, TRIGGERS ANYTIME ANY TYPING HAPPENS IN THE LINEEDIT
-    connect(ui->searchBar, &QLineEdit::textChanged, this, &WLTDialog::searchThroughList);
 
     this->setWindowFlags(Qt::FramelessWindowHint);
 }
@@ -80,17 +76,25 @@ void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
 
     //query so we can add clicked items from the list into the table template_exercises
     QSqlQuery query;
-    query.prepare("INSERT INTO template_exercises (exercise_id, exercise_name, template_id) VALUES (:exerciseID, :exerciseName, :templateID)");
+    query.prepare("INSERT INTO template_exercises (exercise_id, exercise_name, template_id, sets, reps, weight, weight_unit) VALUES (:exerciseID, :exerciseName, :templateID, :setsValue, :repsValue, :weightValue, :weightUnitValue)");
     query.bindValue(":exerciseID", exerciseID);
     query.bindValue(":exerciseName", exerciseName);
     query.bindValue(":templateID", thisTemplateID);
 
+    //Set default values for other units
+    query.bindValue(":setsValue", 0);
+    query.bindValue(":repsValue", 0);
+    query.bindValue(":weightValue", 0);
+    query.bindValue(":weightUnitValue", "lbs");
+
+
     // If execution fails
     if (!query.exec()) {
-        QMessageBox::critical(this, "Error", "unable to add exercise to template");
-        return;
+        QMessageBox::critical(this, "Error", "Unsuccessful. Unable to add exercise to template");
     }
-    QMessageBox::information(this, "Success", "Exercise added to template!");
+    else{
+        QMessageBox::information(this, "Success", "Exercise added to template!");
+    }
 
 }
 

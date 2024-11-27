@@ -48,7 +48,7 @@ void AddNewWorkoutDialog::on_addNewWorkoutButton_clicked()
     query.bindValue(":newWorkoutName",newWorkoutName);
 
     if(query.exec()){
-        QMessageBox::information(this,"Success","Workout was successfully entered into the "+thisTemplateType+" table!");
+        //QMessageBox::information(this,"Success","Workout was successfully entered into the "+thisTemplateType+" table!");
     }
     else{
         QMessageBox::critical(this,"Error","Unable to add to "+thisTemplateType+" table");
@@ -59,5 +59,6 @@ void AddNewWorkoutDialog::on_addNewWorkoutButton_clicked()
 
     currentlyOpenDialog->populateTypeSpecificExercises(); //reload wltdialog
 
+    this->close(); //close after workout is added
 }
 
