@@ -119,6 +119,7 @@ public:
         templateNameBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
+"padding: 10px;\n"
 ""));
         templateNameBox->setMaxLength(12);
         saveNewName = new QPushButton(centralwidget);
@@ -156,7 +157,7 @@ public:
         backButton->setText(QCoreApplication::translate("WeightliftTemplate", "Back", nullptr));
         titleLabel->setText(QCoreApplication::translate("WeightliftTemplate", "Please Set Template Name.", nullptr));
         addNewExerciseButton->setText(QCoreApplication::translate("WeightliftTemplate", "+ Add New Exercise", nullptr));
-        templateNameBox->setPlaceholderText(QCoreApplication::translate("WeightliftTemplate", "   Set Template Name", nullptr));
+        templateNameBox->setPlaceholderText(QCoreApplication::translate("WeightliftTemplate", "Set Template Name", nullptr));
         saveNewName->setText(QCoreApplication::translate("WeightliftTemplate", "Set", nullptr));
     } // retranslateUi
 

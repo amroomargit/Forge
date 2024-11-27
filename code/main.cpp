@@ -55,6 +55,18 @@ void initializeDatabase(){
                "FOREIGN KEY (template_id) REFERENCES templates(template_id) ON DELETE CASCADE"
                ");");
     //cascade deletion, if a user is deleted from the users table above, all exercises associated with their templates are deleted in a cascading effect
+
+    //create all_weightlifting_exercises table (this table will hold all the exercises for weightlifting)
+    query.exec("CREATE TABLE IF NOT EXISTS all_weightlifting_exercises ("
+               "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "exercise_name TEXT NOT NULL"
+               ");");
+
+    //create all_cardio_exercises table (this table will hold all the exercises for cardio)
+    query.exec("CREATE TABLE IF NOT EXISTS all_cardio_exercises ("
+               "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "exercise_name TEXT NOT NULL"
+               ");");
 }
 
 

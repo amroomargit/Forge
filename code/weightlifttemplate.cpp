@@ -74,7 +74,6 @@ void WeightliftTemplate::newTemplate(const QString& givenTemplateName){
     else{
         currentTemplateId = query.lastInsertId().toInt(); // Save the template ID
         qDebug()<<"Successful creation";
-        QMessageBox::information(this,"Success","Able to add to database templates table!");
     }
 }
 
@@ -105,9 +104,6 @@ void WeightliftTemplate::on_saveNewName_clicked(){
     if(!query.exec()){
         QMessageBox::critical(this,"Error","Unable to change name");
     }
-    else{
-        QMessageBox::information(this,"Success","Name changed");
-    }
 
     //change QLabel at the top of the screen
     ui->titleLabel->setText(templateName);
@@ -118,6 +114,7 @@ void WeightliftTemplate::on_saveNewName_clicked(){
 void WeightliftTemplate::on_addNewExerciseButton_clicked()
 {
     WLTDialog *newDialog = new WLTDialog(this); //passing 'this' for proper memory management
+    newDialog->populateTypeSpecificExercises("all_weightlifting_exercises"); //populate the dialog before it appears
     newDialog->exec();
     qDebug()<<"close dialog";
 

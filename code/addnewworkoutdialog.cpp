@@ -7,7 +7,6 @@ AddNewWorkoutDialog::AddNewWorkoutDialog(QWidget *parent)
 {
     ui->setupUi(this);
 
-    this->setWindowFlags(Qt::FramelessWindowHint);
 }
 
 AddNewWorkoutDialog::~AddNewWorkoutDialog()
@@ -15,8 +14,9 @@ AddNewWorkoutDialog::~AddNewWorkoutDialog()
     delete ui;
 }
 
+//x button
 void AddNewWorkoutDialog::on_xButton_clicked()
 {
-    this -> close();
+    this->close();
 }
 

@@ -158,13 +158,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <string notr="true">background-color: #333333;
 color: white;
 border-radius: 15px;
+padding: 10px;
 </string>
     </property>
     <property name="maxLength">
      <number>12</number>
     </property>
     <property name="placeholderText">
-     <string>   Set Template Name</string>
+     <string>Set Template Name</string>
     </property>
    </widget>
    <widget class="QPushButton" name="saveNewName">

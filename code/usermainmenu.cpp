@@ -100,14 +100,14 @@ void UserMainMenu::templateHomeScreenDisplay(){
 
             //button stylesheet
             newTemplateButton->setStyleSheet("QPushButton {"
-                                      "background-color: #333333;"
+                                      "background-color: rgba(255, 0, 0, 200);"
                                       "color: white;"
                                       "border-radius: 15px;"
                                       "padding: 10px 20px;"
                                       "}"
                                       "QPushButton:hover {"
-                                      "background-color: #bababa;"
-                                      "color: black;"
+                                      "background-color: #ff5c5c;;"
+                                      "color: white;"
                                       "}"
                                       );
 

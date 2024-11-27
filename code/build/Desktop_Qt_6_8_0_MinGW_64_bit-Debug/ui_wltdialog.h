@@ -14,9 +14,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollArea>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -25,9 +24,8 @@ class Ui_WLTDialog
 public:
     QPushButton *addNewWorkoutButton;
     QLineEdit *searchBar;
-    QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
     QPushButton *xButton;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *WLTDialog)
     {
@@ -65,14 +63,6 @@ public:
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        scrollArea = new QScrollArea(WLTDialog);
-        scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(30, 140, 431, 401));
-        scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 411, 381));
-        scrollArea->setWidget(scrollAreaWidgetContents);
         xButton = new QPushButton(WLTDialog);
         xButton->setObjectName("xButton");
         xButton->setGeometry(QRect(430, 10, 51, 40));
@@ -90,6 +80,9 @@ public:
 "     background-color: red;  \n"
 "color: white;\n"
 "}"));
+        listWidget = new QListWidget(WLTDialog);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(35, 151, 411, 371));
 
         retranslateUi(WLTDialog);
 

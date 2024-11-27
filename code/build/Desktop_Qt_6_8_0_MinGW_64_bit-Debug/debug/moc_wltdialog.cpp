@@ -37,7 +37,13 @@ struct qt_meta_stringdata_CLASSWLTDialogENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSWLTDialogENDCLASS = QtMocHelpers::stringData(
     "WLTDialog",
     "on_xButton_clicked",
-    ""
+    "",
+    "on_listWidget_itemClicked",
+    "QListWidgetItem*",
+    "thisItem",
+    "searchThroughList",
+    "exerciseSearchedFor",
+    "on_addNewWorkoutButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -50,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSWLTDialogENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,9 +64,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSWLTDialogENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   38,    2, 0x08,    1 /* Private */,
+       3,    1,   39,    2, 0x08,    2 /* Private */,
+       6,    1,   42,    2, 0x08,    4 /* Private */,
+       8,    0,   45,    2, 0x08,    6 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 4,    5,
+    QMetaType::Void, QMetaType::QString,    7,
     QMetaType::Void,
 
        0        // eod
@@ -76,6 +88,14 @@ Q_CONSTINIT const QMetaObject WLTDialog::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<WLTDialog, std::true_type>,
         // method 'on_xButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_listWidget_itemClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>,
+        // method 'searchThroughList'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'on_addNewWorkoutButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -88,10 +108,12 @@ void WLTDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         (void)_t;
         switch (_id) {
         case 0: _t->on_xButton_clicked(); break;
+        case 1: _t->on_listWidget_itemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 2: _t->searchThroughList((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->on_addNewWorkoutButton_clicked(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *WLTDialog::metaObject() const
@@ -113,13 +135,13 @@ int WLTDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 4;
     }
     return _id;
 }
