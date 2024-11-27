@@ -23,13 +23,12 @@ class Ui_AddNewWorkoutDialog
 public:
     QLineEdit *lineEdit;
     QPushButton *addNewWorkoutButton;
-    QPushButton *xButton;
 
     void setupUi(QDialog *AddNewWorkoutDialog)
     {
         if (AddNewWorkoutDialog->objectName().isEmpty())
             AddNewWorkoutDialog->setObjectName("AddNewWorkoutDialog");
-        AddNewWorkoutDialog->resize(450, 123);
+        AddNewWorkoutDialog->resize(450, 98);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/plus.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         AddNewWorkoutDialog->setWindowIcon(icon);
@@ -39,14 +38,14 @@ public:
 "padding: 10px;"));
         lineEdit = new QLineEdit(AddNewWorkoutDialog);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(20, 50, 321, 41));
+        lineEdit->setGeometry(QRect(20, 30, 321, 41));
         lineEdit->setStyleSheet(QString::fromUtf8("background-color: #000000;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
         addNewWorkoutButton = new QPushButton(AddNewWorkoutDialog);
         addNewWorkoutButton->setObjectName("addNewWorkoutButton");
-        addNewWorkoutButton->setGeometry(QRect(350, 50, 71, 40));
+        addNewWorkoutButton->setGeometry(QRect(350, 30, 71, 40));
         QFont font;
         font.setPointSize(8);
         addNewWorkoutButton->setFont(font);
@@ -61,20 +60,6 @@ public:
 "     background-color: #09f522;\n"
 "color: white;\n"
 "}"));
-        xButton = new QPushButton(AddNewWorkoutDialog);
-        xButton->setObjectName("xButton");
-        xButton->setGeometry(QRect(400, 10, 41, 31));
-        xButton->setFont(font);
-        xButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: #000000;\n"
-"color: red;\n"
-"border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"     background-color: red;  \n"
-"color: white;\n"
-"}"));
 
         retranslateUi(AddNewWorkoutDialog);
 
@@ -86,7 +71,6 @@ public:
         AddNewWorkoutDialog->setWindowTitle(QCoreApplication::translate("AddNewWorkoutDialog", "Add New Workout", nullptr));
         lineEdit->setPlaceholderText(QCoreApplication::translate("AddNewWorkoutDialog", "Type New Exercise Name Here", nullptr));
         addNewWorkoutButton->setText(QCoreApplication::translate("AddNewWorkoutDialog", "Enter", nullptr));
-        xButton->setText(QCoreApplication::translate("AddNewWorkoutDialog", "x", nullptr));
     } // retranslateUi
 
 };

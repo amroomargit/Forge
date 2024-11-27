@@ -28,9 +28,19 @@ WLTDialog::~WLTDialog()
     delete ui;
 }
 
-void WLTDialog::populateTypeSpecificExercises(const QString& templateType){
+void WLTDialog::setTemplateType(const QString& templateType){
+    thisTemplateType = templateType;
+    qDebug() << "Template Type Passed to WLTDialog: " << thisTemplateType;
+}
+
+void WLTDialog::setTemplateID(int currentTemplateId){
+    thisTemplateID = currentTemplateId;
+    qDebug() << "Template ID Passed to WLTDialog: " << thisTemplateID;
+}
+
+void WLTDialog::populateTypeSpecificExercises(){
     //dynamic string construction based on which type of template, weights or cardio
-    QString queryString = QString("SELECT id, exercise_name FROM %1").arg(templateType);
+    QString queryString = QString("SELECT id, exercise_name FROM %1").arg(thisTemplateType);
     QSqlQuery query;
     query.prepare(queryString);
 
@@ -63,12 +73,30 @@ void WLTDialog::searchThroughList(const QString &exerciseSearchedFor){
     }
 }
 
+//when an item in the list is clicked...
 void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
-    int exerciseID = thisItem->data(Qt::UserRole).toInt();
-    QString exerciseName = thisItem->text();
+    int exerciseID = thisItem->data(Qt::UserRole).toInt(); //accessing the ID we saved before
+    QString exerciseName = thisItem->text(); //name of exercise is same as name of the item
 
-    //for now DELETE AFTER
-    qDebug() << "Selected exercise:" << exerciseName << "with ID:" << exerciseID;
+    //query so we can add clicked items from the list into the table template_exercises
+    QSqlQuery query;
+    query.prepare("INSERT INTO template_exercises (exercise_id, exercise_name, template_id) VALUES (:exerciseID, :exerciseName, :templateID)");
+    query.bindValue(":exerciseID", exerciseID);
+    query.bindValue(":exerciseName", exerciseName);
+    query.bindValue(":templateID", thisTemplateID);
+
+    // If execution fails
+    if (!query.exec()) {
+        QMessageBox::critical(this, "Error", "unable to add exercise to template");
+        return;
+    }
+    QMessageBox::information(this, "Success", "Exercise added to template!");
+
+}
+
+//remove the list on the dialog
+void WLTDialog::clearList(){
+    ui->listWidget->clear();
 }
 
 void WLTDialog::on_xButton_clicked()
@@ -76,10 +104,12 @@ void WLTDialog::on_xButton_clicked()
     this->close();
 }
 
-
+//add a new workout dialog open button
 void WLTDialog::on_addNewWorkoutButton_clicked()
 {
     AddNewWorkoutDialog *newDialog = new AddNewWorkoutDialog(this); //passing 'this' for proper memory management
+    newDialog->setTemplateType(thisTemplateType);
+    newDialog->sendDialogObject(this); //send over the current object so we can reload when a new exercise is added
     newDialog->exec();
     qDebug()<<"close dialog";
 }

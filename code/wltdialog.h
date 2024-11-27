@@ -17,7 +17,13 @@ public:
     explicit WLTDialog(QWidget *parent = nullptr);
     ~WLTDialog();
 
-    void populateTypeSpecificExercises(const QString& templateType); //list all exercises in the table (has to be public to generate before dialog opens)
+    void populateTypeSpecificExercises(); //list all exercises in the table (has to be public to generate before dialog opens)
+
+    void setTemplateType(const QString& templateType); //setter for template type
+
+    void setTemplateID(int currentTemplateId); //setter for templateID
+
+    void clearList(); //clears the dialog list
 
 private slots:
 
@@ -31,6 +37,9 @@ private:
     Ui::WLTDialog *ui;
 
     QString thisTemplateType;
+
+    int thisTemplateID;
+
 };
 
 #endif // WLTDIALOG_H

@@ -114,7 +114,9 @@ void WeightliftTemplate::on_saveNewName_clicked(){
 void WeightliftTemplate::on_addNewExerciseButton_clicked()
 {
     WLTDialog *newDialog = new WLTDialog(this); //passing 'this' for proper memory management
-    newDialog->populateTypeSpecificExercises("all_weightlifting_exercises"); //populate the dialog before it appears
+    newDialog->setTemplateType("all_weightlifting_exercises"); //set template type
+    newDialog->setTemplateID(currentTemplateId); //set templateID
+    newDialog->populateTypeSpecificExercises(); //populate the dialog before it appears
     newDialog->exec();
     qDebug()<<"close dialog";
 
