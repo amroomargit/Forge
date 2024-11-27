@@ -14,9 +14,9 @@ WeightliftTemplate::WeightliftTemplate(QWidget *parent)
 {
     ui->setupUi(this);
 
-    newTemplate("Default Template Name."); //call new template creation in constructor
-
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+
+    qDebug() << "WeightliftTemplate constructed.";
 }
 
 WeightliftTemplate::~WeightliftTemplate()
@@ -24,10 +24,34 @@ WeightliftTemplate::~WeightliftTemplate()
     delete ui;
 }
 
+void WeightliftTemplate::setUserID(int passedOverUserID) {
+    currentUserID = passedOverUserID;
+    qDebug() << "User ID set to:" << currentUserID; //check
+}
+
+/*WE NEED THIS METHOD SO WE CAN SAVE THE USERNAME UNTIL IT'S TIME TO SEND IT BACK TO USERMAINMENU WHEN THE BACK BUTTON IS CLICKED,
+ * SINCE IT ONLY TAKES USERNAME AND CALCULATES USERID MANUALLY,
+IT CANNOT TAKE USERID DIRECTLY */
+void WeightliftTemplate::setUserName(const QString &userNamePassedThrough){
+    //handle error
+    if(userNamePassedThrough.isNull()){
+        QMessageBox::critical(this,"Error","No username passed through");
+        return;
+    }
+
+    username = userNamePassedThrough;
+}
+
 void WeightliftTemplate::on_backButton_clicked()
 {
         UserMainMenu *backToPrevScreen = new UserMainMenu;
+
         backToPrevScreen->setFixedSize(this->size());
+
+        backToPrevScreen->setUsername(username); //have to pass username back through because previous window was technically closed when this one opened
+
+        backToPrevScreen->templateHomeScreenDisplay(); // Dynamically display templates
+
         this->setCentralWidget(backToPrevScreen);
 }
 
@@ -35,19 +59,22 @@ void WeightliftTemplate::on_backButton_clicked()
 //Add new row to templates table
 void WeightliftTemplate::newTemplate(const QString& givenTemplateName){
     QString thisTemplateName = givenTemplateName;
+    QString templateType = "Weightlifting";
 
     QSqlQuery query;
-    query.prepare("INSERT INTO templates (template_name) VALUES (:templateName)");
+    query.prepare("INSERT INTO templates (user_id,template_name,template_type) VALUES (:currentUserID,:templateName,:templateType)");
+    query.bindValue(":currentUserID", currentUserID);
     query.bindValue(":templateName", thisTemplateName);
+    query.bindValue(":templateType", templateType);
 
     if(!query.exec()){
         qDebug() << "Error with template insertion... "<<query.lastError().text();
-        QMessageBox::critical(this,"Error","Unable to add to database templates table");
+        QMessageBox::critical(this,"Error","Unable to add to database templates table.");
     }
     else{
         currentTemplateId = query.lastInsertId().toInt(); // Save the template ID
         qDebug()<<"Successful creation";
-        QMessageBox::information(this,"Success","able to add to database templates table");
+        QMessageBox::information(this,"Success","Able to add to database templates table!");
     }
 }
 

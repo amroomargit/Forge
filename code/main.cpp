@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QSqlError>
 
+//#include "weightlifttemplate.h"
 
 //database initialization
 void initializeDatabase(){
@@ -35,7 +36,7 @@ void initializeDatabase(){
     //create templates table (this table stores each template name under a specific user)
     query.exec("CREATE TABLE IF NOT EXISTS templates ("
                     "template_id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                    "user_id TEXT NOT NULL,"
+                    "user_id INTEGER NOT NULL,"
                     "template_name TEXT NOT NULL,"
                     "template_type TEXT NOT NULL," //weightlifting or cardio
                     "creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,"
@@ -65,21 +66,9 @@ int main(int argc, char *argv[])
     //Database initialization
     initializeDatabase();
 
+    //WeightliftTemplate w;
     MainWindow w;
     w.show();
     return a.exec();
 }
 
-/*
-#include "mainwindow.h"
-
-#include <QApplication>
-
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
-}
-*/

@@ -19,8 +19,6 @@ UserMainMenu::UserMainMenu(QWidget *parent)
     titlePageLabel = ui->titleLabel;  // Get qlabel  ui
     titlePageLabel->setText("Welcome!"); //default
 
-    templateHomeScreenDisplay(); //dynamically display templates
-
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
@@ -67,13 +65,13 @@ int UserMainMenu::retrieveUserID(const QString& passedUserName){
 }
 
 
-
 //dynamically populate homescreen by reading through templates table to find how many templates a user has associated with their userID (primary/foreign key)
 void UserMainMenu::templateHomeScreenDisplay(){
     int userIDRetrieved = retrieveUserID(username);
+    qDebug() << "Retrieved userID:" << userIDRetrieved;
 
     QSqlQuery query;
-    query.prepare("SELECT template_id, template_name FROM templates WHERE user_id = :userId");
+    query.prepare("SELECT template_name FROM templates WHERE user_id = :userId");
     query.bindValue(":userId", userIDRetrieved);
 
     //button positioning
@@ -90,7 +88,6 @@ void UserMainMenu::templateHomeScreenDisplay(){
     if(query.exec()){
         while(query.next()){
             //taking template id and name from database table
-            int templateId = query.value("template_id").toInt();
             QString templateName = query.value("template_name").toString();
 
             //button creation and size
@@ -98,6 +95,8 @@ void UserMainMenu::templateHomeScreenDisplay(){
             newTemplateButton->setFixedSize(131,121);
 
             newTemplateButton->move(x,y); //move button to x,y coords
+
+            x = x + 200; //increment x
 
             //button stylesheet
             newTemplateButton->setStyleSheet("QPushButton {"
@@ -117,10 +116,7 @@ void UserMainMenu::templateHomeScreenDisplay(){
             totalButtons++;
 
             //increase scrollable width for every 4 buttons
-            if((totalButtons%4) == 0){
-                increaseQWidget(370);
-            }
-
+            increaseQWidget(150);
         }
     }
 }
@@ -144,9 +140,13 @@ void UserMainMenu::increaseQWidget(int widthIncrease){
 //go to weightlifttemplate screen
 void UserMainMenu::on_newWLTButton_clicked()
 {
-    WeightliftTemplate *goToTemplate = new WeightliftTemplate;
+    WeightliftTemplate *goToTemplate = new WeightliftTemplate(this);
     goToTemplate->setFixedSize(this->size());
+    goToTemplate->setUserID(retrieveUserID(username)); //pass userID over to weightlifttemplate
+    goToTemplate->setUserName(username); //pass userID over to weightlifttemplate
+    goToTemplate->newTemplate("Default Template Name."); // Call after setting userID
     this -> setCentralWidget(goToTemplate);
+    qDebug() << "Central widget set to WeightliftTemplate";
 }
 
 //go to cardiotemplate screen

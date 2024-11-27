@@ -49,6 +49,8 @@ void ReturningUser::on_enterButton_clicked(){
 
             nextWindow->setUsername(currentUser); //pass username over to usermainmenu
 
+            nextWindow->templateHomeScreenDisplay(); // Dynamically display templates
+
             this->setCentralWidget(nextWindow);
         }
         else{

@@ -295,27 +295,28 @@ public:
 "}"));
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(370, 164, 691, 131));
-        scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:vertical {\n"
+        scrollArea->setGeometry(QRect(370, 150, 691, 151));
+        scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:horizontal {\n"
 "    background-color: #656565;\n"
-"    width: 15px; \n"
-"    margin: 10px 0; \n"
-"    border-radius: 15px; \n"
+"    height: 15px; \n"
+"    margin: 0 10px; \n"
+"    border-radius: 15px;\n"
 "}\n"
 "\n"
-"QScrollBar::handle:vertical {\n"
+"QScrollBar::handle:horizontal {\n"
 "    background-color: black;\n"
-"    border-radius: 15px; \n"
+"    border-radius: 15px;\n"
 "}\n"
 "\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {\n"
 "    background: none;\n"
-"    height: 0px;\n"
+"    width: 0px; \n"
 "}\n"
 "\n"
-"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
-"    background: none; \n"
-"}"));
+"QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {\n"
+"    background: none;\n"
+"}\n"
+""));
         scrollArea->setFrameShape(QFrame::Shape::NoFrame);
         scrollArea->setWidgetResizable(false);
         scrollAreaWidgetContentsMM = new QWidget();

@@ -40,7 +40,6 @@ constexpr auto qt_meta_stringdata_CLASSUserMainMenuENDCLASS = QtMocHelpers::stri
     "retrieveUserID",
     "",
     "passedUserName",
-    "templateHomeScreenDisplay",
     "increaseQWidget",
     "widthIncrease",
     "on_logoutButton_clicked",
@@ -58,7 +57,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSUserMainMenuENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -66,17 +65,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSUserMainMenuENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   50,    2, 0x08,    1 /* Private */,
-       4,    0,   53,    2, 0x08,    3 /* Private */,
-       5,    1,   54,    2, 0x08,    4 /* Private */,
-       7,    0,   57,    2, 0x08,    6 /* Private */,
-       8,    0,   58,    2, 0x08,    7 /* Private */,
-       9,    0,   59,    2, 0x08,    8 /* Private */,
+       1,    1,   44,    2, 0x08,    1 /* Private */,
+       4,    1,   47,    2, 0x08,    3 /* Private */,
+       6,    0,   50,    2, 0x08,    5 /* Private */,
+       7,    0,   51,    2, 0x08,    6 /* Private */,
+       8,    0,   52,    2, 0x08,    7 /* Private */,
 
  // slots: parameters
     QMetaType::Int, QMetaType::QString,    3,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, QMetaType::Int,    5,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -96,8 +93,6 @@ Q_CONSTINIT const QMetaObject UserMainMenu::staticMetaObject = { {
         // method 'retrieveUserID'
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'templateHomeScreenDisplay'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'increaseQWidget'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
@@ -119,11 +114,10 @@ void UserMainMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: { int _r = _t->retrieveUserID((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 1: _t->templateHomeScreenDisplay(); break;
-        case 2: _t->increaseQWidget((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 3: _t->on_logoutButton_clicked(); break;
-        case 4: _t->on_newWLTButton_clicked(); break;
-        case 5: _t->on_newCLTButton_clicked(); break;
+        case 1: _t->increaseQWidget((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->on_logoutButton_clicked(); break;
+        case 3: _t->on_newWLTButton_clicked(); break;
+        case 4: _t->on_newCLTButton_clicked(); break;
         default: ;
         }
     }
@@ -148,13 +142,13 @@ int UserMainMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 5;
     }
     return _id;
 }

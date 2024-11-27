@@ -16,8 +16,6 @@ WLTDialog::~WLTDialog()
 }
 
 
-
-
 void WLTDialog::on_xButton_clicked()
 {
     this->close();
