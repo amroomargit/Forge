@@ -19,7 +19,8 @@ SOURCES += \
     usermainmenu.cpp \
     userswindow.cpp \
     weightlifttemplate.cpp \
-    wltdialog.cpp
+    wltdialog.cpp \
+    workoutwidget.cpp
 
 HEADERS += \
     addnewworkoutdialog.h \
@@ -31,7 +32,8 @@ HEADERS += \
     usermainmenu.h \
     userswindow.h \
     weightlifttemplate.h \
-    wltdialog.h
+    wltdialog.h \
+    workoutwidget.h
 
 FORMS += \
     addnewworkoutdialog.ui \
@@ -43,7 +45,8 @@ FORMS += \
     usermainmenu.ui \
     userswindow.ui \
     weightlifttemplate.ui \
-    wltdialog.ui
+    wltdialog.ui \
+    workoutwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

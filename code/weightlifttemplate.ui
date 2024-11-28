@@ -132,7 +132,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="widgetResizable">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <widget class="QWidget" name="scrollAreaWidgetContents">
      <property name="geometry">

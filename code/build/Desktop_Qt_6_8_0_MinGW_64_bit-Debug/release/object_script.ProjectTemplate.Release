@@ -9,6 +9,7 @@ release/usermainmenu.o
 release/userswindow.o
 release/weightlifttemplate.o
 release/wltdialog.o
+release/workoutwidget.o
 release/qrc_resources.o
 release/moc_addnewworkoutdialog.o
 release/moc_calculator.o
@@ -20,3 +21,4 @@ release/moc_usermainmenu.o
 release/moc_userswindow.o
 release/moc_weightlifttemplate.o
 release/moc_wltdialog.o
+release/moc_workoutwidget.o

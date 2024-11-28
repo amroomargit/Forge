@@ -17,6 +17,9 @@ public:
     void setUserID(int passedOverUserID); //to be able to recieved ID passed from usermainmenu
     void newTemplate(const QString& givenTemplateName); //MUST be public so it can be called from usermainmenu AFTER userID has been set, so as to avoid query failure
     void setUserName(const QString &userNamePassedThrough);
+    void widgetPopulation(int idOfCurrentTemplate); //Populates the scrollable area with ALL widgets corresponding to the exercises added to the template_exercises table
+    void singleWidgetPopulation(int exerciseUniqueID); //Populates the scrollable area with single widget corresponding to the exercises added to the template_exercises table
+    void setYCoord(int y); //setter for Y coordinate
 
 private slots:
 
@@ -26,11 +29,16 @@ private slots:
 
     void on_addNewExerciseButton_clicked();
 
+    void increaseQWidget(int heightIncrease);
+
+    void clearScrollArea();
+
 private:
     Ui::WeightliftTemplate *ui;
     int currentTemplateId = -1; // to save templateID so name can be changed later(-1 means no template is being edited)
     int currentUserID; //passed over userID corresponding to username's user ID found from the retrieval method in usermainmenu
-    QString username;
+    QString username; //so we can pass username over
+    int thisY; //y value for widget SINGLE population
 };
 
 #endif // WEIGHTLIFTTEMPLATE_H

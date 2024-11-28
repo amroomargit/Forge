@@ -9,6 +9,7 @@ debug/usermainmenu.o
 debug/userswindow.o
 debug/weightlifttemplate.o
 debug/wltdialog.o
+debug/workoutwidget.o
 debug/qrc_resources.o
 debug/moc_addnewworkoutdialog.o
 debug/moc_calculator.o
@@ -20,3 +21,4 @@ debug/moc_usermainmenu.o
 debug/moc_userswindow.o
 debug/moc_weightlifttemplate.o
 debug/moc_wltdialog.o
+debug/moc_workoutwidget.o

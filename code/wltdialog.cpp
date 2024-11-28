@@ -14,8 +14,6 @@ WLTDialog::WLTDialog(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Connect the itemClicked signal to the corresponding slot
-
     this->setWindowFlags(Qt::FramelessWindowHint);
 }
 
@@ -24,14 +22,21 @@ WLTDialog::~WLTDialog()
     delete ui;
 }
 
+//set template type
 void WLTDialog::setTemplateType(const QString& templateType){
     thisTemplateType = templateType;
     qDebug() << "Template Type Passed to WLTDialog: " << thisTemplateType;
 }
 
+//set template ID
 void WLTDialog::setTemplateID(int currentTemplateId){
     thisTemplateID = currentTemplateId;
     qDebug() << "Template ID Passed to WLTDialog: " << thisTemplateID;
+}
+
+//recieve object from weightlifttemplate so we can call on it later
+void WLTDialog(WLTDialog* classObjectPassed){
+    weightLiftTemplateObject = classObjectPassed;
 }
 
 void WLTDialog::populateTypeSpecificExercises(){
@@ -94,6 +99,12 @@ void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
     }
     else{
         QMessageBox::information(this, "Success", "Exercise added to template!");
+
+        weightLiftTemplateObject->setYCoord(y);
+        weightLiftTemplateObject->singlePopulation(this_exercise_unique_id); //repopulate scroll area in weightlifttemplate
+
+        y = y + 240;
+
     }
 
 }

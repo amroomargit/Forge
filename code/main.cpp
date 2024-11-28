@@ -45,7 +45,8 @@ void initializeDatabase(){
 
     //create template_exercises table (this table stores the workouts in a template, under it's respective template, under it's respective user)
     query.exec("CREATE TABLE IF NOT EXISTS template_exercises ("
-               "exercise_id INTEGER NOT NULL,"
+               "this_exercise_unique_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "all_table_exercise_id INTEGER NOT NULL,"
                "template_id INTEGER NOT NULL,"
                "exercise_name TEXT NOT NULL,"
                "sets INTEGER DEFAULT 0,"

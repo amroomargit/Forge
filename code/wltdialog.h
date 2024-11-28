@@ -5,6 +5,8 @@
 
 #include <QListWidget>
 
+#include "weightlifttemplate.h""
+
 namespace Ui {
 class WLTDialog;
 }
@@ -39,6 +41,10 @@ private:
     QString thisTemplateType;
 
     int thisTemplateID;
+
+    WeightliftTemplate weightLiftTemplateObject;
+
+    int y = 0; //to keep track of single widget position population for weightlifttemplate
 
 };
 

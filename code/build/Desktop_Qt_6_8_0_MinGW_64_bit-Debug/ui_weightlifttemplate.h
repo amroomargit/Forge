@@ -108,7 +108,7 @@ public:
 "    background: none; \n"
 "}"));
         scrollArea->setFrameShape(QFrame::Shape::NoFrame);
-        scrollArea->setWidgetResizable(true);
+        scrollArea->setWidgetResizable(false);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 981, 391));
