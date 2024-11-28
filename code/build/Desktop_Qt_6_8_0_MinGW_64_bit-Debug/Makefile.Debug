@@ -388,6 +388,9 @@ debug/moc_addnewworkoutdialog.cpp: ../../addnewworkoutdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		../../weightlifttemplate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
 	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Amroo/Coding/CS 3307/Deliverable 1/project-deliverable-2-amro-s-team/code/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Amroo/Coding/CS 3307/Deliverable 1/project-deliverable-2-amro-s-team/code" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtSql -IC:/Qt/6.8.0/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\addnewworkoutdialog.h -o debug\moc_addnewworkoutdialog.cpp
@@ -780,6 +783,7 @@ debug/moc_cardiotemplate.cpp: ../../cardiotemplate.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../weightlifttemplate.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
 	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Amroo/Coding/CS 3307/Deliverable 1/project-deliverable-2-amro-s-team/code/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Amroo/Coding/CS 3307/Deliverable 1/project-deliverable-2-amro-s-team/code" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtSql -IC:/Qt/6.8.0/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\cardiotemplate.h -o debug\moc_cardiotemplate.cpp
@@ -2182,6 +2186,9 @@ debug/moc_wltdialog.cpp: ../../wltdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		../../weightlifttemplate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
 	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Amroo/Coding/CS 3307/Deliverable 1/project-deliverable-2-amro-s-team/code/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Amroo/Coding/CS 3307/Deliverable 1/project-deliverable-2-amro-s-team/code" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtSql -IC:/Qt/6.8.0/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\wltdialog.h -o debug\moc_wltdialog.cpp
@@ -2654,6 +2661,9 @@ debug/addnewworkoutdialog.o: ../../addnewworkoutdialog.cpp ../../addnewworkoutdi
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		../../weightlifttemplate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
 		ui_addnewworkoutdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
@@ -3111,28 +3121,22 @@ debug/cardiotemplate.o: ../../cardiotemplate.cpp ../../cardiotemplate.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_cardiotemplate.h \
+		../../weightlifttemplate.h \
+		ui_weightlifttemplate.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
@@ -3144,7 +3148,38 @@ debug/cardiotemplate.o: ../../cardiotemplate.cpp ../../cardiotemplate.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
+		../../wltdialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidget \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistview.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/QSqlError \
+		C:/Qt/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cardiotemplate.o ..\..\cardiotemplate.cpp
 
 debug/main.o: ../../main.cpp ../../mainwindow.h \
@@ -5005,6 +5040,9 @@ debug/wltdialog.o: ../../wltdialog.cpp ../../wltdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		../../weightlifttemplate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
 		ui_wltdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/QIcon \
@@ -5225,7 +5263,32 @@ debug/workoutwidget.o: ../../workoutwidget.cpp ../../workoutwidget.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_workoutwidget.h
+		ui_workoutwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\workoutwidget.o ..\..\workoutwidget.cpp
 
 debug/qrc_resources.o: debug/qrc_resources.cpp 

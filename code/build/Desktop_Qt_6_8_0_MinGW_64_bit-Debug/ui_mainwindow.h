@@ -181,7 +181,7 @@ public:
         label_3->setFont(font4);
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(880, 180, 81, 20));
+        label_4->setGeometry(QRect(860, 180, 111, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -212,12 +212,12 @@ public:
         tipsButton->setText(QCoreApplication::translate("MainWindow", "Tips", nullptr));
         termButton->setText(QCoreApplication::translate("MainWindow", "Terminology", nullptr));
         tutorButton->setText(QCoreApplication::translate("MainWindow", "Tutorial", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Functional!", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Functional", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Note: Everything other than Users and \n"
 "Calculator is \n"
 "a basic page just filled with text, to be \n"
 "implemented by final", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "Functional!", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Semi-Functional", nullptr));
         menuHello->setTitle(QString());
     } // retranslateUi
 

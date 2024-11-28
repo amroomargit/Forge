@@ -56,6 +56,7 @@ public:
     QLabel *extremeWLLabel;
     QLabel *extremeWLResultLabel;
     QComboBox *weightDropdown;
+    QComboBox *heightDropdown;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -120,7 +121,7 @@ public:
         ageLabel->setFont(font1);
         weightBox = new QLineEdit(scrollAreaWidgetContents);
         weightBox->setObjectName("weightBox");
-        weightBox->setGeometry(QRect(600, 208, 71, 31));
+        weightBox->setGeometry(QRect(670, 208, 71, 31));
         weightBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -135,7 +136,7 @@ public:
         genderLabel->setFont(font1);
         calculateButton = new QPushButton(scrollAreaWidgetContents);
         calculateButton->setObjectName("calculateButton");
-        calculateButton->setGeometry(QRect(860, 230, 121, 71));
+        calculateButton->setGeometry(QRect(890, 230, 121, 71));
         QFont font2;
         font2.setPointSize(10);
         calculateButton->setFont(font2);
@@ -198,7 +199,7 @@ public:
 "padding: 5px 10px;"));
         weightLabel = new QLabel(scrollAreaWidgetContents);
         weightLabel->setObjectName("weightLabel");
-        weightLabel->setGeometry(QRect(510, 200, 91, 41));
+        weightLabel->setGeometry(QRect(580, 200, 91, 41));
         weightLabel->setFont(font1);
         titleLabel = new QLabel(scrollAreaWidgetContents);
         titleLabel->setObjectName("titleLabel");
@@ -260,8 +261,17 @@ public:
         weightDropdown->addItem(QString());
         weightDropdown->addItem(QString());
         weightDropdown->setObjectName("weightDropdown");
-        weightDropdown->setGeometry(QRect(690, 208, 61, 31));
+        weightDropdown->setGeometry(QRect(750, 208, 61, 31));
         weightDropdown->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 5px 10px;"));
+        heightDropdown = new QComboBox(scrollAreaWidgetContents);
+        heightDropdown->addItem(QString());
+        heightDropdown->addItem(QString());
+        heightDropdown->setObjectName("heightDropdown");
+        heightDropdown->setGeometry(QRect(450, 208, 61, 31));
+        heightDropdown->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 5px 10px;"));
@@ -316,8 +326,11 @@ public:
         weightLossResultLabel->setText(QString());
         extremeWLLabel->setText(QCoreApplication::translate("Calculator", "Extreme weight loss:", nullptr));
         extremeWLResultLabel->setText(QString());
-        weightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "kg", nullptr));
-        weightDropdown->setItemText(1, QCoreApplication::translate("Calculator", "lbs", nullptr));
+        weightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "lbs", nullptr));
+        weightDropdown->setItemText(1, QCoreApplication::translate("Calculator", "kgs", nullptr));
+
+        heightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "cm", nullptr));
+        heightDropdown->setItemText(1, QCoreApplication::translate("Calculator", "ft", nullptr));
 
     } // retranslateUi
 

@@ -155,7 +155,7 @@ public:
     {
         WeightliftTemplate->setWindowTitle(QCoreApplication::translate("WeightliftTemplate", "MainWindow", nullptr));
         backButton->setText(QCoreApplication::translate("WeightliftTemplate", "Back", nullptr));
-        titleLabel->setText(QCoreApplication::translate("WeightliftTemplate", "Please Set Template Name.", nullptr));
+        titleLabel->setText(QCoreApplication::translate("WeightliftTemplate", "Default Name.", nullptr));
         addNewExerciseButton->setText(QCoreApplication::translate("WeightliftTemplate", "+ Add New Exercise", nullptr));
         templateNameBox->setPlaceholderText(QCoreApplication::translate("WeightliftTemplate", "Set Template Name", nullptr));
         saveNewName->setText(QCoreApplication::translate("WeightliftTemplate", "Set", nullptr));

@@ -5,7 +5,7 @@
 
 #include <QListWidget>
 
-#include "weightlifttemplate.h""
+#include "weightlifttemplate.h"
 
 namespace Ui {
 class WLTDialog;
@@ -27,6 +27,8 @@ public:
 
     void clearList(); //clears the dialog list
 
+    void objectPassed(WeightliftTemplate* classObjectPassed); //to recieve the weightlifttemplate object
+
 private slots:
 
     void on_xButton_clicked();
@@ -42,9 +44,9 @@ private:
 
     int thisTemplateID;
 
-    WeightliftTemplate weightLiftTemplateObject;
+    WeightliftTemplate* weightLiftTemplateObject;
 
-    int y = 0; //to keep track of single widget position population for weightlifttemplate
+    int y = 20; //to keep track of single widget position population for weightlifttemplate
 
 };
 

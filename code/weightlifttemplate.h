@@ -15,11 +15,14 @@ public:
     explicit WeightliftTemplate(QWidget *parent = nullptr);
     ~WeightliftTemplate();
     void setUserID(int passedOverUserID); //to be able to recieved ID passed from usermainmenu
-    void newTemplate(const QString& givenTemplateName); //MUST be public so it can be called from usermainmenu AFTER userID has been set, so as to avoid query failure
+    int getUserID(); //getter for userID
+    virtual void newTemplate(const QString& givenTemplateName); //MUST be public so it can be called from usermainmenu AFTER userID has been set, so as to avoid query failure
     void setUserName(const QString &userNamePassedThrough);
     void widgetPopulation(int idOfCurrentTemplate); //Populates the scrollable area with ALL widgets corresponding to the exercises added to the template_exercises table
-    void singleWidgetPopulation(int exerciseUniqueID); //Populates the scrollable area with single widget corresponding to the exercises added to the template_exercises table
+    virtual void singleWidgetPopulation(int exerciseUniqueID); //Populates the scrollable area with single widget corresponding to the exercises added to the template_exercises table
     void setYCoord(int y); //setter for Y coordinate
+    int getCurrentTemplateId(); //getter for templateID
+    void setCurrentTemplateId(int newCurrentTemplateID); //setter for templateID
 
 private slots:
 
@@ -27,11 +30,9 @@ private slots:
 
     void on_saveNewName_clicked();
 
-    void on_addNewExerciseButton_clicked();
+    virtual void on_addNewExerciseButton_clicked();
 
     void increaseQWidget(int heightIncrease);
-
-    void clearScrollArea();
 
 private:
     Ui::WeightliftTemplate *ui;

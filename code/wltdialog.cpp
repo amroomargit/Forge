@@ -1,6 +1,7 @@
 #include "wltdialog.h"
 #include "ui_wltdialog.h"
 #include "addnewworkoutdialog.h"
+#include "weightlifttemplate.h"
 
 #include <QSqlQuery>
 #include <QSqlError>
@@ -13,6 +14,9 @@ WLTDialog::WLTDialog(QWidget *parent)
     , ui(new Ui::WLTDialog)
 {
     ui->setupUi(this);
+
+    // Connect search bar to filter slot
+    connect(ui->searchBar, &QLineEdit::textChanged, this, &WLTDialog::searchThroughList);
 
     this->setWindowFlags(Qt::FramelessWindowHint);
 }
@@ -35,7 +39,7 @@ void WLTDialog::setTemplateID(int currentTemplateId){
 }
 
 //recieve object from weightlifttemplate so we can call on it later
-void WLTDialog(WLTDialog* classObjectPassed){
+void WLTDialog::objectPassed(WeightliftTemplate* classObjectPassed){
     weightLiftTemplateObject = classObjectPassed;
 }
 
@@ -81,7 +85,7 @@ void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
 
     //query so we can add clicked items from the list into the table template_exercises
     QSqlQuery query;
-    query.prepare("INSERT INTO template_exercises (exercise_id, exercise_name, template_id, sets, reps, weight, weight_unit) VALUES (:exerciseID, :exerciseName, :templateID, :setsValue, :repsValue, :weightValue, :weightUnitValue)");
+    query.prepare("INSERT INTO template_exercises (all_table_exercise_id, exercise_name, template_id, sets, reps, weight, weight_unit) VALUES (:exerciseID, :exerciseName, :templateID, :setsValue, :repsValue, :weightValue, :weightUnitValue)");
     query.bindValue(":exerciseID", exerciseID);
     query.bindValue(":exerciseName", exerciseName);
     query.bindValue(":templateID", thisTemplateID);
@@ -101,7 +105,9 @@ void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
         QMessageBox::information(this, "Success", "Exercise added to template!");
 
         weightLiftTemplateObject->setYCoord(y);
-        weightLiftTemplateObject->singlePopulation(this_exercise_unique_id); //repopulate scroll area in weightlifttemplate
+
+        //argument we passes is the ID of the last row inserted into the database, which will be the this_exercise_unique_id
+        weightLiftTemplateObject->singleWidgetPopulation(query.lastInsertId().toInt()); //repopulate scroll area in weightlifttemplate
 
         y = y + 240;
 
@@ -109,7 +115,7 @@ void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
 
 }
 
-//remove the list on the dialog
+//remove the list on the WLTdialog
 void WLTDialog::clearList(){
     ui->listWidget->clear();
 }

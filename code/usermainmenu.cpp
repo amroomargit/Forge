@@ -144,16 +144,19 @@ void UserMainMenu::on_newWLTButton_clicked()
     goToTemplate->setFixedSize(this->size());
     goToTemplate->setUserID(retrieveUserID(username)); //pass userID over to weightlifttemplate
     goToTemplate->setUserName(username); //pass userID over to weightlifttemplate
-    goToTemplate->newTemplate("Default Template Name."); // Call after setting userID
+    goToTemplate->newTemplate("Default Name."); // Call after setting userID
     this -> setCentralWidget(goToTemplate);
     qDebug() << "Central widget set to WeightliftTemplate";
 }
 
 //go to cardiotemplate screen
 void UserMainMenu::on_newCLTButton_clicked()
-{
-    CardioTemplate *goToTemplate = new CardioTemplate;
+{ /*
+    CardioTemplate *goToTemplate = new CardioTemplate(this);
     goToTemplate->setFixedSize(this->size());
-    this -> setCentralWidget(goToTemplate);
+    goToTemplate->setUserID(retrieveUserID(username)); //pass userID over to cardiotemplate which inherited from weightlifttemplate
+    goToTemplate->setUserName(username); //pass userID over to cardiotemplate
+    goToTemplate->newTemplate("Default Name."); // Call after setting userID
+    this -> setCentralWidget(goToTemplate); */
 }
 

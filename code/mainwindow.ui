@@ -269,7 +269,7 @@ color: black;
      </rect>
     </property>
     <property name="text">
-     <string>Functional!</string>
+     <string>Functional</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -296,14 +296,14 @@ implemented by final</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>860</x>
       <y>180</y>
-      <width>81</width>
+      <width>111</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Functional!</string>
+     <string>Semi-Functional</string>
     </property>
    </widget>
   </widget>
