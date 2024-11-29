@@ -28,7 +28,6 @@ public:
 private slots:
     int retrieveUserID(const QString& passedUserName); //to retrieve the userID
 
-
     void increaseQWidget(int widthIncrease);
 
     void on_logoutButton_clicked();
