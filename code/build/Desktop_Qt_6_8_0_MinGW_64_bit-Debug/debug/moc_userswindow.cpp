@@ -36,8 +36,9 @@ namespace {
 struct qt_meta_stringdata_CLASSUsersWindowENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSUsersWindowENDCLASS = QtMocHelpers::stringData(
     "UsersWindow",
-    "increaseQWidget",
+    "dynamicWidgetPopulation",
     "",
+    "increaseQWidget",
     "heightIncrease",
     "onUserButtonClicked",
     "username",
@@ -55,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSUsersWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,14 +64,16 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSUsersWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    2, 0x08,    1 /* Private */,
-       4,    1,   41,    2, 0x08,    3 /* Private */,
-       6,    0,   44,    2, 0x08,    5 /* Private */,
-       7,    0,   45,    2, 0x08,    6 /* Private */,
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    1,   45,    2, 0x08,    2 /* Private */,
+       5,    1,   48,    2, 0x08,    4 /* Private */,
+       7,    0,   51,    2, 0x08,    6 /* Private */,
+       8,    0,   52,    2, 0x08,    7 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::QString,    6,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -86,6 +89,8 @@ Q_CONSTINIT const QMetaObject UsersWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSUsersWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<UsersWindow, std::true_type>,
+        // method 'dynamicWidgetPopulation'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'increaseQWidget'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
@@ -106,10 +111,11 @@ void UsersWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<UsersWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->increaseQWidget((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 1: _t->onUserButtonClicked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->on_addUserButton_clicked(); break;
-        case 3: _t->on_backButton_clicked(); break;
+        case 0: _t->dynamicWidgetPopulation(); break;
+        case 1: _t->increaseQWidget((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->onUserButtonClicked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->on_addUserButton_clicked(); break;
+        case 4: _t->on_backButton_clicked(); break;
         default: ;
         }
     }
@@ -134,13 +140,13 @@ int UsersWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

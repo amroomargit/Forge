@@ -19,7 +19,21 @@ UsersWindow::UsersWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //user button is fixed
+    dynamicWidgetPopulation();
+
+    this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+
+}
+
+UsersWindow::~UsersWindow()
+{
+    delete ui;
+}
+
+//dynamic widget population of pre-existing users
+void UsersWindow::dynamicWidgetPopulation(){
+
+    //the button to add new users must always be present
     QPushButton *addUserButton = ui->addUserButton;
     addUserButton->setText("+");
 
@@ -93,14 +107,6 @@ UsersWindow::UsersWindow(QWidget *parent)
         }
 
     }
-
-    this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
-
-}
-
-UsersWindow::~UsersWindow()
-{
-    delete ui;
 }
 
 //increase QWidget height method

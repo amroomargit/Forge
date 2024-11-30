@@ -17,6 +17,8 @@ public:
     ~UsersWindow();
 
 private slots:
+    void dynamicWidgetPopulation(); //dynamic widget population of pre-existing users
+
     void increaseQWidget(int heightIncrease); //to increase scrollable area while looping
 
     void onUserButtonClicked(const QString &username);
