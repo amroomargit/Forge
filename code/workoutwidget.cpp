@@ -1,6 +1,8 @@
 #include "workoutwidget.h"
 #include "ui_workoutwidget.h"
 
+#include <QPushButton>
+
 WorkoutWidget::WorkoutWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::WorkoutWidget)
@@ -14,17 +16,19 @@ WorkoutWidget::~WorkoutWidget()
 }
 
 void WorkoutWidget::setTitle(const QString &title){
-    ui->displayName->setText(title);
+    ui->displayName_2->setText(title);
 }
 
 void WorkoutWidget::setSets(const QString &count){
-    ui->displaySets->setText(count);
+    ui->setLabel->setText(count);
 }
 
 void WorkoutWidget::setReps(const QString &count){
-    ui->displayReps->setText(count);
+    ui->repLabel->setText(count);
 }
 
 void WorkoutWidget::setWeight(const QString &count){
-    ui->displayWeight->setText(count);
+    ui->displayWeight_2->setText(count);
 }
+
+

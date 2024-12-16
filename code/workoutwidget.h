@@ -22,6 +22,8 @@ public:
 
     void setWeight(const QString &count); //set weight
 
+private slots:
+
 private:
     Ui::WorkoutWidget *ui;
 };

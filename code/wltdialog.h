@@ -32,10 +32,10 @@ public:
 private slots:
 
     void on_xButton_clicked();
-    int on_listWidget_itemClicked(QListWidgetItem *thisItem);
+    void on_listWidget_itemClicked(QListWidgetItem *thisItem);
     void searchThroughList(const QString &exerciseSearchedFor); //dialog search exercise bar
     void on_addNewWorkoutButton_clicked();
-    void weightliftTemplatePageRefresh(int exerciseID);
+    void weightliftTemplatePageRefresh();
 
 private:
     Ui::WLTDialog *ui;
