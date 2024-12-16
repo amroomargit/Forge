@@ -26,14 +26,14 @@ public:
     QLabel *label_2;
     QLabel *label;
     QWidget *widget;
-    QLabel *displayName_2;
+    QLabel *workoutName;
     QWidget *widget_3;
-    QLabel *displaySets_2;
-    QLabel *displayWeight_2;
-    QLabel *displayReps_2;
-    QComboBox *comboBox;
+    QLabel *setLabel;
+    QLabel *weightLabel;
+    QLabel *repLabel;
+    QComboBox *weightDropdown;
     QLineEdit *setBox;
-    QLineEdit *lbsBox;
+    QLineEdit *weightBox;
     QLineEdit *repBox;
     QPushButton *pushButton;
 
@@ -67,42 +67,42 @@ public:
         widget->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        displayName_2 = new QLabel(widget);
-        displayName_2->setObjectName("displayName_2");
-        displayName_2->setGeometry(QRect(10, 0, 501, 41));
+        workoutName = new QLabel(widget);
+        workoutName->setObjectName("workoutName");
+        workoutName->setGeometry(QRect(10, 0, 501, 41));
         QFont font1;
         font1.setPointSize(10);
         font1.setBold(true);
-        displayName_2->setFont(font1);
-        displayName_2->setStyleSheet(QString::fromUtf8("color:white;"));
+        workoutName->setFont(font1);
+        workoutName->setStyleSheet(QString::fromUtf8("color:white;"));
         widget_3 = new QWidget(mainWidget);
         widget_3->setObjectName("widget_3");
         widget_3->setGeometry(QRect(10, 110, 391, 41));
         widget_3->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        displaySets_2 = new QLabel(widget_3);
-        displaySets_2->setObjectName("displaySets_2");
-        displaySets_2->setGeometry(QRect(10, 0, 71, 41));
-        displaySets_2->setFont(font);
-        displaySets_2->setStyleSheet(QString::fromUtf8("color:white;"));
-        displayWeight_2 = new QLabel(widget_3);
-        displayWeight_2->setObjectName("displayWeight_2");
-        displayWeight_2->setGeometry(QRect(150, 0, 81, 41));
-        displayWeight_2->setFont(font);
-        displayWeight_2->setStyleSheet(QString::fromUtf8("color:white;"));
-        displayReps_2 = new QLabel(widget_3);
-        displayReps_2->setObjectName("displayReps_2");
-        displayReps_2->setGeometry(QRect(300, 0, 81, 41));
-        displayReps_2->setFont(font);
-        displayReps_2->setStyleSheet(QString::fromUtf8("color:white;"));
-        comboBox = new QComboBox(mainWidget);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(170, 60, 82, 41));
-        comboBox->setFont(font);
-        comboBox->setStyleSheet(QString::fromUtf8("color:black;"));
+        setLabel = new QLabel(widget_3);
+        setLabel->setObjectName("setLabel");
+        setLabel->setGeometry(QRect(10, 0, 71, 41));
+        setLabel->setFont(font);
+        setLabel->setStyleSheet(QString::fromUtf8("color:white;"));
+        weightLabel = new QLabel(widget_3);
+        weightLabel->setObjectName("weightLabel");
+        weightLabel->setGeometry(QRect(150, 0, 141, 41));
+        weightLabel->setFont(font);
+        weightLabel->setStyleSheet(QString::fromUtf8("color:white;"));
+        repLabel = new QLabel(widget_3);
+        repLabel->setObjectName("repLabel");
+        repLabel->setGeometry(QRect(300, 0, 81, 41));
+        repLabel->setFont(font);
+        repLabel->setStyleSheet(QString::fromUtf8("color:white;"));
+        weightDropdown = new QComboBox(mainWidget);
+        weightDropdown->addItem(QString());
+        weightDropdown->addItem(QString());
+        weightDropdown->setObjectName("weightDropdown");
+        weightDropdown->setGeometry(QRect(170, 60, 82, 41));
+        weightDropdown->setFont(font);
+        weightDropdown->setStyleSheet(QString::fromUtf8("color:black;"));
         setBox = new QLineEdit(mainWidget);
         setBox->setObjectName("setBox");
         setBox->setGeometry(QRect(10, 160, 81, 41));
@@ -111,14 +111,14 @@ public:
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
         setBox->setMaxLength(3);
-        lbsBox = new QLineEdit(mainWidget);
-        lbsBox->setObjectName("lbsBox");
-        lbsBox->setGeometry(QRect(160, 160, 81, 41));
-        lbsBox->setStyleSheet(QString::fromUtf8("background-color: black;\n"
+        weightBox = new QLineEdit(mainWidget);
+        weightBox->setObjectName("weightBox");
+        weightBox->setGeometry(QRect(160, 160, 81, 41));
+        weightBox->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 10px 20px;"));
-        lbsBox->setMaxLength(5);
+        weightBox->setMaxLength(6);
         repBox = new QLineEdit(mainWidget);
         repBox->setObjectName("repBox");
         repBox->setGeometry(QRect(310, 160, 81, 41));
@@ -153,12 +153,12 @@ public:
         WorkoutWidget->setWindowTitle(QCoreApplication::translate("WorkoutWidget", "Form", nullptr));
         label_2->setText(QCoreApplication::translate("WorkoutWidget", "Reps", nullptr));
         label->setText(QCoreApplication::translate("WorkoutWidget", "Sets", nullptr));
-        displayName_2->setText(QString());
-        displaySets_2->setText(QString());
-        displayWeight_2->setText(QString());
-        displayReps_2->setText(QString());
-        comboBox->setItemText(0, QCoreApplication::translate("WorkoutWidget", "lbs", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("WorkoutWidget", "kgs", nullptr));
+        workoutName->setText(QString());
+        setLabel->setText(QString());
+        weightLabel->setText(QString());
+        repLabel->setText(QString());
+        weightDropdown->setItemText(0, QCoreApplication::translate("WorkoutWidget", "lbs", nullptr));
+        weightDropdown->setItemText(1, QCoreApplication::translate("WorkoutWidget", "kgs", nullptr));
 
         pushButton->setText(QCoreApplication::translate("WorkoutWidget", "Change", nullptr));
     } // retranslateUi

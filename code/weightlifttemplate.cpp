@@ -177,7 +177,7 @@ void WeightliftTemplate::dynamicWidgetPopulation(){
 
     QSqlQuery query;
 
-    /*will pull the row matching this_exercise_unique_id since it autoincrements it's unique */
+    /*populate each row matching the template id for the template we are currently working with*/
     query.prepare("SELECT * FROM template_exercises WHERE template_id = :currentTemplateId");
     query.bindValue(":currentTemplateId", currentTemplateId);
 
@@ -187,23 +187,26 @@ void WeightliftTemplate::dynamicWidgetPopulation(){
     }
 
     while(query.next()){
-        //pull values
+        //initialize values
         QString exerciseName = query.value("exercise_name").toString();
         int sets = query.value("sets").toInt();
         int reps = query.value("reps").toInt();
         double weight = query.value("weight").toDouble();
         QString weightUnit = query.value("weight_unit").toString(); //FOR LATER
+        QString uniqueExerciseID = query.value("this_exercise_unique_id").toString();
 
 
         WorkoutWidget *newWidget = new WorkoutWidget(contentHolderInScrollWidget);
         newWidget->setFixedSize(571,231);
 
-        //set username as object name
+        //set values in QLabels
         newWidget->setTitle(exerciseName);
         newWidget->setSets(QString::fromStdString(std::to_string(sets)));
         newWidget->setReps(QString::fromStdString(std::to_string(reps)));
-        newWidget->setWeight(QString::fromStdString(std::to_string(weight)));
+        newWidget->setWeight(QString::fromStdString(std::to_string(weight)),weightUnit);
 
+        //pass through the unique exercise ID for this row in the table so the sets, reps. weight and weight unit may be changed later
+        newWidget->setUniqueExerciseID(uniqueExerciseID);
 
         //new button's position
         newWidget->move(pretendX, pretendY);

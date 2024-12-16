@@ -86,7 +86,7 @@ padding: 10px 20px;</string>
 border-radius: 15px;
 padding: 10px 20px;</string>
     </property>
-    <widget class="QLabel" name="displayName_2">
+    <widget class="QLabel" name="workoutName">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -123,7 +123,7 @@ padding: 10px 20px;</string>
 border-radius: 15px;
 padding: 10px 20px;</string>
     </property>
-    <widget class="QLabel" name="displaySets_2">
+    <widget class="QLabel" name="setLabel">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -144,12 +144,12 @@ padding: 10px 20px;</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="displayWeight_2">
+    <widget class="QLabel" name="weightLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
        <y>0</y>
-       <width>81</width>
+       <width>141</width>
        <height>41</height>
       </rect>
      </property>
@@ -165,7 +165,7 @@ padding: 10px 20px;</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="displayReps_2">
+    <widget class="QLabel" name="repLabel">
      <property name="geometry">
       <rect>
        <x>300</x>
@@ -187,7 +187,7 @@ padding: 10px 20px;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="weightDropdown">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -234,7 +234,7 @@ padding: 10px 20px;</string>
      <number>3</number>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lbsBox">
+   <widget class="QLineEdit" name="weightBox">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -250,7 +250,7 @@ border-radius: 15px;
 padding: 10px 20px;</string>
     </property>
     <property name="maxLength">
-     <number>5</number>
+     <number>6</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="repBox">

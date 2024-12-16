@@ -20,12 +20,18 @@ public:
 
     void setReps(const QString &count); //set rep count
 
-    void setWeight(const QString &count); //set weight
+    void setWeight(const QString &count, QString unit); //set weight
+
+    void setUniqueExerciseID(QString uniqueID); //set unique exercise ID
 
 private slots:
 
+    void on_pushButton_clicked();
+
 private:
     Ui::WorkoutWidget *ui;
+
+    QString exerciseID; //unique exercise ID
 };
 
 #endif // WORKOUTWIDGET_H

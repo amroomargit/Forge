@@ -154,7 +154,7 @@ void UserMainMenu::templateHomeScreenDisplay(){
             totalButtons++;
 
             //increase scrollable width for every 4 buttons
-            increaseQWidget(150);
+            increaseQWidget(200);
         }
     }
 }
