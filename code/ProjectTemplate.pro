@@ -12,15 +12,18 @@ SOURCES += \
     addnewworkoutdialog.cpp \
     calculator.cpp \
     cardiotemplate.cpp \
+    links.cpp \
     main.cpp \
     mainwindow.cpp \
     newuser.cpp \
     returninguser.cpp \
     terminology.cpp \
+    tips.cpp \
     usermainmenu.cpp \
     userswindow.cpp \
     weightlifttemplate.cpp \
     wltdialog.cpp \
+    workoutgoals.cpp \
     workoutwidget.cpp
 
 HEADERS += \
@@ -28,28 +31,34 @@ HEADERS += \
     addnewworkoutdialog.h \
     calculator.h \
     cardiotemplate.h \
+    links.h \
     mainwindow.h \
     newuser.h \
     returninguser.h \
     terminology.h \
+    tips.h \
     usermainmenu.h \
     userswindow.h \
     weightlifttemplate.h \
     wltdialog.h \
+    workoutgoals.h \
     workoutwidget.h
 
 FORMS += \
     addnewworkoutdialog.ui \
     calculator.ui \
     cardiotemplate.ui \
+    links.ui \
     mainwindow.ui \
     newuser.ui \
     returninguser.ui \
     terminology.ui \
+    tips.ui \
     usermainmenu.ui \
     userswindow.ui \
     weightlifttemplate.ui \
     wltdialog.ui \
+    workoutgoals.ui \
     workoutwidget.ui
 
 # Default rules for deployment.

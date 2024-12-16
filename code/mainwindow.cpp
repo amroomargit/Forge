@@ -4,6 +4,8 @@
 #include "userswindow.h"
 #include "calculator.h"
 #include "terminology.h"
+#include "links.h"
+#include "tips.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -43,13 +45,17 @@ void MainWindow::on_goalsButton_clicked()
 
 void MainWindow::on_tipsButton_clicked()
 {
-
+    Tips *tipPage = new Tips;
+    tipPage->setFixedSize(this->size());
+    this->setCentralWidget(tipPage);
 }
 
 
 void MainWindow::on_linksButton_clicked()
 {
-
+    Links *linkPage = new Links;
+    linkPage->setFixedSize(this->size());
+    this->setCentralWidget(linkPage);
 }
 
 

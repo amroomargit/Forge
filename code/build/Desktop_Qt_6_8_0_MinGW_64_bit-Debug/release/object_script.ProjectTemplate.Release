@@ -1,11 +1,13 @@
 release/addnewworkoutdialog.o
 release/calculator.o
 release/cardiotemplate.o
+release/links.o
 release/main.o
 release/mainwindow.o
 release/newuser.o
 release/returninguser.o
 release/terminology.o
+release/tips.o
 release/usermainmenu.o
 release/userswindow.o
 release/weightlifttemplate.o
@@ -15,10 +17,12 @@ release/qrc_resources.o
 release/moc_addnewworkoutdialog.o
 release/moc_calculator.o
 release/moc_cardiotemplate.o
+release/moc_links.o
 release/moc_mainwindow.o
 release/moc_newuser.o
 release/moc_returninguser.o
 release/moc_terminology.o
+release/moc_tips.o
 release/moc_usermainmenu.o
 release/moc_userswindow.o
 release/moc_weightlifttemplate.o

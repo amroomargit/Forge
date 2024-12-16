@@ -1,11 +1,13 @@
 debug/addnewworkoutdialog.o
 debug/calculator.o
 debug/cardiotemplate.o
+debug/links.o
 debug/main.o
 debug/mainwindow.o
 debug/newuser.o
 debug/returninguser.o
 debug/terminology.o
+debug/tips.o
 debug/usermainmenu.o
 debug/userswindow.o
 debug/weightlifttemplate.o
@@ -15,10 +17,12 @@ debug/qrc_resources.o
 debug/moc_addnewworkoutdialog.o
 debug/moc_calculator.o
 debug/moc_cardiotemplate.o
+debug/moc_links.o
 debug/moc_mainwindow.o
 debug/moc_newuser.o
 debug/moc_returninguser.o
 debug/moc_terminology.o
+debug/moc_tips.o
 debug/moc_usermainmenu.o
 debug/moc_userswindow.o
 debug/moc_weightlifttemplate.o
