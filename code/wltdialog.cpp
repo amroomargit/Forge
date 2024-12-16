@@ -78,10 +78,25 @@ void WLTDialog::searchThroughList(const QString &exerciseSearchedFor){
     }
 }
 
+/*refresh the weightlifttemplate page so the widgets can dynamically populate the page
+we just create a new template and re-feed all the old information (i.e. username, IDs, etc.)
+but it is not added to the database, so technically we are just refreshing the same page */
+void WLTDialog::weightliftTemplatePageRefresh(int exerciseID){
+    WeightliftTemplate *refreshedScreen = new WeightliftTemplate(this);
+    refreshedScreen->setFixedSize(this->size());
+    refreshedScreen->setUserID(weightLiftTemplateObject->getUserID());
+    refreshedScreen->setUserName(weightLiftTemplateObject->getUserName());
+    //the method to add the template to the database is not called
+    refreshedScreen->setExerciseId(exerciseID);
+    singleWidgetPopulation(int exerciseUniqueID)
+    weightLiftTemplateObject->setCentralWidget(refreshedScreen);
+}
+
 //when an item in the list is clicked...
-void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
+int WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
     int exerciseID = thisItem->data(Qt::UserRole).toInt(); //accessing the ID we saved before
     QString exerciseName = thisItem->text(); //name of exercise is same as name of the item
+    int returnValue = 0;
 
     //query so we can add clicked items from the list into the table template_exercises
     QSqlQuery query;
@@ -104,15 +119,17 @@ void WLTDialog::on_listWidget_itemClicked(QListWidgetItem *thisItem){
     else{
         QMessageBox::information(this, "Success", "Exercise added to template!");
 
-        weightLiftTemplateObject->setYCoord(y);
+        //weightLiftTemplateObject->setYCoord(y);
 
         //argument we passes is the ID of the last row inserted into the database, which will be the this_exercise_unique_id
-        weightLiftTemplateObject->singleWidgetPopulation(query.lastInsertId().toInt()); //repopulate scroll area in weightlifttemplate
+        //weightLiftTemplateObject->singleWidgetPopulation(query.lastInsertId().toInt()); //repopulate scroll area in weightlifttemplate
 
-        y = y + 240;
-
+        //y = y + 240;
     }
 
+    returnValue = query.lastInsertId().toInt(); //set return value to the exercise ID
+
+    return(returnValue);
 }
 
 //remove the list on the WLTdialog

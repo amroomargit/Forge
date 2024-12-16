@@ -17,6 +17,8 @@ WeightliftTemplate::WeightliftTemplate(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //singleWidgetPopulation();
+
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
@@ -30,19 +32,23 @@ WeightliftTemplate::~WeightliftTemplate()
 void WeightliftTemplate::setUserID(int passedOverUserID) {
     currentUserID = passedOverUserID;
 }
-
 int WeightliftTemplate::getUserID(){
     return currentUserID;
 }
 
 
 // Getter and Setter for currentTemplateId
+void WeightliftTemplate::setCurrentTemplateId(int newCurrentTemplateID){
+    currentTemplateId = newCurrentTemplateID;
+}
 int WeightliftTemplate::getCurrentTemplateId(){
     return currentTemplateId;
 }
 
-void WeightliftTemplate::setCurrentTemplateId(int newCurrentTemplateID){
-    currentTemplateId = newCurrentTemplateID;
+
+//setter for exercise id
+void WeightliftTemplate::setExerciseId(int givenExerciseId){
+    exerciseUniqueID = givenExerciseId;
 }
 
 
@@ -59,8 +65,10 @@ void WeightliftTemplate::setUserName(const QString &userNamePassedThrough){
     username = userNamePassedThrough;
 }
 
-
-
+//getter for username
+QString WeightliftTemplate::getUserName(){
+    return username;
+}
 
 void WeightliftTemplate::on_backButton_clicked()
 {
@@ -163,8 +171,8 @@ void WeightliftTemplate::setYCoord(int y){
     thisY = y;
 }
 
-//single widget population
-void WeightliftTemplate::singleWidgetPopulation(int exerciseUniqueID){
+//NEW single widget population
+void WeightliftTemplate::singleWidgetPopulation(){
 
     qDebug() << "Looking for exercise with ID:" << exerciseUniqueID;
 
@@ -213,3 +221,56 @@ void WeightliftTemplate::singleWidgetPopulation(int exerciseUniqueID){
         QMessageBox::critical(this,"Error","Unable to populate single widget");
     }
 }
+
+
+/*
+//OLD single widget population
+void WeightliftTemplate::singleWidgetPopulation(){
+
+    qDebug() << "Looking for exercise with ID:" << exerciseUniqueID;
+
+    //populates based only the unique template id passed to it
+
+    //x and y coords of widget to be placed
+    int x = 20;
+    //y is global to keep track across classes
+
+    //scroll area
+    QWidget *contentHolderInScrollWidget = ui->scrollArea->widget();
+
+    QSqlQuery query;
+
+    //will pull the row matching this_exercise_unique_id since it autoincrements it's unique
+    query.prepare("SELECT * FROM template_exercises WHERE this_exercise_unique_id = :exerciseUniqueID");
+    query.bindValue(":exerciseUniqueID", exerciseUniqueID);
+
+    if(query.exec() && query.next()){
+        //pull values
+        QString exerciseName = query.value("exercise_name").toString();
+        int sets = query.value("sets").toInt();
+        int reps = query.value("reps").toInt();
+        double weight = query.value("weight").toDouble();
+        QString weightUnit = query.value("weight_unit").toString(); //FOR LATER
+
+
+        WorkoutWidget *newWidget = new WorkoutWidget(contentHolderInScrollWidget);
+        newWidget->setFixedSize(561,180);
+
+        //set username as object name
+        newWidget->setTitle(exerciseName);
+        newWidget->setSets(QString::fromStdString(std::to_string(sets)));
+        newWidget->setReps(QString::fromStdString(std::to_string(reps)));
+        newWidget->setWeight(QString::fromStdString(std::to_string(weight)));
+
+
+        //new button's position
+        newWidget->move(x, thisY);
+
+
+        //increase size of scrollable area
+        increaseQWidget(200);
+    }
+    else{
+        QMessageBox::critical(this,"Error","Unable to populate single widget");
+    }
+} */

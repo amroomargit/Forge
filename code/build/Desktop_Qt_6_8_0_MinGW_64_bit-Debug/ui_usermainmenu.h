@@ -36,11 +36,11 @@ public:
     QLabel *currMeasLabel;
     QLabel *heightLabel;
     QLineEdit *heightBox;
-    QPushButton *updateButton;
-    QPushButton *updateButton_2;
+    QPushButton *heightUpdateButton;
+    QPushButton *weightUpdateButton;
     QLineEdit *weightBox;
     QLabel *weightLabel;
-    QPushButton *updateButton_3;
+    QPushButton *calorieUpdateButton;
     QLineEdit *caloriesBox;
     QLabel *caloriesLabel;
     QLabel *quicklinksLabel;
@@ -54,6 +54,9 @@ public:
     QWidget *scrollAreaWidgetContentsMM;
     QComboBox *heightUnit;
     QComboBox *weightUnit;
+    QLabel *displayHeight;
+    QLabel *displayWeight;
+    QLabel *displayCalories;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -144,11 +147,11 @@ public:
         heightBox->setObjectName("heightBox");
         heightBox->setGeometry(QRect(60, 410, 101, 28));
         heightBox->setMaxLength(3);
-        updateButton = new QPushButton(centralwidget);
-        updateButton->setObjectName("updateButton");
-        updateButton->setGeometry(QRect(240, 403, 81, 41));
-        updateButton->setFont(font3);
-        updateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        heightUpdateButton = new QPushButton(centralwidget);
+        heightUpdateButton->setObjectName("heightUpdateButton");
+        heightUpdateButton->setGeometry(QRect(240, 403, 81, 41));
+        heightUpdateButton->setFont(font3);
+        heightUpdateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -159,11 +162,11 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
-        updateButton_2 = new QPushButton(centralwidget);
-        updateButton_2->setObjectName("updateButton_2");
-        updateButton_2->setGeometry(QRect(640, 403, 81, 41));
-        updateButton_2->setFont(font3);
-        updateButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        weightUpdateButton = new QPushButton(centralwidget);
+        weightUpdateButton->setObjectName("weightUpdateButton");
+        weightUpdateButton->setGeometry(QRect(640, 403, 81, 41));
+        weightUpdateButton->setFont(font3);
+        weightUpdateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -177,16 +180,16 @@ public:
         weightBox = new QLineEdit(centralwidget);
         weightBox->setObjectName("weightBox");
         weightBox->setGeometry(QRect(390, 410, 171, 28));
-        weightBox->setMaxLength(3);
+        weightBox->setMaxLength(5);
         weightLabel = new QLabel(centralwidget);
         weightLabel->setObjectName("weightLabel");
         weightLabel->setGeometry(QRect(390, 370, 91, 41));
         weightLabel->setFont(font4);
-        updateButton_3 = new QPushButton(centralwidget);
-        updateButton_3->setObjectName("updateButton_3");
-        updateButton_3->setGeometry(QRect(990, 403, 81, 41));
-        updateButton_3->setFont(font3);
-        updateButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        calorieUpdateButton = new QPushButton(centralwidget);
+        calorieUpdateButton->setObjectName("calorieUpdateButton");
+        calorieUpdateButton->setGeometry(QRect(990, 403, 81, 41));
+        calorieUpdateButton->setFont(font3);
+        calorieUpdateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -200,7 +203,7 @@ public:
         caloriesBox = new QLineEdit(centralwidget);
         caloriesBox->setObjectName("caloriesBox");
         caloriesBox->setGeometry(QRect(790, 410, 191, 28));
-        caloriesBox->setMaxLength(3);
+        caloriesBox->setMaxLength(4);
         caloriesLabel = new QLabel(centralwidget);
         caloriesLabel->setObjectName("caloriesLabel");
         caloriesLabel->setGeometry(QRect(790, 370, 101, 41));
@@ -341,6 +344,20 @@ public:
 "color: white;\n"
 "border-radius: 15px;\n"
 ""));
+        displayHeight = new QLabel(centralwidget);
+        displayHeight->setObjectName("displayHeight");
+        displayHeight->setGeometry(QRect(130, 381, 71, 21));
+        QFont font5;
+        font5.setPointSize(12);
+        displayHeight->setFont(font5);
+        displayWeight = new QLabel(centralwidget);
+        displayWeight->setObjectName("displayWeight");
+        displayWeight->setGeometry(QRect(470, 381, 71, 21));
+        displayWeight->setFont(font5);
+        displayCalories = new QLabel(centralwidget);
+        displayCalories->setObjectName("displayCalories");
+        displayCalories->setGeometry(QRect(870, 381, 71, 21));
+        displayCalories->setFont(font5);
         UserMainMenu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(UserMainMenu);
         menubar->setObjectName("menubar");
@@ -365,10 +382,10 @@ public:
         newCLTButton->setText(QCoreApplication::translate("UserMainMenu", "New Cardio Template", nullptr));
         currMeasLabel->setText(QCoreApplication::translate("UserMainMenu", "Current Measurements", nullptr));
         heightLabel->setText(QCoreApplication::translate("UserMainMenu", "Height:", nullptr));
-        updateButton->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
-        updateButton_2->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
+        heightUpdateButton->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
+        weightUpdateButton->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
         weightLabel->setText(QCoreApplication::translate("UserMainMenu", "Weight:", nullptr));
-        updateButton_3->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
+        calorieUpdateButton->setText(QCoreApplication::translate("UserMainMenu", "Update", nullptr));
         caloriesLabel->setText(QCoreApplication::translate("UserMainMenu", "Calories:", nullptr));
         quicklinksLabel->setText(QCoreApplication::translate("UserMainMenu", "Quick Links", nullptr));
         termButton->setText(QCoreApplication::translate("UserMainMenu", "Terminology", nullptr));
@@ -384,6 +401,9 @@ public:
         weightUnit->setItemText(0, QCoreApplication::translate("UserMainMenu", "lbs", nullptr));
         weightUnit->setItemText(1, QCoreApplication::translate("UserMainMenu", "kgs", nullptr));
 
+        displayHeight->setText(QString());
+        displayWeight->setText(QString());
+        displayCalories->setText(QString());
     } // retranslateUi
 
 };

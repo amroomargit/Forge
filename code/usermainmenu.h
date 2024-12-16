@@ -32,9 +32,17 @@ private slots:
 
     void on_logoutButton_clicked();
 
+    void displayCurrentMeasurementValues(); //to display current measurement values
+
     void on_newWLTButton_clicked();
 
     void on_newCLTButton_clicked();
+
+    void on_heightUpdateButton_clicked(); //to set current height value
+
+    void on_weightUpdateButton_clicked(); //to set current weight value
+
+    void on_calorieUpdateButton_clicked(); //to set current calorie value
 
 private:
     Ui::UserMainMenu *ui;

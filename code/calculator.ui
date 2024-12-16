@@ -201,8 +201,8 @@ padding: 10px 20px;
 }
 
 QPushButton:hover {
-     background-color: #bababa;
-color: black;
+     background-color: #09f522;
+color: white;
 }</string>
       </property>
       <property name="text">
@@ -425,7 +425,7 @@ padding: 5px 10px;</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>530</y>
+        <y>490</y>
         <width>191</width>
         <height>61</height>
        </rect>
@@ -442,33 +442,33 @@ padding: 5px 10px;</string>
      <widget class="QLabel" name="maintainWLabel">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>550</y>
-        <width>141</width>
+        <x>410</x>
+        <y>540</y>
+        <width>161</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>13</pointsize>
        </font>
       </property>
       <property name="text">
        <string>Maintain weight:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="maintainWResultLabel">
+     <widget class="QLabel" name="calorieLabel1">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>550</y>
-        <width>181</width>
+        <x>550</x>
+        <y>540</y>
+        <width>91</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>13</pointsize>
        </font>
       </property>
       <property name="text">
@@ -493,7 +493,7 @@ padding: 5px 10px;</string>
        <string>Mild weight loss:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="mildWLResultLabel">
+     <widget class="QLabel" name="calorieLabel2">
       <property name="geometry">
        <rect>
         <x>410</x>
@@ -529,10 +529,10 @@ padding: 5px 10px;</string>
        <string>Weight loss:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="weightLossResultLabel">
+     <widget class="QLabel" name="calorieLabel3">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>410</x>
         <y>630</y>
         <width>181</width>
         <height>31</height>
@@ -565,7 +565,7 @@ padding: 5px 10px;</string>
        <string>Extreme weight loss:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="extremeWLResultLabel">
+     <widget class="QLabel" name="calorieLabel4">
       <property name="geometry">
        <rect>
         <x>410</x>
@@ -626,7 +626,7 @@ padding: 5px 10px;</string>
       </property>
       <item>
        <property name="text">
-        <string>cm</string>
+        <string>m</string>
        </property>
       </item>
       <item>
@@ -634,6 +634,132 @@ padding: 5px 10px;</string>
         <string>ft</string>
        </property>
       </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>240</y>
+        <width>291</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Hint: for ft, use a &quot; . &quot; to divide the values, not &quot; ' &quot;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mildWGLabel">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>590</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mild weight gain:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weightGainLabel">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>630</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Weight gain:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="calorieLabel6">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>630</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="extremeWeightGainLabel">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>670</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Extreme weight gain:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="calorieLabel7">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>670</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="calorieLabel5">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>590</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </widget>
     </widget>
    </widget>

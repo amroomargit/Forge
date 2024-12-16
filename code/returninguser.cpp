@@ -41,10 +41,17 @@ void ReturningUser::setUser(const QString &username){
 }
 
 void ReturningUser::on_enterButton_clicked(){
-    QString passFromUser = ui->passBox->text(); //password user enters in line edit
+    QString passFromUser = ui->passBox->text();    //password user enters in line edit
+        if(passFromUser.isEmpty()){
+
+            //check if line edit is empty
+            QMessageBox::warning(this,"Error","Password cannot be empty");
+            return;
+        }
 
         if(passFromUser == pass){
             UserMainMenu *nextWindow = new UserMainMenu;
+
             nextWindow ->setFixedSize(this->size());
 
             nextWindow->setUsername(currentUser); //pass username over to usermainmenu
@@ -101,13 +108,11 @@ void ReturningUser::on_deleteButton_clicked(){
 
 }
 
-
 void ReturningUser::on_backButton_clicked(){
     UsersWindow *usersWindow = new UsersWindow;
     usersWindow->setFixedSize(this->size());
     this->setCentralWidget(usersWindow);
 }
-
 
 void ReturningUser::on_hintButton_clicked()
 {

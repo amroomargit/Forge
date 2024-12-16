@@ -16,16 +16,18 @@ UserMainMenu::UserMainMenu(QWidget *parent)
 {
     ui->setupUi(this);
 
-    titlePageLabel = ui->titleLabel;  // Get qlabel  ui
-    titlePageLabel->setText("Welcome!"); //default
+    titlePageLabel = ui->titleLabel;  // Get Qlabel  ui
+    titlePageLabel->setText("Welcome!"); //set default text for label
 
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
+
 
 UserMainMenu::~UserMainMenu()
 {
     delete ui;
 }
+
 
 //dynamically set username that was passed over at top of page
 void UserMainMenu::setUsername(const QString &thisUsername) {
@@ -42,6 +44,41 @@ void UserMainMenu::on_logoutButton_clicked()
     usersWindow->setFixedSize(this->size());
     this -> setCentralWidget(usersWindow);
 }
+
+void UserMainMenu::displayCurrentMeasurementValues(){
+    QString height;
+    QString heightUnit;
+    QString weight;
+    QString weightUnit;
+    QString calories;
+
+    QSqlQuery query;
+
+
+    query.prepare("SELECT height, weight, caloric_intake, height_unit, weight_unit FROM users WHERE name = :name");
+    query.bindValue(":name",username);
+
+    if(query.exec()){
+        if(query.next()){
+            height = query.value("height").toString();
+            heightUnit = query.value("height_unit").toString();
+            weight = query.value("weight").toString();
+            weightUnit = query.value("weight_unit").toString();
+            calories = query.value("caloric_intake").toString();
+        }
+        else{
+            QMessageBox::critical(this,"Error","Query failure to display current measurments");
+            return;
+        }
+    }
+
+    ui->displayHeight->setText(height+" "+heightUnit);
+    ui->displayWeight->setText(weight+" "+weightUnit);
+    ui->displayCalories->setText(calories);
+
+    return;
+}
+
 
 //to retrieve userID for foreign key
 int UserMainMenu::retrieveUserID(const QString& passedUserName){
@@ -67,8 +104,9 @@ int UserMainMenu::retrieveUserID(const QString& passedUserName){
 
 //dynamically populate homescreen by reading through templates table to find how many templates a user has associated with their userID (primary/foreign key)
 void UserMainMenu::templateHomeScreenDisplay(){
+    displayCurrentMeasurementValues(); //method call to display current measurement methods
+
     int userIDRetrieved = retrieveUserID(username);
-    qDebug() << "Retrieved userID:" << userIDRetrieved;
 
     QSqlQuery query;
     query.prepare("SELECT template_name FROM templates WHERE user_id = :userId");
@@ -121,6 +159,7 @@ void UserMainMenu::templateHomeScreenDisplay(){
     }
 }
 
+
 //dynamic increase QWidget width method
 void UserMainMenu::increaseQWidget(int widthIncrease){
 
@@ -137,6 +176,7 @@ void UserMainMenu::increaseQWidget(int widthIncrease){
     scrollWidget->resize(newWidth,oldSize.height());
 }
 
+
 //go to weightlifttemplate screen
 void UserMainMenu::on_newWLTButton_clicked()
 {
@@ -149,6 +189,7 @@ void UserMainMenu::on_newWLTButton_clicked()
     qDebug() << "Central widget set to WeightliftTemplate";
 }
 
+
 //go to cardiotemplate screen
 void UserMainMenu::on_newCLTButton_clicked()
 { /*
@@ -158,5 +199,62 @@ void UserMainMenu::on_newCLTButton_clicked()
     goToTemplate->setUserName(username); //pass userID over to cardiotemplate
     goToTemplate->newTemplate("Default Name."); // Call after setting userID
     this -> setCentralWidget(goToTemplate); */
+}
+
+//update the current measurement height
+void UserMainMenu::on_heightUpdateButton_clicked(){
+    QString newHeight = ui->heightBox->text();
+    QString heightUnitSelection = ui->heightUnit->currentText();
+
+    QSqlQuery query;
+
+    query.prepare("UPDATE users SET height = :newHeight, height_unit = :heightUnitSelection WHERE name = :name");
+    query.bindValue(":newHeight", newHeight); // bind the new height value
+    query.bindValue(":heightUnitSelection", heightUnitSelection); // bind the new height_unit value
+    query.bindValue(":name", username); // bind the username to identify the user
+
+    if (!query.exec()) {
+        QMessageBox::critical(this,"Error","Could not set height");
+    }
+
+    //refresh values
+    displayCurrentMeasurementValues();
+}
+
+//update the current measurement weight
+void UserMainMenu::on_weightUpdateButton_clicked(){
+    QString newWeight = ui->weightBox->text();
+    QString weightUnitSelection = ui->weightUnit->currentText();
+
+    QSqlQuery query;
+
+    query.prepare("UPDATE users SET weight = :newWeight, weight_unit = :weightUnitSelection WHERE name = :name");
+    query.bindValue(":newWeight", newWeight); // bind the new weight value
+    query.bindValue(":weightUnitSelection", weightUnitSelection); // bind the new weight_unit value
+    query.bindValue(":name", username); // bind the username to identify the user
+
+    if (!query.exec()) {
+        QMessageBox::critical(this,"Error","Could not set weight");
+    }
+
+    //refresh values
+    displayCurrentMeasurementValues();
+}
+
+//update the current measurement calories
+void UserMainMenu::on_calorieUpdateButton_clicked(){
+    QString newCalories = ui->caloriesBox->text();
+    QSqlQuery query;
+
+    query.prepare("UPDATE users SET caloric_intake = :newCalories WHERE name = :name");
+    query.bindValue(":newCalories", newCalories); // bind the new height value
+    query.bindValue(":name", username); // bind the username to identify the user
+
+    if (!query.exec()) {
+        QMessageBox::critical(this,"Error","Could not set calories");
+    }
+
+    //refresh values
+    displayCurrentMeasurementValues();
 }
 

@@ -48,15 +48,22 @@ public:
     QLabel *weightBMLabel;
     QLabel *calorieGoalLabel;
     QLabel *maintainWLabel;
-    QLabel *maintainWResultLabel;
+    QLabel *calorieLabel1;
     QLabel *mildWLLabel;
-    QLabel *mildWLResultLabel;
+    QLabel *calorieLabel2;
     QLabel *weightLossLabel;
-    QLabel *weightLossResultLabel;
+    QLabel *calorieLabel3;
     QLabel *extremeWLLabel;
-    QLabel *extremeWLResultLabel;
+    QLabel *calorieLabel4;
     QComboBox *weightDropdown;
     QComboBox *heightDropdown;
+    QLabel *label;
+    QLabel *mildWGLabel;
+    QLabel *weightGainLabel;
+    QLabel *calorieLabel6;
+    QLabel *extremeWeightGainLabel;
+    QLabel *calorieLabel7;
+    QLabel *calorieLabel5;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -148,8 +155,8 @@ public:
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"     background-color: #bababa;\n"
-"color: black;\n"
+"     background-color: #09f522;\n"
+"color: white;\n"
 "}"));
         genderDropdown = new QComboBox(scrollAreaWidgetContents);
         genderDropdown->addItem(QString());
@@ -221,42 +228,44 @@ public:
         weightBMLabel->setFont(font);
         calorieGoalLabel = new QLabel(scrollAreaWidgetContents);
         calorieGoalLabel->setObjectName("calorieGoalLabel");
-        calorieGoalLabel->setGeometry(QRect(50, 530, 191, 61));
+        calorieGoalLabel->setGeometry(QRect(50, 490, 191, 61));
         calorieGoalLabel->setFont(font);
         maintainWLabel = new QLabel(scrollAreaWidgetContents);
         maintainWLabel->setObjectName("maintainWLabel");
-        maintainWLabel->setGeometry(QRect(260, 550, 141, 31));
+        maintainWLabel->setGeometry(QRect(410, 540, 161, 31));
         QFont font5;
-        font5.setPointSize(11);
+        font5.setPointSize(13);
         maintainWLabel->setFont(font5);
-        maintainWResultLabel = new QLabel(scrollAreaWidgetContents);
-        maintainWResultLabel->setObjectName("maintainWResultLabel");
-        maintainWResultLabel->setGeometry(QRect(410, 550, 181, 31));
-        maintainWResultLabel->setFont(font5);
+        calorieLabel1 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel1->setObjectName("calorieLabel1");
+        calorieLabel1->setGeometry(QRect(550, 540, 91, 31));
+        calorieLabel1->setFont(font5);
         mildWLLabel = new QLabel(scrollAreaWidgetContents);
         mildWLLabel->setObjectName("mildWLLabel");
         mildWLLabel->setGeometry(QRect(260, 590, 141, 31));
-        mildWLLabel->setFont(font5);
-        mildWLResultLabel = new QLabel(scrollAreaWidgetContents);
-        mildWLResultLabel->setObjectName("mildWLResultLabel");
-        mildWLResultLabel->setGeometry(QRect(410, 590, 181, 31));
-        mildWLResultLabel->setFont(font5);
+        QFont font6;
+        font6.setPointSize(11);
+        mildWLLabel->setFont(font6);
+        calorieLabel2 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel2->setObjectName("calorieLabel2");
+        calorieLabel2->setGeometry(QRect(410, 590, 181, 31));
+        calorieLabel2->setFont(font6);
         weightLossLabel = new QLabel(scrollAreaWidgetContents);
         weightLossLabel->setObjectName("weightLossLabel");
         weightLossLabel->setGeometry(QRect(260, 630, 141, 31));
-        weightLossLabel->setFont(font5);
-        weightLossResultLabel = new QLabel(scrollAreaWidgetContents);
-        weightLossResultLabel->setObjectName("weightLossResultLabel");
-        weightLossResultLabel->setGeometry(QRect(400, 630, 181, 31));
-        weightLossResultLabel->setFont(font5);
+        weightLossLabel->setFont(font6);
+        calorieLabel3 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel3->setObjectName("calorieLabel3");
+        calorieLabel3->setGeometry(QRect(410, 630, 181, 31));
+        calorieLabel3->setFont(font6);
         extremeWLLabel = new QLabel(scrollAreaWidgetContents);
         extremeWLLabel->setObjectName("extremeWLLabel");
         extremeWLLabel->setGeometry(QRect(260, 670, 171, 31));
-        extremeWLLabel->setFont(font5);
-        extremeWLResultLabel = new QLabel(scrollAreaWidgetContents);
-        extremeWLResultLabel->setObjectName("extremeWLResultLabel");
-        extremeWLResultLabel->setGeometry(QRect(410, 670, 181, 31));
-        extremeWLResultLabel->setFont(font5);
+        extremeWLLabel->setFont(font6);
+        calorieLabel4 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel4->setObjectName("calorieLabel4");
+        calorieLabel4->setGeometry(QRect(410, 670, 181, 31));
+        calorieLabel4->setFont(font6);
         weightDropdown = new QComboBox(scrollAreaWidgetContents);
         weightDropdown->addItem(QString());
         weightDropdown->addItem(QString());
@@ -275,6 +284,34 @@ public:
 "color: white;\n"
 "border-radius: 15px;\n"
 "padding: 5px 10px;"));
+        label = new QLabel(scrollAreaWidgetContents);
+        label->setObjectName("label");
+        label->setGeometry(QRect(260, 240, 291, 20));
+        label->setFont(font3);
+        mildWGLabel = new QLabel(scrollAreaWidgetContents);
+        mildWGLabel->setObjectName("mildWGLabel");
+        mildWGLabel->setGeometry(QRect(640, 590, 141, 31));
+        mildWGLabel->setFont(font6);
+        weightGainLabel = new QLabel(scrollAreaWidgetContents);
+        weightGainLabel->setObjectName("weightGainLabel");
+        weightGainLabel->setGeometry(QRect(640, 630, 141, 31));
+        weightGainLabel->setFont(font6);
+        calorieLabel6 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel6->setObjectName("calorieLabel6");
+        calorieLabel6->setGeometry(QRect(790, 630, 181, 31));
+        calorieLabel6->setFont(font6);
+        extremeWeightGainLabel = new QLabel(scrollAreaWidgetContents);
+        extremeWeightGainLabel->setObjectName("extremeWeightGainLabel");
+        extremeWeightGainLabel->setGeometry(QRect(640, 670, 171, 31));
+        extremeWeightGainLabel->setFont(font6);
+        calorieLabel7 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel7->setObjectName("calorieLabel7");
+        calorieLabel7->setGeometry(QRect(790, 670, 181, 31));
+        calorieLabel7->setFont(font6);
+        calorieLabel5 = new QLabel(scrollAreaWidgetContents);
+        calorieLabel5->setObjectName("calorieLabel5");
+        calorieLabel5->setGeometry(QRect(790, 590, 181, 31));
+        calorieLabel5->setFont(font6);
         scrollArea->setWidget(scrollAreaWidgetContents);
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
@@ -319,19 +356,26 @@ public:
         weightBMLabel->setText(QString());
         calorieGoalLabel->setText(QCoreApplication::translate("Calculator", "Calorie Goal:", nullptr));
         maintainWLabel->setText(QCoreApplication::translate("Calculator", "Maintain weight:", nullptr));
-        maintainWResultLabel->setText(QString());
+        calorieLabel1->setText(QString());
         mildWLLabel->setText(QCoreApplication::translate("Calculator", "Mild weight loss:", nullptr));
-        mildWLResultLabel->setText(QString());
+        calorieLabel2->setText(QString());
         weightLossLabel->setText(QCoreApplication::translate("Calculator", "Weight loss:", nullptr));
-        weightLossResultLabel->setText(QString());
+        calorieLabel3->setText(QString());
         extremeWLLabel->setText(QCoreApplication::translate("Calculator", "Extreme weight loss:", nullptr));
-        extremeWLResultLabel->setText(QString());
+        calorieLabel4->setText(QString());
         weightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "lbs", nullptr));
         weightDropdown->setItemText(1, QCoreApplication::translate("Calculator", "kgs", nullptr));
 
-        heightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "cm", nullptr));
+        heightDropdown->setItemText(0, QCoreApplication::translate("Calculator", "m", nullptr));
         heightDropdown->setItemText(1, QCoreApplication::translate("Calculator", "ft", nullptr));
 
+        label->setText(QCoreApplication::translate("Calculator", "Hint: for ft, use a \" . \" to divide the values, not \" ' \"", nullptr));
+        mildWGLabel->setText(QCoreApplication::translate("Calculator", "Mild weight gain:", nullptr));
+        weightGainLabel->setText(QCoreApplication::translate("Calculator", "Weight gain:", nullptr));
+        calorieLabel6->setText(QString());
+        extremeWeightGainLabel->setText(QCoreApplication::translate("Calculator", "Extreme weight gain:", nullptr));
+        calorieLabel7->setText(QString());
+        calorieLabel5->setText(QString());
     } // retranslateUi
 
 };
