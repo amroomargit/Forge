@@ -16,6 +16,7 @@ SOURCES += \
     mainwindow.cpp \
     newuser.cpp \
     returninguser.cpp \
+    terminology.cpp \
     usermainmenu.cpp \
     userswindow.cpp \
     weightlifttemplate.cpp \
@@ -23,12 +24,14 @@ SOURCES += \
     workoutwidget.cpp
 
 HEADERS += \
+    TextPage.h \
     addnewworkoutdialog.h \
     calculator.h \
     cardiotemplate.h \
     mainwindow.h \
     newuser.h \
     returninguser.h \
+    terminology.h \
     usermainmenu.h \
     userswindow.h \
     weightlifttemplate.h \
@@ -42,6 +45,7 @@ FORMS += \
     mainwindow.ui \
     newuser.ui \
     returninguser.ui \
+    terminology.ui \
     usermainmenu.ui \
     userswindow.ui \
     weightlifttemplate.ui \

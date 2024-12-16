@@ -3,6 +3,7 @@
 
 #include "userswindow.h"
 #include "calculator.h"
+#include "terminology.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,7 +29,9 @@ void MainWindow::on_userButton_clicked(){
 
 void MainWindow::on_termButton_clicked()
 {
-
+    Terminology *termWindow = new Terminology;
+    termWindow->setFixedSize(this->size());
+    this->setCentralWidget(termWindow);
 }
 
 
