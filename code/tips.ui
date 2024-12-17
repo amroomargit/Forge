@@ -74,11 +74,14 @@ color: black;
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

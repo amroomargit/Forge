@@ -57,6 +57,7 @@ public:
     QLabel *displayHeight;
     QLabel *displayWeight;
     QLabel *displayCalories;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -358,6 +359,9 @@ public:
         displayCalories->setObjectName("displayCalories");
         displayCalories->setGeometry(QRect(870, 381, 71, 21));
         displayCalories->setFont(font5);
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(230, 480, 331, 20));
         UserMainMenu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(UserMainMenu);
         menubar->setObjectName("menubar");
@@ -404,6 +408,7 @@ public:
         displayHeight->setText(QString());
         displayWeight->setText(QString());
         displayCalories->setText(QString());
+        label->setText(QCoreApplication::translate("UserMainMenu", "(Note: clicking on the quicklinks WILL log you out)", nullptr));
     } // retranslateUi
 
 };

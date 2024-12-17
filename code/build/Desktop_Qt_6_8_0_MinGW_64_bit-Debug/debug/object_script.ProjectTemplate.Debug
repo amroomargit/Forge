@@ -8,10 +8,12 @@ debug/newuser.o
 debug/returninguser.o
 debug/terminology.o
 debug/tips.o
+debug/tutorial.o
 debug/usermainmenu.o
 debug/userswindow.o
 debug/weightlifttemplate.o
 debug/wltdialog.o
+debug/workoutgoals.o
 debug/workoutwidget.o
 debug/qrc_resources.o
 debug/moc_addnewworkoutdialog.o
@@ -23,8 +25,10 @@ debug/moc_newuser.o
 debug/moc_returninguser.o
 debug/moc_terminology.o
 debug/moc_tips.o
+debug/moc_tutorial.o
 debug/moc_usermainmenu.o
 debug/moc_userswindow.o
 debug/moc_weightlifttemplate.o
 debug/moc_wltdialog.o
+debug/moc_workoutgoals.o
 debug/moc_workoutwidget.o

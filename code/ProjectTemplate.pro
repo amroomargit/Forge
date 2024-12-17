@@ -19,6 +19,7 @@ SOURCES += \
     returninguser.cpp \
     terminology.cpp \
     tips.cpp \
+    tutorial.cpp \
     usermainmenu.cpp \
     userswindow.cpp \
     weightlifttemplate.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     returninguser.h \
     terminology.h \
     tips.h \
+    tutorial.h \
     usermainmenu.h \
     userswindow.h \
     weightlifttemplate.h \
@@ -54,6 +56,7 @@ FORMS += \
     returninguser.ui \
     terminology.ui \
     tips.ui \
+    tutorial.ui \
     usermainmenu.ui \
     userswindow.ui \
     weightlifttemplate.ui \

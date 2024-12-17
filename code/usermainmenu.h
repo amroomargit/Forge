@@ -44,6 +44,18 @@ private slots:
 
     void on_calorieUpdateButton_clicked(); //to set current calorie value
 
+    void on_termButton_clicked();
+
+    void on_goalsButton_clicked();
+
+    void on_tipButton_clicked();
+
+    void on_linksButton_clicked();
+
+    void on_tutorialButton_clicked();
+
+    void on_calculatorButton_clicked();
+
 private:
     Ui::UserMainMenu *ui;
     QString username;

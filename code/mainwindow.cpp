@@ -6,6 +6,8 @@
 #include "terminology.h"
 #include "links.h"
 #include "tips.h"
+#include "workoutgoals.h"
+#include "tutorial.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -39,7 +41,9 @@ void MainWindow::on_termButton_clicked()
 
 void MainWindow::on_goalsButton_clicked()
 {
-
+    WorkoutGoals *workoutGoalsPage = new WorkoutGoals;
+    workoutGoalsPage->setFixedSize(this->size());
+    this->setCentralWidget(workoutGoalsPage);
 }
 
 
@@ -61,7 +65,9 @@ void MainWindow::on_linksButton_clicked()
 
 void MainWindow::on_tutorButton_clicked()
 {
-
+    Tutorial *tutorialPage = new Tutorial;
+    tutorialPage->setFixedSize(this->size());
+    this->setCentralWidget(tutorialPage);
 }
 
 

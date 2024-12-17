@@ -24,15 +24,15 @@ void Links::setText() const{
     ui->label->setText(R"(
 <html>
     <body>
-        <p>ScottHermanFitness on YouTube: <a href="https://www.youtube.com/@ScottHermanFitness">link</a></p>
+        <p><b>ScottHermanFitness on YouTube:</b> <a href="https://www.youtube.com/@ScottHermanFitness">link</a></p>
         <br>
-        <p>TylerPath on YouTube: <a href="https://www.youtube.com/@tyler-path">link</a></p>
+        <p><b>TylerPath on YouTube:</b> <a href="https://www.youtube.com/@tyler-path">link</a></p>
         <br>
-        <p>MyFitnessPal: <a href="https://www.myfitnesspal.com">link</a></p>
+        <p><b>MyFitnessPal: </b><a href="https://www.myfitnesspal.com">link</a></p>
         <br>
-        <p>Fit4Less Gym: <a href="https://www.fit4less.ca">link</a></p>
+        <p><b>Fit4Less Gym: </b><a href="https://www.fit4less.ca">link</a></p>
         <br>
-        <p>Crunch Fitness Gym: <a href="https://www.crunch.com">link</a></p>
+        <p><b>Crunch Fitness Gym: </b><a href="https://www.crunch.com">link</a></p>
     </body>
 </html>
 )");

@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'terminology.ui'
+** Form generated from reading UI file 'workoutgoals.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_TERMINOLOGY_H
-#define UI_TERMINOLOGY_H
+#ifndef UI_WORKOUTGOALS_H
+#define UI_WORKOUTGOALS_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
@@ -20,7 +20,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Terminology
+class Ui_WorkoutGoals
 {
 public:
     QWidget *centralwidget;
@@ -30,22 +30,22 @@ public:
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
-    void setupUi(QMainWindow *Terminology)
+    void setupUi(QMainWindow *WorkoutGoals)
     {
-        if (Terminology->objectName().isEmpty())
-            Terminology->setObjectName("Terminology");
-        Terminology->resize(1203, 721);
-        centralwidget = new QWidget(Terminology);
+        if (WorkoutGoals->objectName().isEmpty())
+            WorkoutGoals->setObjectName("WorkoutGoals");
+        WorkoutGoals->resize(1203, 721);
+        centralwidget = new QWidget(WorkoutGoals);
         centralwidget->setObjectName("centralwidget");
         titleLabel = new QLabel(centralwidget);
         titleLabel->setObjectName("titleLabel");
-        titleLabel->setGeometry(QRect(60, 70, 381, 91));
+        titleLabel->setGeometry(QRect(60, 70, 461, 91));
         QFont font;
         font.setPointSize(40);
         titleLabel->setFont(font);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(100, 140, 971, 511));
+        label->setGeometry(QRect(140, 100, 971, 551));
         QFont font1;
         font1.setPointSize(13);
         label->setFont(font1);
@@ -67,34 +67,34 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
-        Terminology->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(Terminology);
+        WorkoutGoals->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(WorkoutGoals);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 1203, 25));
-        Terminology->setMenuBar(menubar);
-        statusbar = new QStatusBar(Terminology);
+        WorkoutGoals->setMenuBar(menubar);
+        statusbar = new QStatusBar(WorkoutGoals);
         statusbar->setObjectName("statusbar");
-        Terminology->setStatusBar(statusbar);
+        WorkoutGoals->setStatusBar(statusbar);
 
-        retranslateUi(Terminology);
+        retranslateUi(WorkoutGoals);
 
-        QMetaObject::connectSlotsByName(Terminology);
+        QMetaObject::connectSlotsByName(WorkoutGoals);
     } // setupUi
 
-    void retranslateUi(QMainWindow *Terminology)
+    void retranslateUi(QMainWindow *WorkoutGoals)
     {
-        Terminology->setWindowTitle(QCoreApplication::translate("Terminology", "MainWindow", nullptr));
-        titleLabel->setText(QCoreApplication::translate("Terminology", "Terminology.", nullptr));
+        WorkoutGoals->setWindowTitle(QCoreApplication::translate("WorkoutGoals", "MainWindow", nullptr));
+        titleLabel->setText(QCoreApplication::translate("WorkoutGoals", "Workout Goals.", nullptr));
         label->setText(QString());
-        backButton->setText(QCoreApplication::translate("Terminology", "Back", nullptr));
+        backButton->setText(QCoreApplication::translate("WorkoutGoals", "Back", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Terminology: public Ui_Terminology {};
+    class WorkoutGoals: public Ui_WorkoutGoals {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_TERMINOLOGY_H
+#endif // UI_WORKOUTGOALS_H

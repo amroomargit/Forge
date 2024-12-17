@@ -10,6 +10,13 @@
 #include <QSqlError>
 #include <QMessageBox>
 
+#include "calculator.h"
+#include "terminology.h"
+#include "links.h"
+#include "tips.h"
+#include "workoutgoals.h"
+#include "tutorial.h"
+
 UserMainMenu::UserMainMenu(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::UserMainMenu)
@@ -256,5 +263,53 @@ void UserMainMenu::on_calorieUpdateButton_clicked(){
 
     //refresh values
     displayCurrentMeasurementValues();
+}
+
+
+void UserMainMenu::on_termButton_clicked()
+{
+    Terminology *termWindow = new Terminology;
+    termWindow->setFixedSize(this->size());
+    this->setCentralWidget(termWindow);
+}
+
+
+void UserMainMenu::on_goalsButton_clicked()
+{
+    WorkoutGoals *workoutGoalsPage = new WorkoutGoals;
+    workoutGoalsPage->setFixedSize(this->size());
+    this->setCentralWidget(workoutGoalsPage);
+}
+
+
+void UserMainMenu::on_tipButton_clicked()
+{
+    Tips *tipPage = new Tips;
+    tipPage->setFixedSize(this->size());
+    this->setCentralWidget(tipPage);
+}
+
+
+void UserMainMenu::on_linksButton_clicked()
+{
+    Links *linkPage = new Links;
+    linkPage->setFixedSize(this->size());
+    this->setCentralWidget(linkPage);
+}
+
+
+void UserMainMenu::on_tutorialButton_clicked()
+{
+    Tutorial *tutorialPage = new Tutorial;
+    tutorialPage->setFixedSize(this->size());
+    this->setCentralWidget(tutorialPage);
+}
+
+
+void UserMainMenu::on_calculatorButton_clicked()
+{
+    Calculator *calculator = new Calculator;
+    calculator->setFixedSize(this->size());
+    this->setCentralWidget(calculator);
 }
 
