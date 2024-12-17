@@ -16,14 +16,14 @@ class CardioTemplate : public WeightliftTemplate //inherit from weightliftingtem
 public:
     explicit CardioTemplate(QWidget *parent = nullptr);
     ~CardioTemplate();
-/*
-    void newTemplate(const QString& givenTemplateName) override;  // OVERRIDEN METHOD
 
-    void singleWidgetPopulation(int exerciseUniqueID) override; // OVERRIDEN METHOD */
+    void newTemplate(QString givenTemplateName) override;
+
+    void dynamicWidgetPopulation() override;
 
 
-private slots:
-    //void on_addNewExerciseButton_clicked() override; // OVERRIDEN METHOD
+protected slots:
+    void on_addNewExerciseButton_clicked() override;
 
 
 private:

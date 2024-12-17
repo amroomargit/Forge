@@ -17,8 +17,6 @@ WeightliftTemplate::WeightliftTemplate(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //singleWidgetPopulation();
-
     this->setWindowFlags(Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 }
 
@@ -27,7 +25,6 @@ WeightliftTemplate::~WeightliftTemplate()
     delete ui;
 }
 
-
 // getter and setter for currentUserID
 void WeightliftTemplate::setUserID(int passedOverUserID) {
     currentUserID = passedOverUserID;
@@ -35,7 +32,6 @@ void WeightliftTemplate::setUserID(int passedOverUserID) {
 int WeightliftTemplate::getUserID(){
     return currentUserID;
 }
-
 
 // Getter and Setter for currentTemplateId
 void WeightliftTemplate::setCurrentTemplateId(int newCurrentTemplateID){
@@ -47,8 +43,7 @@ int WeightliftTemplate::getCurrentTemplateId(){
 
 
 /*WE NEED THIS METHOD SO WE CAN SAVE THE USERNAME UNTIL IT'S TIME TO SEND IT BACK TO USERMAINMENU WHEN THE BACK BUTTON IS CLICKED,
- * SINCE IT ONLY TAKES USERNAME AND CALCULATES USERID MANUALLY,
-IT CANNOT TAKE USERID DIRECTLY */
+ * SINCE IT ONLY TAKES USERNAME AND CALCULATES USERID MANUALLY,IT CANNOT TAKE USERID DIRECTLY */
 void WeightliftTemplate::setUserName(const QString &userNamePassedThrough){
     //handle error
     if(userNamePassedThrough.isNull()){
@@ -80,14 +75,14 @@ void WeightliftTemplate::on_backButton_clicked()
 
 
 //Add new row to templates table
-    void WeightliftTemplate::newTemplate(const QString& givenTemplateName){
-    QString thisTemplateName = givenTemplateName;
+void WeightliftTemplate::newTemplate(QString givenTemplateName){ //OVERRIDE
+    QString templateName = givenTemplateName;
     QString templateType = "Weightlifting";
 
     QSqlQuery query;
     query.prepare("INSERT INTO templates (user_id,template_name,template_type) VALUES (:currentUserID,:templateName,:templateType)");
     query.bindValue(":currentUserID", currentUserID);
-    query.bindValue(":templateName", thisTemplateName);
+    query.bindValue(":templateName", templateName);
     query.bindValue(":templateType", templateType);
 
     if(!query.exec()){
@@ -95,9 +90,9 @@ void WeightliftTemplate::on_backButton_clicked()
     }
     else{
         currentTemplateId = query.lastInsertId().toInt(); // Save the template ID
-        qDebug()<<"Successful creation";
     }
 }
+
 
 //when set name is clicked for template name
 void WeightliftTemplate::on_saveNewName_clicked(){
@@ -133,7 +128,7 @@ void WeightliftTemplate::on_saveNewName_clicked(){
 }
 
 //when new exercise button is clicked
-void WeightliftTemplate::on_addNewExerciseButton_clicked(){
+void WeightliftTemplate::on_addNewExerciseButton_clicked(){ //OVERRIDE
     WLTDialog *newDialog = new WLTDialog(this); //passing 'this' for proper memory management
     newDialog->setTemplateType("all_weightlifting_exercises"); //set template type
     newDialog->setTemplateID(currentTemplateId); //set templateID
@@ -166,7 +161,7 @@ void WeightliftTemplate::setYCoord(int y){
 }
 
 //NEW single widget population
-void WeightliftTemplate::dynamicWidgetPopulation(){
+void WeightliftTemplate::dynamicWidgetPopulation(){ //OVERRIDE
 
     //x and y coords of widget to be placed
     int pretendX = 20;

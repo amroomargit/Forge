@@ -1,5 +1,4 @@
 #include "cardiotemplate.h"
-#include "ui_weightlifttemplate.h"
 #include "wltdialog.h"
 
 #include <QSqlQuery>
@@ -13,9 +12,8 @@ CardioTemplate::CardioTemplate(QWidget *parent)
 
 CardioTemplate::~CardioTemplate(){}
 
-/*
-// OVERRIDE SUPER CLASS method
-void CardioTemplate::newTemplate(const QString& givenTemplateName){
+
+void CardioTemplate::newTemplate(QString givenTemplateName){
     QString thisTemplateName = givenTemplateName;
     QString templateType = "Weightlifting";
 

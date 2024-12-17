@@ -45,6 +45,13 @@ void UserMainMenu::setUsername(const QString &thisUsername) {
     }
 }
 
+
+//dynamically set templateID
+void UserMainMenu::setTemplateID(int id) {
+    templateIDFromNewButton = id;
+}
+
+
 void UserMainMenu::on_logoutButton_clicked()
 {
     UsersWindow *usersWindow = new UsersWindow;
@@ -156,6 +163,17 @@ void UserMainMenu::templateHomeScreenDisplay(){
                                       "}"
                                       );
 
+            //setting username property so we can access username of each individual button later
+            newTemplateButton->setProperty("username",username);
+
+            /*setting templateID property from the recorded value from when we first clicked on the new template creation button,
+            which got the templateID return value from the newTemplate method inside of weightlifttemplate and assigned it to the instance
+            variable templateIDFromNewButton which was defined in the header of this class, this is so we can access template ID of each
+            individual button later when we want to make the created templates in the QScrollArea clickable*/
+            newTemplateButton->setProperty("templateID",templateIDFromNewButton);
+
+            // Connect the button's clicked() signal to the onPreExistingTemplateButtonClicked() method
+            connect(newTemplateButton, &QPushButton::clicked,this,&UserMainMenu::onPreExistingTemplateButtonClicked);
 
             //update button count
             totalButtons++;
@@ -183,17 +201,36 @@ void UserMainMenu::increaseQWidget(int widthIncrease){
     scrollWidget->resize(newWidth,oldSize.height());
 }
 
+//to be able to click the template buttons we've created that are in the scrollable area
+void UserMainMenu::onPreExistingTemplateButtonClicked(){
+
+    QPushButton *clickedButton = qobject_cast<QPushButton *>(sender());
+
+    if (clickedButton) {
+        // Retrieve the bound username and templateID property
+        QString usernameProperty = clickedButton->property("username").toString();
+        int templateIDProperty = clickedButton->property("templateID").toInt();
+
+        WeightliftTemplate *goToTemplate = new WeightliftTemplate(this);
+        goToTemplate->setFixedSize(this->size());
+        goToTemplate->setUserID(retrieveUserID(usernameProperty)); //pass userID over to weightlifttemplate
+        goToTemplate->setUserName(usernameProperty); //pass userID over to weightlifttemplate
+        goToTemplate->setCurrentTemplateId(templateIDProperty); //pass templateID over to weightlifttemplate
+        goToTemplate->dynamicWidgetPopulation(); //populate
+        this -> setCentralWidget(goToTemplate);
+    }
+}
+
 
 //go to weightlifttemplate screen
-void UserMainMenu::on_newWLTButton_clicked()
-{
+void UserMainMenu::on_newWLTButton_clicked(){
+
     WeightliftTemplate *goToTemplate = new WeightliftTemplate(this);
     goToTemplate->setFixedSize(this->size());
     goToTemplate->setUserID(retrieveUserID(username)); //pass userID over to weightlifttemplate
     goToTemplate->setUserName(username); //pass userID over to weightlifttemplate
-    goToTemplate->newTemplate("Default Name."); // Call after setting userID
+    goToTemplate->newTemplate("Default Name."); // Call after setting userID, creates new template and sets up values in the database
     this -> setCentralWidget(goToTemplate);
-    qDebug() << "Central widget set to WeightliftTemplate";
 }
 
 
@@ -266,6 +303,7 @@ void UserMainMenu::on_calorieUpdateButton_clicked(){
 }
 
 
+//quicklinks
 void UserMainMenu::on_termButton_clicked()
 {
     Terminology *termWindow = new Terminology;

@@ -25,6 +25,8 @@ public:
 
     void templateHomeScreenDisplay(); //we need to call this outside usermainmenu.cpp so that the userID has time to pass over and will not be -1. This affects the ability to dynamically display the template buttons
 
+    void setTemplateID(int id);
+
 private slots:
     int retrieveUserID(const QString& passedUserName); //to retrieve the userID
 
@@ -33,6 +35,8 @@ private slots:
     void on_logoutButton_clicked();
 
     void displayCurrentMeasurementValues(); //to display current measurement values
+
+    void onPreExistingTemplateButtonClicked(); //to be able to click the template buttons we've created that are in the scrollable area
 
     void on_newWLTButton_clicked();
 
@@ -60,6 +64,7 @@ private:
     Ui::UserMainMenu *ui;
     QString username;
     QLabel *titlePageLabel;
+    int templateIDFromNewButton;
 };
 
 #endif // USERMAINMENU_H

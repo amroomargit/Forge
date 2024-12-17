@@ -58,10 +58,13 @@ void UsersWindow::dynamicWidgetPopulation(){
 
     //loop through query to create buttons
     while(query.next()){
+
+        //take last known table row's username
         QString username = query.value(0).toString();
 
         //new button
         QPushButton *userButton = new QPushButton(username, scrollAreaWidgetContents);
+
         userButton->setFixedSize(131,121);
 
         //set username as object name

@@ -16,7 +16,7 @@ public:
     ~WeightliftTemplate();
     void setUserID(int passedOverUserID); //to be able to recieved ID passed from usermainmenu
     int getUserID(); //getter for userID
-    virtual void newTemplate(const QString& givenTemplateName); //MUST be public so it can be called from usermainmenu AFTER userID has been set, so as to avoid query failure
+    virtual void newTemplate(QString givenTemplateName); //MUST be public so it can be called from usermainmenu AFTER userID has been set, so as to avoid query failure
     void setUserName(const QString &userNamePassedThrough);
     void widgetPopulation(int idOfCurrentTemplate); //Populates the scrollable area with ALL widgets corresponding to the exercises added to the template_exercises table
     virtual void dynamicWidgetPopulation(); //Populates the scrollable area dynamically
@@ -25,7 +25,7 @@ public:
     void setCurrentTemplateId(int newCurrentTemplateID); //setter for templateID
     QString getUserName(); //return username
 
-private slots:
+protected slots: //protected because child class needs to be able to access these methods if needed
 
     void on_backButton_clicked();
 
@@ -35,7 +35,7 @@ private slots:
 
     void increaseQWidget(int heightIncrease); //increase scrollable widget height
 
-private:
+protected: //protected because child class needs to be able to access these methods if needed
     Ui::WeightliftTemplate *ui;
     int currentTemplateId = -1; // to save templateID so name can be changed later(-1 means no template is being edited)
     int currentUserID; //passed over userID corresponding to username's user ID found from the retrieval method in usermainmenu
