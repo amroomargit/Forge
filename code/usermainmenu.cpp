@@ -123,7 +123,7 @@ void UserMainMenu::templateHomeScreenDisplay(){
     int userIDRetrieved = retrieveUserID(username);
 
     QSqlQuery query;
-    query.prepare("SELECT template_name FROM templates WHERE user_id = :userId");
+    query.prepare("SELECT template_name, template_type FROM templates WHERE user_id = :userId");
     query.bindValue(":userId", userIDRetrieved);
 
     //button positioning
@@ -141,6 +141,7 @@ void UserMainMenu::templateHomeScreenDisplay(){
         while(query.next()){
             //taking template id and name from database table
             QString templateName = query.value("template_name").toString();
+            QString templateType = query.value("template_type").toString();
 
             //button creation and size
             QPushButton *newTemplateButton = new QPushButton(templateName,scrollAreaWidgetContents);
@@ -151,29 +152,33 @@ void UserMainMenu::templateHomeScreenDisplay(){
             x = x + 200; //increment x
 
             //button stylesheet
-            newTemplateButton->setStyleSheet("QPushButton {"
-                                      "background-color: rgba(255, 0, 0, 200);"
-                                      "color: white;"
-                                      "border-radius: 15px;"
-                                      "padding: 10px 20px;"
-                                      "}"
-                                      "QPushButton:hover {"
-                                      "background-color: #ff5c5c;;"
-                                      "color: white;"
-                                      "}"
-                                      );
-
-            //setting username property so we can access username of each individual button later
-            newTemplateButton->setProperty("username",username);
-
-            /*setting templateID property from the recorded value from when we first clicked on the new template creation button,
-            which got the templateID return value from the newTemplate method inside of weightlifttemplate and assigned it to the instance
-            variable templateIDFromNewButton which was defined in the header of this class, this is so we can access template ID of each
-            individual button later when we want to make the created templates in the QScrollArea clickable*/
-            newTemplateButton->setProperty("templateID",templateIDFromNewButton);
-
-            // Connect the button's clicked() signal to the onPreExistingTemplateButtonClicked() method
-            connect(newTemplateButton, &QPushButton::clicked,this,&UserMainMenu::onPreExistingTemplateButtonClicked);
+            if(templateType == "Weightlifting"){
+                newTemplateButton->setStyleSheet("QPushButton {"
+                                                 "background-color: rgba(255, 0, 0, 200);"
+                                                 "color: white;"
+                                                 "border-radius: 15px;"
+                                                 "padding: 10px 20px;"
+                                                 "}"
+                                                 "QPushButton:hover {"
+                                                 "background-color: #ff5c5c;;"
+                                                 "color: white;"
+                                                 "}"
+                                                 );
+            }
+            else{
+                newTemplateButton->setStyleSheet(
+                                                 "QPushButton {"
+                                                    "background-color: rgba(221, 188, 0, 0.8);"
+                                                    "color: white;"
+                                                    "border-radius: 15px;"
+                                                    "padding: 10px 20px;"
+                                                 "}"
+                                                 "QPushButton:hover {"
+                                                    "background-color: #ffd900;"
+                                                    "color: white;"
+                                                 "}"
+                                                 );
+            }
 
             //update button count
             totalButtons++;
@@ -236,13 +241,13 @@ void UserMainMenu::on_newWLTButton_clicked(){
 
 //go to cardiotemplate screen
 void UserMainMenu::on_newCLTButton_clicked()
-{ /*
+{
     CardioTemplate *goToTemplate = new CardioTemplate(this);
     goToTemplate->setFixedSize(this->size());
     goToTemplate->setUserID(retrieveUserID(username)); //pass userID over to cardiotemplate which inherited from weightlifttemplate
     goToTemplate->setUserName(username); //pass userID over to cardiotemplate
     goToTemplate->newTemplate("Default Name."); // Call after setting userID
-    this -> setCentralWidget(goToTemplate); */
+    this -> setCentralWidget(goToTemplate);
 }
 
 //update the current measurement height

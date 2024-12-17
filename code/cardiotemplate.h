@@ -19,9 +19,6 @@ public:
 
     void newTemplate(QString givenTemplateName) override;
 
-    void dynamicWidgetPopulation() override;
-
-
 protected slots:
     void on_addNewExerciseButton_clicked() override;
 

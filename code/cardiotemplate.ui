@@ -14,11 +14,42 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="saveNewName">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>207</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #333333;
+color: #09f522;
+border-radius: 15px;
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #09f522;
+color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Set</string>
+    </property>
+   </widget>
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>290</y>
+      <y>280</y>
       <width>981</width>
       <height>391</height>
      </rect>
@@ -49,7 +80,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="widgetResizable">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <widget class="QWidget" name="scrollAreaWidgetContents">
      <property name="geometry">
@@ -62,56 +93,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="titleLabel">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>70</y>
-      <width>841</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>40</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>New Cardio Template.</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="backButton">
-    <property name="geometry">
-     <rect>
-      <x>1080</x>
-      <y>20</y>
-      <width>71</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-background-color: #333333;
-color: #09f522;
-border-radius: 15px;
-padding: 10px 20px;
-}
-
-QPushButton:hover {
-     background-color: #09f522;
-color: white;
-}</string>
-    </property>
-    <property name="text">
-     <string>Save</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="backButton_2">
+   <widget class="QPushButton" name="addNewExerciseButton">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -140,6 +122,78 @@ color: black;
     </property>
     <property name="text">
      <string>+ Add New Exercise</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="templateNameBox">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>207</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #333333;
+color: white;
+border-radius: 15px;
+padding: 10px;
+</string>
+    </property>
+    <property name="maxLength">
+     <number>12</number>
+    </property>
+    <property name="placeholderText">
+     <string>Set Template Name</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>30</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #333333;
+color: white;
+border-radius: 15px;
+padding: 10px 20px;
+}
+
+QPushButton:hover {
+     background-color: #bababa;
+color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titleLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>70</y>
+      <width>841</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Default Name.</string>
     </property>
    </widget>
   </widget>

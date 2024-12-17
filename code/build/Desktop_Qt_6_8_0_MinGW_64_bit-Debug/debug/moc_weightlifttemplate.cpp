@@ -62,10 +62,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSWeightliftTemplateENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   38,    2, 0x08,    1 /* Private */,
-       3,    0,   39,    2, 0x08,    2 /* Private */,
-       4,    0,   40,    2, 0x08,    3 /* Private */,
-       5,    1,   41,    2, 0x08,    4 /* Private */,
+       1,    0,   38,    2, 0x09,    1 /* Protected */,
+       3,    0,   39,    2, 0x09,    2 /* Protected */,
+       4,    0,   40,    2, 0x09,    3 /* Protected */,
+       5,    1,   41,    2, 0x09,    4 /* Protected */,
 
  // slots: parameters
     QMetaType::Void,

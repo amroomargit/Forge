@@ -99,6 +99,8 @@ public:
         weightDropdown = new QComboBox(mainWidget);
         weightDropdown->addItem(QString());
         weightDropdown->addItem(QString());
+        weightDropdown->addItem(QString());
+        weightDropdown->addItem(QString());
         weightDropdown->setObjectName("weightDropdown");
         weightDropdown->setGeometry(QRect(170, 60, 82, 41));
         weightDropdown->setFont(font);
@@ -158,7 +160,9 @@ public:
         weightLabel->setText(QString());
         repLabel->setText(QString());
         weightDropdown->setItemText(0, QCoreApplication::translate("WorkoutWidget", "lbs", nullptr));
-        weightDropdown->setItemText(1, QCoreApplication::translate("WorkoutWidget", "kgs", nullptr));
+        weightDropdown->setItemText(1, QCoreApplication::translate("WorkoutWidget", "sec", nullptr));
+        weightDropdown->setItemText(2, QCoreApplication::translate("WorkoutWidget", "min", nullptr));
+        weightDropdown->setItemText(3, QCoreApplication::translate("WorkoutWidget", "kgs", nullptr));
 
         pushButton->setText(QCoreApplication::translate("WorkoutWidget", "Change", nullptr));
     } // retranslateUi

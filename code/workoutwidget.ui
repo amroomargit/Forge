@@ -211,6 +211,16 @@ padding: 10px 20px;</string>
     </item>
     <item>
      <property name="text">
+      <string>sec</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>min</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>kgs</string>
      </property>
     </item>

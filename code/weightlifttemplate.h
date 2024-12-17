@@ -19,7 +19,7 @@ public:
     virtual void newTemplate(QString givenTemplateName); //MUST be public so it can be called from usermainmenu AFTER userID has been set, so as to avoid query failure
     void setUserName(const QString &userNamePassedThrough);
     void widgetPopulation(int idOfCurrentTemplate); //Populates the scrollable area with ALL widgets corresponding to the exercises added to the template_exercises table
-    virtual void dynamicWidgetPopulation(); //Populates the scrollable area dynamically
+    void dynamicWidgetPopulation(); //Populates the scrollable area dynamically
     void setYCoord(int y); //setter for Y coordinate
     int getCurrentTemplateId(); //getter for templateID
     void setCurrentTemplateId(int newCurrentTemplateID); //setter for templateID

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -25,11 +26,13 @@ class Ui_CardioTemplate
 {
 public:
     QWidget *centralwidget;
+    QPushButton *saveNewName;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QLabel *titleLabel;
+    QPushButton *addNewExerciseButton;
+    QLineEdit *templateNameBox;
     QPushButton *backButton;
-    QPushButton *backButton_2;
+    QLabel *titleLabel;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -40,9 +43,26 @@ public:
         CardioTemplate->resize(1203, 721);
         centralwidget = new QWidget(CardioTemplate);
         centralwidget->setObjectName("centralwidget");
+        saveNewName = new QPushButton(centralwidget);
+        saveNewName->setObjectName("saveNewName");
+        saveNewName->setGeometry(QRect(990, 207, 61, 41));
+        QFont font;
+        font.setPointSize(9);
+        saveNewName->setFont(font);
+        saveNewName->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: #09f522;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #09f522;\n"
+"color: white;\n"
+"}"));
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(80, 290, 981, 391));
+        scrollArea->setGeometry(QRect(80, 280, 981, 391));
         scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:vertical {\n"
 "    background-color: #656565;\n"
 "    width: 15px; \n"
@@ -64,41 +84,18 @@ public:
 "    background: none; \n"
 "}"));
         scrollArea->setFrameShape(QFrame::Shape::NoFrame);
-        scrollArea->setWidgetResizable(true);
+        scrollArea->setWidgetResizable(false);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 981, 391));
         scrollArea->setWidget(scrollAreaWidgetContents);
-        titleLabel = new QLabel(centralwidget);
-        titleLabel->setObjectName("titleLabel");
-        titleLabel->setGeometry(QRect(60, 70, 841, 91));
-        QFont font;
-        font.setPointSize(40);
-        titleLabel->setFont(font);
-        backButton = new QPushButton(centralwidget);
-        backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(1080, 20, 71, 41));
+        addNewExerciseButton = new QPushButton(centralwidget);
+        addNewExerciseButton->setObjectName("addNewExerciseButton");
+        addNewExerciseButton->setGeometry(QRect(100, 210, 221, 41));
         QFont font1;
-        font1.setPointSize(9);
-        backButton->setFont(font1);
-        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: #333333;\n"
-"color: #09f522;\n"
-"border-radius: 15px;\n"
-"padding: 10px 20px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"     background-color: #09f522;\n"
-"color: white;\n"
-"}"));
-        backButton_2 = new QPushButton(centralwidget);
-        backButton_2->setObjectName("backButton_2");
-        backButton_2->setGeometry(QRect(100, 210, 221, 41));
-        QFont font2;
-        font2.setPointSize(11);
-        backButton_2->setFont(font2);
-        backButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        font1.setPointSize(11);
+        addNewExerciseButton->setFont(font1);
+        addNewExerciseButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -109,6 +106,36 @@ public:
 "     background-color: #bababa;\n"
 "color: black;\n"
 "}"));
+        templateNameBox = new QLineEdit(centralwidget);
+        templateNameBox->setObjectName("templateNameBox");
+        templateNameBox->setGeometry(QRect(670, 207, 301, 41));
+        templateNameBox->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px;\n"
+""));
+        templateNameBox->setMaxLength(12);
+        backButton = new QPushButton(centralwidget);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(1080, 30, 71, 41));
+        backButton->setFont(font);
+        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #333333;\n"
+"color: white;\n"
+"border-radius: 15px;\n"
+"padding: 10px 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: #bababa;\n"
+"color: black;\n"
+"}"));
+        titleLabel = new QLabel(centralwidget);
+        titleLabel->setObjectName("titleLabel");
+        titleLabel->setGeometry(QRect(60, 70, 841, 91));
+        QFont font2;
+        font2.setPointSize(40);
+        titleLabel->setFont(font2);
         CardioTemplate->setCentralWidget(centralwidget);
         menubar = new QMenuBar(CardioTemplate);
         menubar->setObjectName("menubar");
@@ -126,9 +153,11 @@ public:
     void retranslateUi(QMainWindow *CardioTemplate)
     {
         CardioTemplate->setWindowTitle(QCoreApplication::translate("CardioTemplate", "MainWindow", nullptr));
-        titleLabel->setText(QCoreApplication::translate("CardioTemplate", "New Cardio Template.", nullptr));
-        backButton->setText(QCoreApplication::translate("CardioTemplate", "Save", nullptr));
-        backButton_2->setText(QCoreApplication::translate("CardioTemplate", "+ Add New Exercise", nullptr));
+        saveNewName->setText(QCoreApplication::translate("CardioTemplate", "Set", nullptr));
+        addNewExerciseButton->setText(QCoreApplication::translate("CardioTemplate", "+ Add New Exercise", nullptr));
+        templateNameBox->setPlaceholderText(QCoreApplication::translate("CardioTemplate", "Set Template Name", nullptr));
+        backButton->setText(QCoreApplication::translate("CardioTemplate", "Back", nullptr));
+        titleLabel->setText(QCoreApplication::translate("CardioTemplate", "Default Name.", nullptr));
     } // retranslateUi
 
 };
