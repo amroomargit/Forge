@@ -58,6 +58,8 @@ public:
     QLabel *displayWeight;
     QLabel *displayCalories;
     QLabel *label;
+    QLabel *label_2;
+    QLabel *templatesLabel_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -136,21 +138,21 @@ public:
 ""));
         currMeasLabel = new QLabel(centralwidget);
         currMeasLabel->setObjectName("currMeasLabel");
-        currMeasLabel->setGeometry(QRect(40, 320, 331, 51));
+        currMeasLabel->setGeometry(QRect(40, 340, 331, 51));
         currMeasLabel->setFont(font1);
         heightLabel = new QLabel(centralwidget);
         heightLabel->setObjectName("heightLabel");
-        heightLabel->setGeometry(QRect(60, 370, 81, 41));
+        heightLabel->setGeometry(QRect(60, 390, 81, 41));
         QFont font4;
         font4.setPointSize(14);
         heightLabel->setFont(font4);
         heightBox = new QLineEdit(centralwidget);
         heightBox->setObjectName("heightBox");
-        heightBox->setGeometry(QRect(60, 410, 101, 28));
+        heightBox->setGeometry(QRect(60, 430, 101, 28));
         heightBox->setMaxLength(3);
         heightUpdateButton = new QPushButton(centralwidget);
         heightUpdateButton->setObjectName("heightUpdateButton");
-        heightUpdateButton->setGeometry(QRect(240, 403, 81, 41));
+        heightUpdateButton->setGeometry(QRect(240, 423, 81, 41));
         heightUpdateButton->setFont(font3);
         heightUpdateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
@@ -165,7 +167,7 @@ public:
 "}"));
         weightUpdateButton = new QPushButton(centralwidget);
         weightUpdateButton->setObjectName("weightUpdateButton");
-        weightUpdateButton->setGeometry(QRect(640, 403, 81, 41));
+        weightUpdateButton->setGeometry(QRect(640, 423, 81, 41));
         weightUpdateButton->setFont(font3);
         weightUpdateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
@@ -180,15 +182,15 @@ public:
 "}"));
         weightBox = new QLineEdit(centralwidget);
         weightBox->setObjectName("weightBox");
-        weightBox->setGeometry(QRect(390, 410, 171, 28));
+        weightBox->setGeometry(QRect(390, 430, 171, 28));
         weightBox->setMaxLength(5);
         weightLabel = new QLabel(centralwidget);
         weightLabel->setObjectName("weightLabel");
-        weightLabel->setGeometry(QRect(390, 370, 91, 41));
+        weightLabel->setGeometry(QRect(390, 390, 91, 41));
         weightLabel->setFont(font4);
         calorieUpdateButton = new QPushButton(centralwidget);
         calorieUpdateButton->setObjectName("calorieUpdateButton");
-        calorieUpdateButton->setGeometry(QRect(990, 403, 81, 41));
+        calorieUpdateButton->setGeometry(QRect(990, 423, 81, 41));
         calorieUpdateButton->setFont(font3);
         calorieUpdateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
@@ -203,19 +205,19 @@ public:
 "}"));
         caloriesBox = new QLineEdit(centralwidget);
         caloriesBox->setObjectName("caloriesBox");
-        caloriesBox->setGeometry(QRect(790, 410, 191, 28));
+        caloriesBox->setGeometry(QRect(790, 430, 191, 28));
         caloriesBox->setMaxLength(4);
         caloriesLabel = new QLabel(centralwidget);
         caloriesLabel->setObjectName("caloriesLabel");
-        caloriesLabel->setGeometry(QRect(790, 370, 101, 41));
+        caloriesLabel->setGeometry(QRect(790, 390, 101, 41));
         caloriesLabel->setFont(font4);
         quicklinksLabel = new QLabel(centralwidget);
         quicklinksLabel->setObjectName("quicklinksLabel");
-        quicklinksLabel->setGeometry(QRect(40, 460, 171, 51));
+        quicklinksLabel->setGeometry(QRect(40, 480, 171, 51));
         quicklinksLabel->setFont(font1);
         termButton = new QPushButton(centralwidget);
         termButton->setObjectName("termButton");
-        termButton->setGeometry(QRect(50, 520, 131, 121));
+        termButton->setGeometry(QRect(50, 540, 131, 121));
         termButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -229,7 +231,7 @@ public:
 "}"));
         goalsButton = new QPushButton(centralwidget);
         goalsButton->setObjectName("goalsButton");
-        goalsButton->setGeometry(QRect(210, 520, 131, 121));
+        goalsButton->setGeometry(QRect(210, 540, 131, 121));
         goalsButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -243,7 +245,7 @@ public:
 "}"));
         tipButton = new QPushButton(centralwidget);
         tipButton->setObjectName("tipButton");
-        tipButton->setGeometry(QRect(370, 520, 131, 121));
+        tipButton->setGeometry(QRect(370, 540, 131, 121));
         tipButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -257,7 +259,7 @@ public:
 "}"));
         calculatorButton = new QPushButton(centralwidget);
         calculatorButton->setObjectName("calculatorButton");
-        calculatorButton->setGeometry(QRect(850, 520, 131, 121));
+        calculatorButton->setGeometry(QRect(850, 540, 131, 121));
         calculatorButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -271,7 +273,7 @@ public:
 "}"));
         tutorialButton = new QPushButton(centralwidget);
         tutorialButton->setObjectName("tutorialButton");
-        tutorialButton->setGeometry(QRect(690, 520, 131, 121));
+        tutorialButton->setGeometry(QRect(690, 540, 131, 121));
         tutorialButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -285,7 +287,7 @@ public:
 "}"));
         linksButton = new QPushButton(centralwidget);
         linksButton->setObjectName("linksButton");
-        linksButton->setGeometry(QRect(530, 520, 131, 121));
+        linksButton->setGeometry(QRect(530, 540, 131, 121));
         linksButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "background-color: #333333;\n"
 "color: white;\n"
@@ -299,7 +301,7 @@ public:
 "}"));
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
-        scrollArea->setGeometry(QRect(370, 150, 691, 151));
+        scrollArea->setGeometry(QRect(370, 160, 691, 151));
         scrollArea->setStyleSheet(QString::fromUtf8("QScrollBar:horizontal {\n"
 "    background-color: #656565;\n"
 "    height: 15px; \n"
@@ -331,7 +333,7 @@ public:
         heightUnit->addItem(QString());
         heightUnit->addItem(QString());
         heightUnit->setObjectName("heightUnit");
-        heightUnit->setGeometry(QRect(170, 410, 61, 31));
+        heightUnit->setGeometry(QRect(170, 430, 61, 31));
         heightUnit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
@@ -340,28 +342,36 @@ public:
         weightUnit->addItem(QString());
         weightUnit->addItem(QString());
         weightUnit->setObjectName("weightUnit");
-        weightUnit->setGeometry(QRect(570, 410, 61, 31));
+        weightUnit->setGeometry(QRect(570, 430, 61, 31));
         weightUnit->setStyleSheet(QString::fromUtf8("background-color: #333333;\n"
 "color: white;\n"
 "border-radius: 15px;\n"
 ""));
         displayHeight = new QLabel(centralwidget);
         displayHeight->setObjectName("displayHeight");
-        displayHeight->setGeometry(QRect(130, 381, 71, 21));
+        displayHeight->setGeometry(QRect(130, 401, 71, 21));
         QFont font5;
         font5.setPointSize(12);
         displayHeight->setFont(font5);
         displayWeight = new QLabel(centralwidget);
         displayWeight->setObjectName("displayWeight");
-        displayWeight->setGeometry(QRect(470, 381, 71, 21));
+        displayWeight->setGeometry(QRect(470, 401, 71, 21));
         displayWeight->setFont(font5);
         displayCalories = new QLabel(centralwidget);
         displayCalories->setObjectName("displayCalories");
-        displayCalories->setGeometry(QRect(870, 381, 71, 21));
+        displayCalories->setGeometry(QRect(870, 401, 71, 21));
         displayCalories->setFont(font5);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(230, 480, 331, 20));
+        label->setGeometry(QRect(230, 500, 331, 20));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(620, 120, 531, 41));
+        label_2->setStyleSheet(QString::fromUtf8("color:red"));
+        templatesLabel_2 = new QLabel(centralwidget);
+        templatesLabel_2->setObjectName("templatesLabel_2");
+        templatesLabel_2->setGeometry(QRect(340, 114, 261, 51));
+        templatesLabel_2->setFont(font1);
         UserMainMenu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(UserMainMenu);
         menubar->setObjectName("menubar");
@@ -409,6 +419,9 @@ public:
         displayWeight->setText(QString());
         displayCalories->setText(QString());
         label->setText(QCoreApplication::translate("UserMainMenu", "(Note: clicking on the quicklinks WILL log you out)", nullptr));
+        label_2->setText(QCoreApplication::translate("UserMainMenu", "NOTE TO AVOID CONFUSION: template storage is not mean't to be accessable\n"
+" (not a design flaw, system was intended to be this way)", nullptr));
+        templatesLabel_2->setText(QCoreApplication::translate("UserMainMenu", "Template Storage", nullptr));
     } // retranslateUi
 
 };

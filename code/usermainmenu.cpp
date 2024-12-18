@@ -158,11 +158,11 @@ void UserMainMenu::templateHomeScreenDisplay(){
                                                  "color: white;"
                                                  "border-radius: 15px;"
                                                  "padding: 10px 20px;"
-                                                 "}"
+                                                 "}" /*
                                                  "QPushButton:hover {"
                                                  "background-color: #ff5c5c;;"
                                                  "color: white;"
-                                                 "}"
+                                                 "}" */
                                                  );
             }
             else{
@@ -172,11 +172,11 @@ void UserMainMenu::templateHomeScreenDisplay(){
                                                     "color: white;"
                                                     "border-radius: 15px;"
                                                     "padding: 10px 20px;"
-                                                 "}"
+                                                 "}" /*
                                                  "QPushButton:hover {"
                                                     "background-color: #ffd900;"
                                                     "color: white;"
-                                                 "}"
+                                                 "}" */
                                                  );
             }
 
