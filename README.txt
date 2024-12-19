@@ -66,7 +66,7 @@ Qt Creator IDE (optional but recommended).
 Clone the repository using Git:
 bash
 Copy code
-git clone https://github.com/your-username/forge-fitness-app.git
+git clone https://github.com/amroomargit/forge.git
 Or download the project files as a .zip and extract them.
 
 3. Open the Project in Qt Creator
