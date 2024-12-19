@@ -206,6 +206,7 @@ void UserMainMenu::increaseQWidget(int widthIncrease){
     scrollWidget->resize(newWidth,oldSize.height());
 }
 
+/*
 //to be able to click the template buttons we've created that are in the scrollable area
 void UserMainMenu::onPreExistingTemplateButtonClicked(){
 
@@ -224,7 +225,7 @@ void UserMainMenu::onPreExistingTemplateButtonClicked(){
         goToTemplate->dynamicWidgetPopulation(); //populate
         this -> setCentralWidget(goToTemplate);
     }
-}
+} */
 
 
 //go to weightlifttemplate screen

@@ -73,3 +73,4 @@ RESOURCES += \
     resources.qrc
 
 QT += sql
+

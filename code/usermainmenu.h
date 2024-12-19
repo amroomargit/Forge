@@ -36,7 +36,7 @@ private slots:
 
     void displayCurrentMeasurementValues(); //to display current measurement values
 
-    void onPreExistingTemplateButtonClicked(); //to be able to click the template buttons we've created that are in the scrollable area
+    //void onPreExistingTemplateButtonClicked(); //to be able to click the template buttons we've created that are in the scrollable area
 
     void on_newWLTButton_clicked();
 

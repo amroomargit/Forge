@@ -27,7 +27,6 @@ public:
     QPushButton *backButton;
     QLabel *titleLabel;
     QLabel *label;
-    QPushButton *backToQuickLinks;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -40,7 +39,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         backButton = new QPushButton(centralwidget);
         backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(1002, 30, 161, 41));
+        backButton->setGeometry(QRect(1080, 30, 71, 31));
         QFont font;
         font.setPointSize(8);
         backButton->setFont(font);
@@ -69,21 +68,6 @@ public:
         label->setFont(font2);
         label->setTextFormat(Qt::TextFormat::RichText);
         label->setOpenExternalLinks(true);
-        backToQuickLinks = new QPushButton(centralwidget);
-        backToQuickLinks->setObjectName("backToQuickLinks");
-        backToQuickLinks->setGeometry(QRect(1002, 80, 161, 41));
-        backToQuickLinks->setFont(font);
-        backToQuickLinks->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: #333333;\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"padding: 10px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"     background-color: #bababa;\n"
-"color: black;\n"
-"}"));
         Links->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Links);
         menubar->setObjectName("menubar");
@@ -101,10 +85,9 @@ public:
     void retranslateUi(QMainWindow *Links)
     {
         Links->setWindowTitle(QCoreApplication::translate("Links", "MainWindow", nullptr));
-        backButton->setText(QCoreApplication::translate("Links", "Back To Main Menu", nullptr));
+        backButton->setText(QCoreApplication::translate("Links", "Back", nullptr));
         titleLabel->setText(QCoreApplication::translate("Links", "Links.", nullptr));
         label->setText(QString());
-        backToQuickLinks->setText(QCoreApplication::translate("Links", "Back To User Screen", nullptr));
     } // retranslateUi
 
 };
